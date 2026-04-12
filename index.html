@@ -471,7 +471,9 @@ spline-viewer #logo,spline-viewer [id*="logo"]{display:none!important;}
 .reveal:nth-child(3){transition-delay:.16s;}
 .reveal.active { opacity: 1; transform: translateY(0); }
 @keyframes wa-pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-.wa-float { animation: wa-pulse 2s infinite; }
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9990;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;animation:wa-pulse 2s infinite;transition:all .3s ease;box-shadow:0 4px 16px rgba(37,211,102,0.35);cursor:pointer;text-decoration:none;}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(37,211,102,0.5);}
+.wa-float img{width:28px;height:28px;filter:brightness(10);}
 
 /* NOISE TEXTURE OVERLAY */
 .noise-overlay{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.028;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");}
@@ -549,8 +551,8 @@ spline-viewer{display:block;border:none;outline:none;}
         <span class="hero-pill">Ages 6 – 18</span>
       </div>
       <div class="hero-btns">
-        <button class="btn-primary" onclick="showPage('parents')">Explore Programs &rarr;</button>
-        <button class="btn-outline" onclick="showPage('schools')">Partner With Us</button>
+        <button class="btn-primary" onclick="showPage('parents')">For Parents</button>
+        <button class="btn-outline" onclick="showPage('schools')">For Schools</button>
       </div>
     </div>
   </div>
