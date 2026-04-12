@@ -90,9 +90,9 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--g800);ove
 .btn-primary:active{transform:translateY(0);box-shadow:0 4px 12px rgba(58,174,220,0.3);}
 .btn-outline{background:rgba(255,255,255,0.05);color:#fff;border:1.5px solid rgba(255,255,255,0.15);padding:14px 30px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all .3s cubic-bezier(.4,0,.2,1);display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-family:'Space Grotesk',sans-serif;backdrop-filter:blur(8px);letter-spacing:.3px;}
 .btn-outline:hover{border-color:rgba(58,174,220,0.5);color:#fff;background:rgba(58,174,220,0.08);box-shadow:0 0 24px rgba(58,174,220,0.15);}
-/* 3D ROBOT — anchored exactly below the header text, scaled up but retaining vertical bounds */
-.hero-robot-bg{position:fixed;top:32vh;bottom:0;left:0;right:0;width:100vw;z-index:0;pointer-events:none;animation:fadeIn 2s ease .3s both;display:flex;align-items:flex-start;justify-content:center;overflow:visible;}
-.hero-robot-bg spline-viewer{width:100vw;height:100%;display:block;transform:scale(1.35);transform-origin:top center;}
+/* 3D ROBOT — fixed, fills entire viewport naturally */
+.hero-robot-bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;animation:fadeIn 2s ease .3s both;display:flex;align-items:center;justify-content:center;}
+.hero-robot-bg spline-viewer{width:100%;height:100%;display:block;}
 /* Overlay: dark at TOP (text), clear in CENTER (robot), dark at BOTTOM (page blend) */
 .hero-robot-overlay{position:absolute;inset:-20vh 0 0 0;background:linear-gradient(to bottom,rgba(6,13,26,0.95) 0%,rgba(6,13,26,0.6) 25%,rgba(6,13,26,0.1) 50%,rgba(6,13,26,0.5) 75%,rgba(6,13,26,0.98) 100%);pointer-events:none;z-index:1;}
 .hero-robot-overlay2{position:absolute;inset:-20vh 0 0 0;background:radial-gradient(ellipse at 50% 55%,transparent 30%,rgba(6,13,26,0.6) 70%,rgba(6,13,26,0.9) 100%);pointer-events:none;z-index:1;}
@@ -536,7 +536,6 @@ spline-viewer{display:block;border:none;outline:none;}
 
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow"><span class="ey-dot"></span>Kenya’s Premier Youth STEM Program</div>
       <h1>Empowering the<br><span class="hl">next generation</span><br>of <span class="hg">innovators</span></h1>
       <p class="hero-sub">World-class Coding, Robotics, AI and IoT for young Kenyans aged 6&ndash;18. Project-based. Future-ready.</p>
       <div class="hero-btns">
