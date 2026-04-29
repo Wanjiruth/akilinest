@@ -8,11 +8,13 @@
 <meta name="keywords" content="coding for kids Kenya, robotics classes Nairobi, STEM education Kenya, kids programming, youth technology, Akili Nest, coding camp Kenya, AI for kids, IoT education">
 <meta name="author" content="Akili Nest">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://akilinest.netlify.app">
+<link rel="canonical" href="https://akilinest.co.ke">
+<link rel="icon" type="image/png" href="images/img_1.png">
+<link rel="apple-touch-icon" href="images/img_1.png">
 <meta property="og:title" content="Akili Nest | Where Young Minds Innovate">
 <meta property="og:description" content="Hands-on Coding, Robotics, AI and IoT courses for young Kenyans aged 6 to 18. Build the future, one line of code at a time.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://akilinest.netlify.app">
+<meta property="og:url" content="https://akilinest.co.ke">
 <meta property="og:site_name" content="Akili Nest">
 <meta property="og:locale" content="en_KE">
 <meta name="twitter:card" content="summary_large_image">
@@ -94,7 +96,11 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--g800);ove
 .btn-outline{background:rgba(255,255,255,0.05);color:#fff;border:1.5px solid rgba(255,255,255,0.15);padding:14px 30px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all .3s cubic-bezier(.4,0,.2,1);display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-family:'Space Grotesk',sans-serif;backdrop-filter:blur(8px);letter-spacing:.3px;}
 .btn-outline:hover{border-color:rgba(58,174,220,0.5);color:#fff;background:rgba(58,174,220,0.08);box-shadow:0 0 24px rgba(58,174,220,0.15);}
 /* 3D ROBOT — fixed, nudged substantially to clear the text, positioned nicely back toward the left slightly, and scaled up */
-.hero-robot-bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;animation:fadeIn 2s ease .3s both;display:flex;align-items:flex-start;justify-content:center;}
+.hero-robot-bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;display:flex;align-items:flex-start;justify-content:center;}
+.hero-robot-bg spline-viewer{opacity:0;transition:opacity 1.2s ease;}
+.hero-robot-bg.robot-ready spline-viewer{opacity:1;}
+/* Logo: start hidden to prevent white-bg glitch, fade in after canvas fix */
+.nav-logo img, .fb-brand img{opacity:0;transition:opacity 0.4s ease;}
 .hero-robot-bg spline-viewer{width:100%;height:100%;display:block;transform:translate(18vw, 25vh) scale(1.3);transform-origin:center center;}
 /* Overlay: dark at TOP (text), clear in CENTER (robot), dark at BOTTOM (page blend) */
 .hero-robot-overlay{position:absolute;inset:-20vh 0 0 0;background:linear-gradient(to bottom,rgba(6,13,26,0.95) 0%,rgba(6,13,26,0.6) 25%,rgba(6,13,26,0.1) 50%,rgba(6,13,26,0.5) 75%,rgba(6,13,26,0.98) 100%);pointer-events:none;z-index:1;}
@@ -1141,7 +1147,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Remove white background from logo images
+  // Remove white background from logo images — hide first to prevent flash
   function removeWhiteBg(img) {
     if (!img.complete || !img.naturalWidth) { img.onload = () => removeWhiteBg(img); return; }
     try {
@@ -1161,11 +1167,26 @@ document.addEventListener("DOMContentLoaded", () => {
       ctx.putImageData(d, 0, 0);
       img.src = c.toDataURL('image/png');
     } catch(e) {
-      // Canvas fails on file:// protocol - logo keeps original appearance
-      // On deployed Netlify site, canvas approach works correctly
+      // Canvas fails on file:// - logo keeps original appearance
     }
+    // Fade logo in after processing (whether canvas worked or not)
+    requestAnimationFrame(() => { img.style.opacity = '1'; });
   }
-  document.querySelectorAll('.nav-logo img, .fb-brand img').forEach(removeWhiteBg);
+  document.querySelectorAll('.nav-logo img, .fb-brand img').forEach(img => {
+    if (img.complete && img.naturalWidth) { removeWhiteBg(img); }
+    else { img.onload = () => removeWhiteBg(img); img.onerror = () => { img.style.opacity = '1'; }; }
+  });
+
+  // Fade in robot only when Spline has loaded
+  const splineEl = document.querySelector('spline-viewer');
+  const robotBg = document.getElementById('robotBg');
+  if (splineEl && robotBg) {
+    splineEl.addEventListener('load', () => {
+      robotBg.classList.add('robot-ready');
+    });
+    // Fallback: show robot after 8s even if event never fires
+    setTimeout(() => { robotBg.classList.add('robot-ready'); }, 8000);
+  }
 
   // Animated stat counters
   const statObserver = new IntersectionObserver((entries) => {
