@@ -1143,6 +1143,33 @@ document.addEventListener("DOMContentLoaded", () => {
   
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  // Automatically remove white background from the logo using Canvas
+  function removeWhiteBg(img) {
+    if (!img.complete || !img.naturalWidth) { img.onload = () => removeWhiteBg(img); return; }
+    try {
+      const c = document.createElement('canvas');
+      c.width = img.naturalWidth; c.height = img.naturalHeight;
+      const ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      const d = ctx.getImageData(0, 0, c.width, c.height);
+      for (let i = 0; i < d.data.length; i += 4) {
+        const r = d.data[i], g = d.data[i+1], b = d.data[i+2];
+        // If the pixel is very close to white, make it fully transparent
+        if (r > 230 && g > 230 && b > 230) {
+          d.data[i+3] = 0;
+        } else if (r > 200 && g > 200 && b > 200) {
+          // Smooth the edges for pixels that are light but not pure white
+          d.data[i+3] = Math.round(255 * (1 - (Math.min(r, g, b) - 200) / 55));
+        }
+      }
+      ctx.putImageData(d, 0, 0);
+      img.src = c.toDataURL('image/png');
+      // Add a nice brightness filter to make the now-transparent logo pop against the dark bg
+      img.style.filter = 'brightness(1.5) drop-shadow(0 0 8px rgba(255,255,255,0.2))';
+    } catch(e) {}
+  }
+  document.querySelectorAll('.nav-logo img, .fb-brand img').forEach(removeWhiteBg);
+
   // Animated stat counters
   const statObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
