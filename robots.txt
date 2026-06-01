@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://akilinest.co.ke/sitemap.xml
-
