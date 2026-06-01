@@ -10,7 +10,7 @@ export default function Footer() {
               <img
                   src={`${import.meta.env.BASE_URL}logo.png`}
                   alt="AkiliNest"
-                  className="h-12 md:h-14 object-contain mb-8 origin-left transform scale-[2] md:scale-[2.4]"
+                  className="h-20 md:h-24 -ml-4 object-contain mb-8"
                 />
             </Link>
             <p className="text-sm text-white/30 leading-relaxed max-w-[220px]">

@@ -27,7 +27,7 @@ function Typewriter() {
   }, []);
 
   return (
-    <h1 className="font-serif text-[clamp(2.5rem,5.5vw,5rem)] font-black leading-[0.95] tracking-tight text-white mb-8 max-w-4xl">
+    <h1 className="font-serif text-[clamp(2.2rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tight text-white mb-8 max-w-4xl">
       {displayed.split("\n").map((line, i) => (
         <span key={i}>
           {i > 0 && <br />}
@@ -50,9 +50,9 @@ const stages = [
 
 const steps = [
   { n: "01", label: "Think First", desc: "Independent reasoning before any tool is opened.", color: "#1A7A97", bg: "rgba(26,122,151,0.08)" },
-  { n: "02", label: "Write Creatively", desc: "Children frame ideas in their own words first.", color: "#E8693A", bg: "rgba(232,105,58,0.08)" },
-  { n: "03", label: "Use AI", desc: "AI critiques, expands, and challenges their thinking.", color: "#7F5AF0", bg: "rgba(127,90,240,0.08)" },
-  { n: "04", label: "Present", desc: "Learners explain and defend their reasoning clearly.", color: "#E8523A", bg: "rgba(232,82,58,0.08)" },
+  { n: "02", label: "Write Creatively", desc: "Children frame ideas in their own words first.", color: "#1A7A97", bg: "rgba(26,122,151,0.08)" },
+  { n: "03", label: "Use AI", desc: "AI critiques, expands, and challenges their thinking.", color: "#1A7A97", bg: "rgba(26,122,151,0.08)" },
+  { n: "04", label: "Present", desc: "Learners explain and defend their reasoning clearly.", color: "#1A7A97", bg: "rgba(26,122,151,0.08)" },
 ];
 
 const work = [
@@ -70,7 +70,7 @@ export default function Home() {
           <video autoPlay muted loop playsInline preload="auto" className="w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}hero-bg.png`}>
             <source src={`${import.meta.env.BASE_URL}hero-main.mp4`} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0B1220]/90 via-[#0B1220]/50 to-[#0B1220]/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1310]/95 via-[#1A1310]/60 to-transparent" />
         </div>
 
         <div className="relative z-10 px-6 md:px-14 pb-14 pt-20 max-w-5xl">
@@ -86,13 +86,7 @@ export default function Home() {
             In a world where AI gives instant answers, we train children to think with clarity, depth, and creativity before they ever ask for one.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 mb-10">
-            {["Think First", "Write Creatively", "Use AI", "Present"].map((s, i) => (
-              <span key={s} className={`text-xs font-bold px-4 py-2 rounded-full backdrop-blur-sm border transition-all ${i === 0 ? "bg-[#E8693A] border-[#E8693A] text-white" : "bg-white/8 border-white/15 text-white"}`}>
-                {s}
-              </span>
-            ))}
-          </div>
+
 
           <div className="flex flex-wrap gap-4">
             <Link href="/programme" data-testid="button-hero-programmes" className="inline-flex items-center gap-2 bg-white text-[#0D0C18] font-bold text-sm px-7 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-xl transition-all">
@@ -110,17 +104,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HASSABIS QUOTE */}
-      <div className="bg-[#0B4D5F] px-6 py-20 border-t border-white/10 text-center">
-        <Reveal>
-          <p className="font-serif text-[clamp(1.5rem,3vw,2.2rem)] text-white font-medium italic max-w-4xl mx-auto leading-relaxed">
-            "Creativity is one of the most important human qualities, and one of the hardest things to replicate."
-          </p>
-          <span className="block mt-8 text-[11px] font-bold tracking-[2px] uppercase text-white/50">
-            Demis Hassabis <span className="text-[#E8693A]">·</span> CEO, Google DeepMind
-          </span>
-        </Reveal>
-      </div>
 
       {/* TICKER */}
       <div className="bg-[#F9F5EE] py-4 overflow-hidden border-t border-[#0D0C18]/5">

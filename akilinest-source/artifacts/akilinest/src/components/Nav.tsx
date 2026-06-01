@@ -30,12 +30,12 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
         {/* LOGO */}
-        <Link href="/" data-testid="link-home-logo" className="shrink-0 flex items-center pr-4">
+        <Link href="/" data-testid="link-home-logo" className="shrink-0 flex items-center pr-12">
           <img
             src={`${import.meta.env.BASE_URL}logo.png`}
             alt="AkiliNest"
-            className={`object-contain origin-left transform scale-[3] md:scale-[3.2] transition-all duration-300 ${
-              isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
+            className={`object-contain transition-all duration-300 -my-8 -ml-3 ${
+              isScrolled ? "h-24 md:h-28" : "h-28 md:h-[120px]"
             }`}
           />
         </Link>
