@@ -138,12 +138,7 @@
   }
 }
 
-/* Ensure the page content isn't hidden behind the fixed header.
-   Use the CSS variable `--header-height` (set by JS) so the padding
-   always matches the actual header height. Falls back to 88px. */
-main {
-  padding-top: var(--header-height, 88px);
-}
+/* Header overlays the hero, no padding needed on main */
 
 /* Scroll reveal */
 .reveal {

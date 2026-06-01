@@ -26,27 +26,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location]);
-  // Keep header height CSS variable in sync so `main` padding matches header
-  useEffect(() => {
-    const setHeaderHeight = () => {
-      const header = document.querySelector('header');
-      const h = header ? Math.ceil(header.getBoundingClientRect().height) : 88;
-      document.documentElement.style.setProperty('--header-height', `${h}px`);
-    };
-    setHeaderHeight();
-    window.addEventListener('resize', setHeaderHeight);
-    // Observe changes to header (e.g., wrapping nav links) and update
-    const headerEl = document.querySelector('header');
-    let mo;
-    if (headerEl && typeof MutationObserver !== 'undefined') {
-      mo = new MutationObserver(setHeaderHeight);
-      mo.observe(headerEl, { attributes: true, childList: true, subtree: true });
-    }
-    return () => {
-      window.removeEventListener('resize', setHeaderHeight);
-      if (mo) mo.disconnect();
-    };
-  }, []);
+  
   return null;
 }
 
