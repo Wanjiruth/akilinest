@@ -161,3 +161,13 @@ main {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+
+/* Cursor Trail paint splashes */
+.cdot {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  transition: opacity 0.5s;
+  mix-blend-mode: multiply;
+}

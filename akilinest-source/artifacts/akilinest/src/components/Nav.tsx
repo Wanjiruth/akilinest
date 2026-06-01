@@ -22,10 +22,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white ${
         isScrolled
-          ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)] py-2"
-          : "bg-transparent py-3"
+          ? "shadow-[0_2px_20px_rgba(0,0,0,0.08)] py-2"
+          : "border-b border-black/5 py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
@@ -49,9 +49,7 @@ export default function Nav() {
               className={`relative text-[11px] md:text-[12px] px-2 md:px-3 py-1.5 rounded-lg transition-all whitespace-nowrap ${
                 location === link.href
                   ? "text-[#E8693A] font-bold"
-                  : isScrolled
-                    ? "text-[#0F172A]/65 hover:text-[#0F172A] font-semibold"
-                    : "text-white/75 hover:text-white font-semibold"
+                  : "text-[#0F172A]/75 hover:text-[#0F172A] font-semibold"
               }`}
               data-testid={`link-nav-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
             >

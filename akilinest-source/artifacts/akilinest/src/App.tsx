@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
+import { CursorTrail } from "@/components/CursorTrail";
 
 import Home from "@/pages/Home";
 import Programme from "@/pages/Programme";
@@ -52,6 +53,7 @@ function ScrollToTop() {
 function AppRouter() {
   return (
     <div className="flex flex-col min-h-screen">
+      <CursorTrail />
       <ScrollToTop />
       <Nav />
       <main className="flex-1">
