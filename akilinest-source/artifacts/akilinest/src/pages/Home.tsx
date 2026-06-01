@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full h-[85vh] max-h-[900px] min-h-[600px] flex flex-col justify-end overflow-hidden">
+      <section className="relative w-full h-screen min-h-[600px] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline preload="auto" className="w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}hero-bg.png`}>
             <source src={`${import.meta.env.BASE_URL}hero-main.mp4`} type="video/mp4" />
@@ -219,7 +219,17 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* HASSABIS QUOTE */}
+      <div className="bg-[#0D0C18] px-6 py-20 text-center border-t border-white/5">
+        <Reveal>
+          <p className="font-serif text-[clamp(1.4rem,2.5vw,2rem)] text-white/80 font-normal italic max-w-3xl mx-auto leading-relaxed">
+            "Creativity is one of the most important human qualities, and one of the hardest things to replicate."
+          </p>
+          <span className="block mt-6 text-[10px] font-bold tracking-[2px] uppercase text-white/30">
+            Demis Hassabis <span className="text-[#E8693A]">·</span> CEO, Google DeepMind
+          </span>
+        </Reveal>
+      </div>
 
 
       {/* CTA */}
