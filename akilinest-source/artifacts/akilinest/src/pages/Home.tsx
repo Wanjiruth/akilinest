@@ -27,7 +27,7 @@ function Typewriter() {
   }, []);
 
   return (
-    <h1 className="font-serif text-[clamp(3rem,7vw,7rem)] font-black leading-[0.95] tracking-tight text-white mb-8 max-w-4xl">
+    <h1 className="font-serif text-[clamp(2.5rem,5.5vw,5rem)] font-black leading-[0.95] tracking-tight text-white mb-8 max-w-4xl">
       {displayed.split("\n").map((line, i) => (
         <span key={i}>
           {i > 0 && <br />}
