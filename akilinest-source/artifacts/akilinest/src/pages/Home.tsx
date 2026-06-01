@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full min-h-screen flex flex-col justify-end overflow-hidden">
+      <section className="relative w-full h-[85vh] max-h-[900px] min-h-[600px] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline preload="auto" className="w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}hero-bg.png`}>
             <source src={`${import.meta.env.BASE_URL}hero-main.mp4`} type="video/mp4" />
@@ -73,7 +73,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0B1220]/90 via-[#0B1220]/50 to-[#0B1220]/80" />
         </div>
 
-        <div className="relative z-10 px-6 md:px-14 pb-20 pt-32 max-w-5xl">
+        <div className="relative z-10 px-6 md:px-14 pb-14 pt-20 max-w-5xl">
           <div className="flex items-center gap-4 mb-8">
             <span className="bg-[#E8693A] text-white text-[10px] font-black tracking-[2px] uppercase px-4 py-2 rounded-full">Creative Studio</span>
             <span className="w-px h-4 bg-white/20" />
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
           <Reveal>
             <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-[#E8693A] mb-5 block">The Studio Ethos</span>
-            <h2 className="font-serif text-[clamp(2.5rem,4.5vw,4.5rem)] font-black text-[#0D0C18] tracking-tight leading-[1.05] mb-8">
+            <h2 className="font-sans text-[clamp(2.2rem,4vw,3.8rem)] font-extrabold text-[#0D0C18] tracking-tighter leading-[1.1] mb-8">
               We do not raise perfectly obedient AI users.<br/>
               <span className="text-[#1A7A97]">We raise wild, original thinkers.</span>
             </h2>
