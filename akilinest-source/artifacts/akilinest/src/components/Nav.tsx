@@ -24,7 +24,7 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)] py-2"
+          ? "bg-[#0B1220]/80 backdrop-blur-md shadow-lg py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -35,9 +35,7 @@ export default function Nav() {
             src={`${import.meta.env.BASE_URL}logo.png`}
             alt="AkiliNest"
             className={`object-contain origin-left transform scale-[3] md:scale-[3.2] transition-all duration-300 ${
-              isScrolled 
-                ? "h-8 md:h-9" 
-                : "h-9 md:h-10 drop-shadow-[0_0_12px_rgba(255,255,255,0.7)] saturate-150"
+              isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
             }`}
           />
         </Link>
@@ -51,9 +49,7 @@ export default function Nav() {
               className={`relative text-[11px] md:text-[12px] px-2 md:px-3 py-1.5 rounded-lg transition-all whitespace-nowrap ${
                 location === link.href
                   ? "text-[#E8693A] font-bold"
-                  : isScrolled
-                    ? "text-[#0F172A]/75 hover:text-[#0F172A] font-semibold"
-                    : "text-white/90 hover:text-white font-semibold drop-shadow-md"
+                  : "text-white/90 hover:text-white font-semibold"
               }`}
               data-testid={`link-nav-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
             >
