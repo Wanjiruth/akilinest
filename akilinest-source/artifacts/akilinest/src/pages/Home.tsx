@@ -110,6 +110,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HASSABIS QUOTE */}
+      <div className="bg-[#0B4D5F] px-6 py-20 border-t border-white/10 text-center">
+        <Reveal>
+          <p className="font-serif text-[clamp(1.5rem,3vw,2.2rem)] text-white font-medium italic max-w-4xl mx-auto leading-relaxed">
+            "Creativity is one of the most important human qualities, and one of the hardest things to replicate."
+          </p>
+          <span className="block mt-8 text-[11px] font-bold tracking-[2px] uppercase text-white/50">
+            Demis Hassabis <span className="text-[#E8693A]">·</span> CEO, Google DeepMind
+          </span>
+        </Reveal>
+      </div>
+
       {/* TICKER */}
       <div className="bg-[#F9F5EE] py-4 overflow-hidden border-t border-[#0D0C18]/5">
         <div className="flex w-max animate-[ticker_28s_linear_infinite]">

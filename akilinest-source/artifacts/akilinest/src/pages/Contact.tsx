@@ -65,7 +65,7 @@ export default function Contact() {
             <p className="text-base text-white/50 leading-relaxed font-light mb-8">Sessions run on weekends at HeartSpace on Kabernet Road. Holiday camps run Monday to Friday across all four stages. Reach out to learn more or to get on our early access list.</p>
             <div className="space-y-4">
               {[
-                { icon: "Loc", label: "Location", val: "Nairobi, Kenya", href: undefined },
+                { icon: "Loc", label: "Location", val: "HeartSpace, Kabarnet Road (Opp. Rose of Sharon), Nairobi", href: undefined },
                 { icon: "Mail", label: "Email", val: "akilinest@gmail.com", href: "mailto:akilinest@gmail.com" },
                 { icon: "Tel", label: "WhatsApp", val: "0702820845", href: "https://wa.me/254702820845" },
                 { icon: "Web", label: "Website", val: "akilinest.co.ke", href: undefined },
