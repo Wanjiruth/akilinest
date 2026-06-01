@@ -113,6 +113,17 @@ export default function Programme() {
           </div>
         ))}
       </div>
+      {/* HASSABIS QUOTE */}
+      <div className="bg-[#0B4D5F] px-6 py-20 text-center border-t border-black/5">
+        <Reveal>
+          <p className="font-serif text-[clamp(1.4rem,2.5vw,2rem)] text-white/90 font-normal italic max-w-3xl mx-auto leading-relaxed">
+            "Creativity is one of the most important human qualities, and one of the hardest things to replicate."
+          </p>
+          <span className="block mt-6 text-[10px] font-bold tracking-[2px] uppercase text-white/50">
+            Demis Hassabis <span className="text-[#E8693A]">·</span> CEO, Google DeepMind
+          </span>
+        </Reveal>
+      </div>
 
       {/* 6 DOMAINS */}
       <section className="bg-[#F9F5EE] px-6 md:px-14 py-20">
