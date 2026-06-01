@@ -22,18 +22,20 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#483f2a] shadow-lg py-2" : "bg-[#6b6952] py-3"
+      className={`fixed top-0 md:top-4 left-0 md:left-1/2 md:-translate-x-1/2 w-full md:w-[95%] max-w-6xl z-50 transition-all duration-300 md:rounded-2xl md:border md:border-white/10 ${
+        isScrolled ? "bg-[#483f2a]/95 backdrop-blur-md shadow-lg py-2" : "bg-[#6b6952] py-3 md:shadow-md"
       }`}
     >
-      <div className="px-4 md:px-8 flex items-center justify-between gap-4">
+      <div className="px-4 md:px-6 flex items-center justify-between gap-4">
         {/* LOGO */}
         <Link href="/" data-testid="link-home-logo" className="shrink-0">
-          <div className="rounded-xl px-3 py-2 flex items-center justify-center backdrop-blur-sm">
+          <div className="rounded-xl px-2 py-1 flex items-center justify-center backdrop-blur-sm transition-all duration-300">
             <img
               src={`${import.meta.env.BASE_URL}logo.png`}
               alt="AkiliNest"
-              className="h-20 md:h-32 lg:h-36 object-contain drop-shadow-2xl"
+              className={`object-contain drop-shadow-xl transition-all duration-300 ${
+                isScrolled ? "h-10 md:h-14" : "h-12 md:h-16 lg:h-20"
+              }`}
             />
           </div>
         </Link>
@@ -47,7 +49,7 @@ export default function Nav() {
               className={`text-[12px] md:text-[13px] font-medium px-2 md:px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                 location === link.href
                   ? "text-[#E8693A]"
-                  : "text-white/70 hover:text-white"
+                  : "text-white/80 hover:text-white"
               }`}
               data-testid={`link-nav-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
             >
