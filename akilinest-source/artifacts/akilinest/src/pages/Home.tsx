@@ -56,9 +56,9 @@ const steps = [
 ];
 
 const work = [
-  { stage: "Sprouts · Age 7", stageBg: "#1A7A97", stageLabel: "ws-sprouts", title: '"Save Our Oceans" Storybook', desc: "Hand-drawn characters enhanced with AI illustration. The story, characters, and moral — entirely Amira's original thinking.", author: "Amira, Sprouts Cohort 1", tools: "Book Creator + Bing Image Creator", initial: "A", color: "#1A7A97", img: "work-sprouts.png" },
+  { stage: "Sprouts · Age 7", stageBg: "#1A7A97", stageLabel: "ws-sprouts", title: '"Save Our Oceans" Storybook', desc: "Hand-drawn characters enhanced with AI illustration. The story, characters, and moral were entirely Amira's original thinking.", author: "Amira, Sprouts Cohort 1", tools: "Book Creator + Bing Image Creator", initial: "A", color: "#1A7A97", img: "work-sprouts.png" },
   { stage: "Explorers · Age 10", stageBg: "#E8693A", stageLabel: "ws-explorers", title: '"Is AI Creative?" Research Poster', desc: "Kioni formed her own position first, then used Perplexity to challenge her arguments. The final poster presents both sides.", author: "Kioni, Explorers Cohort 1", tools: "Perplexity + Google Slides", initial: "K", color: "#E8693A", img: "work-explorers.png" },
-  { stage: "Builders · Age 13", stageBg: "#7F5AF0", stageLabel: "ws-builders", title: "School Marketplace — MVP Prototype", desc: "A working no-code app with brand identity, user research, and pitch deck — designed from a real problem at his school.", author: "Jabari, Builders Cohort 1", tools: "Lovable + Figma + Canva", initial: "J", color: "#7F5AF0", img: "work-builders.png" },
+  { stage: "Builders · Age 13", stageBg: "#7F5AF0", stageLabel: "ws-builders", title: "School Marketplace: MVP Prototype", desc: "A working no-code app with brand identity, user research, and pitch deck, designed from a real problem at his school.", author: "Jabari, Builders Cohort 1", tools: "Lovable + Figma + Canva", initial: "J", color: "#7F5AF0", img: "work-builders.png" },
 ];
 
 export default function Home() {
@@ -152,8 +152,8 @@ export default function Home() {
               <Reveal key={s.label} delay={i * 80}>
                 <div className="group bg-white border border-black/8 rounded-3xl p-7 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:border-black/15 transition-all duration-500">
                   <div className="absolute top-0 left-0 right-0 h-1 transition-all duration-500 opacity-80 group-hover:opacity-100 group-hover:h-2" style={{ background: s.color }} />
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500" style={{ background: s.bg }}>
-                    {i === 0 && "🧠"}{i === 1 && "✍️"}{i === 2 && "🤖"}{i === 3 && "🎤"}
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center font-serif font-black text-lg mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500" style={{ background: s.bg, color: s.color }}>
+                    {s.n}
                   </div>
                   <div className="text-[10px] font-black tracking-[1.8px] uppercase mb-2 group-hover:opacity-80 transition-opacity" style={{ color: s.color }}>Step {s.n}</div>
                   <h3 className="font-serif text-xl font-black text-[#0D0C18] mb-2 leading-tight group-hover:text-black transition-colors">{s.label}</h3>
@@ -192,14 +192,16 @@ export default function Home() {
               {/* Quote overlay card */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
                 <div className="bg-white/80 backdrop-blur-md rounded-3xl p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white group-hover:-translate-y-2 transition-transform duration-500">
-                  <div className="text-3xl mb-4">💬</div>
+                  <div className="w-10 h-10 rounded-full bg-[#1A7A97]/10 flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-[#1A7A97]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                  </div>
                   <p className="text-sm md:text-base text-[#0D0C18] font-medium leading-relaxed mb-5 italic">
                     "I used to worry my child would just use AI to cheat. Now I hear her challenging its answers. She treats it like a brainstorming partner, but she always has the final word."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-[#1A7A97] text-white flex items-center justify-center text-xs font-bold font-serif">M</div>
                     <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#5C5A70]">
-                      — Mother of an Explorer
+                      Mother of an Explorer
                     </span>
                   </div>
                 </div>

@@ -65,10 +65,10 @@ export default function Contact() {
             <p className="text-base text-white/50 leading-relaxed font-light mb-8">Sessions run on weekends at HeartSpace on Kabernet Road. Holiday camps run Monday to Friday across all four stages. Reach out to learn more or to get on our early access list.</p>
             <div className="space-y-4">
               {[
-                { icon: "📍", label: "Location", val: "Nairobi, Kenya", href: undefined },
-                { icon: "✉️", label: "Email", val: "akilinest@gmail.com", href: "mailto:akilinest@gmail.com" },
-                { icon: "💬", label: "WhatsApp", val: "0702820845", href: "https://wa.me/254702820845" },
-                { icon: "🌐", label: "Website", val: "akilinest.co.ke", href: undefined },
+                { icon: "Loc", label: "Location", val: "Nairobi, Kenya", href: undefined },
+                { icon: "Mail", label: "Email", val: "akilinest@gmail.com", href: "mailto:akilinest@gmail.com" },
+                { icon: "Tel", label: "WhatsApp", val: "0702820845", href: "https://wa.me/254702820845" },
+                { icon: "Web", label: "Website", val: "akilinest.co.ke", href: undefined },
               ].map((row) => (
                 <div key={row.label} className="flex items-center gap-3">
                   <div className="w-9 h-9 bg-white/6 rounded-xl flex items-center justify-center text-sm shrink-0">{row.icon}</div>
@@ -99,10 +99,10 @@ export default function Contact() {
                 <label className="block text-xs font-bold text-[#0D0C18] mb-2">Child's stage</label>
                 <select value={form.stage} onChange={(e) => setForm({ ...form, stage: e.target.value })} className={inputClass} data-testid="select-contact-stage">
                   <option value="">Select a stage</option>
-                  <option>Ages 6 to 8 — Sprouts</option>
-                  <option>Ages 9 to 11 — Explorers</option>
-                  <option>Ages 12 to 14 — Builders</option>
-                  <option>Ages 15 to 17 — Innovators</option>
+                  <option>Ages 6 to 8: Sprouts</option>
+                  <option>Ages 9 to 11: Explorers</option>
+                  <option>Ages 12 to 14: Builders</option>
+                  <option>Ages 15 to 17: Innovators</option>
                   <option>Parent Series only</option>
                 </select>
               </div>
