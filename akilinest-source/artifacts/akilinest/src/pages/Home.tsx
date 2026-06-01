@@ -110,22 +110,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST STRIP */}
-      <div className="bg-[#0B4D5F] border-t border-white/10 px-6 md:px-14 py-8 flex flex-wrap items-center gap-8">
-        <span className="text-[10px] font-bold tracking-[2px] uppercase text-white/25 shrink-0">Why parents choose AkiliNest</span>
-        <div className="flex flex-wrap gap-8 items-center">
-          {[["4", "age-based stages"], ["30", "sessions per programme"], ["100%", "weekly take-home output"], ["0", "copy-paste learning"]].map(([n, l], i) => (
-            <div key={i} className="flex items-center gap-4">
-              {i > 0 && <div className="w-px h-8 bg-white/8 hidden md:block" />}
-              <div>
-                <span className="font-serif text-3xl font-black text-white leading-none" style={{ color: i === 2 ? "#E8693A" : "white" }}>{n}</span>
-                <p className="text-[11px] text-white/35 mt-0.5 max-w-[80px] leading-tight">{l}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* TICKER */}
       <div className="bg-[#F9F5EE] py-4 overflow-hidden border-t border-[#0D0C18]/5">
         <div className="flex w-max animate-[ticker_28s_linear_infinite]">
