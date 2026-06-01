@@ -67,7 +67,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative w-full min-h-screen flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}hero-bg.png`}>
+          <video autoPlay muted loop playsInline preload="auto" className="w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}hero-bg.png`}>
             <source src={`${import.meta.env.BASE_URL}hero-main.mp4`} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-[#0B1220]/90 via-[#0B1220]/50 to-[#0B1220]/80" />

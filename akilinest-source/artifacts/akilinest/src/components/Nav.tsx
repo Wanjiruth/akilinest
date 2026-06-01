@@ -23,7 +23,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#483f2a] shadow-lg py-2" : "bg-[#6b6952] py-3"
+        isScrolled ? "bg-[#0B1220]/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10" : "bg-gradient-to-b from-[#0B1220]/80 to-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4">

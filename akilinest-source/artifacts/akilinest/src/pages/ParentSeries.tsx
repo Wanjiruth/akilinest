@@ -48,7 +48,7 @@ export default function ParentSeries() {
     <>
       {/* PAGE HERO */}
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}parents-poster.jpg`}>
+        <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}parents-poster.jpg`}>
           <source src={`${import.meta.env.BASE_URL}parents-mom-child.mp4`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0D0C18] to-[#1A2030]" />
