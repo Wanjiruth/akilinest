@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* TRUST STRIP */}
-      <div className="bg-[#0D0C18] border-t border-white/5 px-6 md:px-14 py-8 flex flex-wrap items-center gap-8">
+      <div className="bg-[#0B4D5F] border-t border-white/10 px-6 md:px-14 py-8 flex flex-wrap items-center gap-8">
         <span className="text-[10px] font-bold tracking-[2px] uppercase text-white/25 shrink-0">Why parents choose AkiliNest</span>
         <div className="flex flex-wrap gap-8 items-center">
           {[["4", "age-based stages"], ["30", "sessions per programme"], ["100%", "weekly take-home output"], ["0", "copy-paste learning"]].map(([n, l], i) => (
@@ -127,12 +127,12 @@ export default function Home() {
       </div>
 
       {/* TICKER */}
-      <div className="bg-[#0D0C18] py-4 overflow-hidden border-t border-white/5">
+      <div className="bg-[#F9F5EE] py-4 overflow-hidden border-t border-[#0D0C18]/5">
         <div className="flex w-max animate-[ticker_28s_linear_infinite]">
           {[...Array(2)].map((_, rep) => (
             <div key={rep} className="flex">
               {["Think First", "·", "Write Creatively", "·", "Use AI", "·", "Present", "·", "Creative Intelligence", "·", "AI-Empowered Thinkers", "·", "Nairobi", "·"].map((t, i) => (
-                <span key={i} className={`text-[11px] font-semibold tracking-[2.5px] uppercase whitespace-nowrap px-6 ${t === "·" ? "text-white/10 px-2" : i % 4 === 0 ? "text-[#E8693A]" : "text-white/22"}`}>{t}</span>
+                <span key={i} className={`text-[11px] font-semibold tracking-[2.5px] uppercase whitespace-nowrap px-6 ${t === "·" ? "text-[#0D0C18]/10 px-2" : i % 4 === 0 ? "text-[#E8693A]" : "text-[#0D0C18]/30"}`}>{t}</span>
               ))}
             </div>
           ))}
@@ -162,6 +162,50 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY SPLIT */}
+      <section className="bg-white px-6 md:px-14 py-28 border-t border-black/5">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+          <Reveal>
+            <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-[#E8693A] mb-5 block">The Studio Ethos</span>
+            <h2 className="font-serif text-[clamp(2.5rem,4.5vw,4.5rem)] font-black text-[#0D0C18] tracking-tight leading-[1.05] mb-8">
+              We do not raise perfectly obedient AI users.<br/>
+              <span className="text-[#1A7A97]">We raise wild, original thinkers.</span>
+            </h2>
+            <p className="text-lg text-[#5C5A70] leading-relaxed max-w-xl font-light mb-8">
+              In a world where algorithms provide instant, identical answers, the most valuable human skill is the ability to form a unique perspective. We build an environment that demands mental effort, rewards curiosity, and treats AI as a sparring partner, not a crutch.
+            </p>
+            <Link href="/about" data-testid="button-home-philosophy" className="inline-flex items-center gap-2 text-sm font-bold text-[#0D0C18] hover:text-[#E8693A] transition-colors group">
+              Read our full philosophy
+              <span className="w-6 h-px bg-current transition-all group-hover:w-10"></span>
+            </Link>
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="relative aspect-square md:aspect-[4/3] lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-[#F9F5EE] group">
+              {/* Abstract fluid environment for the studio feel */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#E8693A]/20 via-[#1A7A97]/10 to-[#7F5AF0]/20 mix-blend-multiply opacity-70 group-hover:scale-105 transition-transform duration-1000" />
+              <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#E8693A]/30 rounded-full blur-3xl mix-blend-multiply animate-pulse" />
+              <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#1A7A97]/20 rounded-full blur-3xl mix-blend-multiply animate-pulse" style={{ animationDelay: '2s' }} />
+              
+              {/* Quote overlay card */}
+              <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+                <div className="bg-white/80 backdrop-blur-md rounded-3xl p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white group-hover:-translate-y-2 transition-transform duration-500">
+                  <div className="text-3xl mb-4">💬</div>
+                  <p className="text-sm md:text-base text-[#0D0C18] font-medium leading-relaxed mb-5 italic">
+                    "I used to worry my child would just use AI to cheat. Now I hear her challenging its answers. She treats it like a brainstorming partner, but she always has the final word."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-[#1A7A97] text-white flex items-center justify-center text-xs font-bold font-serif">M</div>
+                    <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#5C5A70]">
+                      — Mother of an Explorer
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
