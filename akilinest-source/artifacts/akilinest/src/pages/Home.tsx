@@ -150,13 +150,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {steps.map((s, i) => (
               <Reveal key={s.label} delay={i * 80}>
-                <div className="bg-white border border-black/8 rounded-3xl p-7 relative overflow-hidden hover:-translate-y-1 transition-transform shadow-sm">
-                  <div className="absolute top-0 left-0 right-0 h-1" style={{ background: s.color }} />
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl mb-5" style={{ background: s.bg }}>
+                <div className="group bg-white border border-black/8 rounded-3xl p-7 relative overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:border-black/15 transition-all duration-500">
+                  <div className="absolute top-0 left-0 right-0 h-1 transition-all duration-500 opacity-80 group-hover:opacity-100 group-hover:h-2" style={{ background: s.color }} />
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500" style={{ background: s.bg }}>
                     {i === 0 && "🧠"}{i === 1 && "✍️"}{i === 2 && "🤖"}{i === 3 && "🎤"}
                   </div>
-                  <div className="text-[10px] font-black tracking-[1.8px] uppercase mb-2" style={{ color: s.color }}>Step {s.n}</div>
-                  <h3 className="font-serif text-xl font-black text-[#0D0C18] mb-2 leading-tight">{s.label}</h3>
+                  <div className="text-[10px] font-black tracking-[1.8px] uppercase mb-2 group-hover:opacity-80 transition-opacity" style={{ color: s.color }}>Step {s.n}</div>
+                  <h3 className="font-serif text-xl font-black text-[#0D0C18] mb-2 leading-tight group-hover:text-black transition-colors">{s.label}</h3>
                   <p className="text-sm text-[#5C5A70] leading-relaxed font-light">{s.desc}</p>
                 </div>
               </Reveal>
@@ -176,13 +176,13 @@ export default function Home() {
             {stages.map((s, i) => (
               <Reveal key={s.name} delay={i * 80}>
                 <Link href="/programme" data-testid={`card-stage-${s.name.toLowerCase()}`}>
-                  <div className={`relative rounded-3xl overflow-hidden min-h-[420px] flex flex-col cursor-pointer hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 bg-gradient-to-b ${s.grad}`}>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <span className="absolute top-5 right-5 font-serif text-[5rem] font-black text-white/6 leading-none select-none">0{i + 1}</span>
-                    <div className="relative z-10 p-6 mt-auto">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center font-serif font-black text-white text-lg mb-3" style={{ background: "rgba(255,255,255,0.15)" }}>{s.letter}</div>
+                  <div className={`relative rounded-3xl overflow-hidden min-h-[420px] flex flex-col cursor-pointer hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/50 transition-all duration-500 bg-gradient-to-b group ${s.grad}`}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-500" />
+                    <span className="absolute top-5 right-5 font-serif text-[5rem] font-black text-white/5 leading-none select-none group-hover:scale-110 group-hover:rotate-3 group-hover:text-white/15 transition-all duration-500 origin-top-right">0{i + 1}</span>
+                    <div className="relative z-10 p-6 mt-auto transform group-hover:translate-y-[-4px] transition-transform duration-500">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center font-serif font-black text-white text-lg mb-3 group-hover:scale-110 group-hover:bg-white/25 transition-all duration-500 shadow-sm" style={{ background: "rgba(255,255,255,0.15)" }}>{s.letter}</div>
                       <span className="text-[10px] font-bold tracking-[1.8px] uppercase text-white/45 mb-1 block">{s.age}</span>
-                      <h3 className="font-serif text-3xl font-black text-white mb-2">{s.name}</h3>
+                      <h3 className="font-serif text-3xl font-black text-white mb-2 group-hover:text-[#E8693A] transition-colors duration-300">{s.name}</h3>
                       <p className="text-sm font-semibold text-white/90 mb-2 leading-tight">{s.tagline}</p>
                       <p className="text-xs text-white/50 leading-relaxed font-light">{s.desc}</p>
                     </div>
@@ -194,45 +194,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STUDENT WORK */}
-      <section className="bg-[#0D0C18] px-6 md:px-14 py-24 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-white/35 mb-4 block">What Students Create</span>
-            <h2 className="font-serif text-[clamp(2.2rem,4vw,4rem)] font-black text-white tracking-tight leading-tight mb-3">Proof of thinking,<br />not just output</h2>
-            <p className="text-base text-white/50 leading-relaxed font-light mb-12 max-w-lg">Every session ends with a creation. Every creation starts with independent thinking.</p>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {work.map((w, i) => (
-              <Reveal key={w.title} delay={i * 80}>
-                <div className="bg-white/4 border border-white/8 rounded-3xl overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40 transition-all">
-                  <div className="aspect-[4/3] overflow-hidden relative bg-white/5">
-                    <img src={`${import.meta.env.BASE_URL}${w.img}`} alt={w.title} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <div className="p-6">
-                    <span className="text-[10px] font-black tracking-[2px] uppercase px-3 py-1.5 rounded-full inline-block mb-4" style={{ background: `${w.color}25`, color: w.color }}>{w.stage}</span>
-                    <h3 className="font-serif text-lg font-black text-white mb-2 leading-tight">{w.title}</h3>
-                    <p className="text-sm text-white/50 leading-relaxed font-light mb-4">{w.desc}</p>
-                    <div className="flex items-center gap-2.5 pt-4 border-t border-white/7">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center font-serif font-black text-white text-xs shrink-0" style={{ background: w.color }}>{w.initial}</div>
-                      <div>
-                        <span className="text-xs font-semibold text-white/80 block">{w.author}</span>
-                        <span className="text-[11px] text-white/35">{w.tools}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal>
-            <div className="mt-6 bg-white/3 border border-white/6 rounded-2xl p-6 flex items-center gap-4">
-              <div className="w-1 h-11 bg-[#E8693A] rounded-full shrink-0" />
-              <p className="text-sm text-white/45 leading-relaxed font-light"><strong className="text-white/80 font-semibold">These are representative examples</strong> of the kind of work our students produce. Every project begins with structured thinking — AI is introduced only after children have formed their own position.</p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+
+
 
       {/* CTA */}
       <section className="bg-[#0B4D5F] px-6 md:px-14 py-28 text-center relative overflow-hidden">
