@@ -23,18 +23,18 @@ export default function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0B1220]/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10" : "bg-gradient-to-b from-[#0B1220]/80 to-transparent py-4"
+        isScrolled ? "bg-[#E6E8EA] shadow-md py-1 border-b border-black/5" : "bg-[#E6E8EA]/95 py-1.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
         {/* LOGO */}
         <Link href="/" data-testid="link-home-logo" className="shrink-0">
-          <div className="rounded-xl px-2 py-1 flex items-center justify-center backdrop-blur-sm transition-all duration-300">
+          <div className="flex items-center justify-center transition-all duration-300">
             <img
               src={`${import.meta.env.BASE_URL}logo.png`}
               alt="AkiliNest"
-              className={`object-contain drop-shadow-xl transition-all duration-300 ${
-                isScrolled ? "h-12 md:h-16" : "h-16 md:h-20 lg:h-24"
+              className={`object-contain transition-all duration-300 ${
+                isScrolled ? "h-10 md:h-12" : "h-12 md:h-14 lg:h-16"
               }`}
             />
           </div>
@@ -46,10 +46,10 @@ export default function Nav() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-[12px] md:text-[13px] font-medium px-2 md:px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
+              className={`text-[11px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded-lg transition-colors whitespace-nowrap ${
                 location === link.href
                   ? "text-[#E8693A]"
-                  : "text-white/80 hover:text-white"
+                  : "text-[#0F172A]/70 hover:text-[#0F172A]"
               }`}
               data-testid={`link-nav-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
             >
@@ -58,7 +58,7 @@ export default function Nav() {
           ))}
           <Link
             href="/contact"
-            className="bg-[#E8693A] hover:bg-[#C4561A] text-white px-4 md:px-5 py-2 rounded-full text-[12px] md:text-[13px] font-bold transition-all ml-1 whitespace-nowrap shadow-sm"
+            className="bg-[#E8693A] hover:bg-[#C4561A] text-white px-3 md:px-4 py-1.5 rounded-full text-[11px] md:text-[12px] font-black transition-all ml-1 whitespace-nowrap shadow-sm"
             data-testid="button-nav-cta"
           >
             Get in Touch
