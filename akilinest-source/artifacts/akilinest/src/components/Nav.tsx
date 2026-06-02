@@ -34,8 +34,8 @@ export default function Nav() {
           <img
             src={`${import.meta.env.BASE_URL}logo.png`}
             alt="AkiliNest"
-            className={`object-contain transition-all duration-300 -my-16 md:-my-24 -ml-3 ${
-              isScrolled ? "h-36 md:h-44" : "h-44 md:h-[220px]"
+            className={`object-contain transition-all duration-300 mt-2 -mb-32 md:-mb-44 -ml-3 ${
+              isScrolled ? "h-32 md:h-44" : "h-44 md:h-[220px]"
             }`}
           />
         </Link>

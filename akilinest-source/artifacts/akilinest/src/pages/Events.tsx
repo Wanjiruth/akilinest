@@ -23,8 +23,8 @@ export default function Events() {
               <div className="bg-[#0B4D5F] p-10 relative overflow-hidden">
                 <div className="absolute -right-14 -bottom-14 w-56 h-56 bg-white/5 rounded-full" />
                 <span className="inline-block bg-white/15 text-white text-xs font-bold tracking-[1.5px] uppercase px-4 py-2 rounded-full mb-5">Open Enrolment</span>
-                <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] font-black text-white mb-3 relative z-10">AkiliNest:<br />First Cohort</h2>
-                <p className="text-base text-white/60 font-light relative z-10">The beginning of something remarkable. Join our very first cohorts across all stages.</p>
+                <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] font-black text-white mb-3 relative z-10">Join our cohort</h2>
+                <p className="text-base text-white/60 font-light relative z-10">The beginning of something remarkable. Register interest for upcoming intakes.</p>
               </div>
 
               {/* EVENT DETAILS */}

@@ -76,8 +76,6 @@ export default function Home() {
         <div className="relative z-10 px-6 md:px-14 pb-14 pt-20 max-w-5xl">
           <div className="flex items-center gap-4 mb-8">
             <span className="bg-[#E8693A] text-white text-[10px] font-black tracking-[2px] uppercase px-4 py-2 rounded-full">Creative Studio</span>
-            <span className="w-px h-4 bg-white/20" />
-            <span className="text-[11px] font-semibold tracking-[1.5px] uppercase text-white/50">Nairobi, Kenya · Ages 6 to 17</span>
           </div>
 
           <Typewriter />
