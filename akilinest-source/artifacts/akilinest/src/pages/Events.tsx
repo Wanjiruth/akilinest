@@ -16,39 +16,46 @@ export default function Events() {
       </div>
 
       <section className="bg-[#0D0C18] px-6 md:px-14 py-20">
-        <div className="max-w-2xl">
+        <div className="max-w-5xl">
           <Reveal>
-            <div className="bg-white/4 border border-white/8 rounded-3xl overflow-hidden">
-              {/* EVENT HEADER */}
-              <div className="bg-[#0B4D5F] p-10 relative overflow-hidden">
-                <div className="absolute -right-14 -bottom-14 w-56 h-56 bg-white/5 rounded-full" />
-                <span className="inline-block bg-white/15 text-white text-xs font-bold tracking-[1.5px] uppercase px-4 py-2 rounded-full mb-5">Open Enrolment</span>
-                <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] font-black text-white mb-3 relative z-10">Join our cohort</h2>
-                <p className="text-base text-white/60 font-light relative z-10">The beginning of something remarkable. Register interest for upcoming intakes.</p>
+            <div className="bg-white/4 border border-white/8 rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_0.8fr]">
+              <div className="flex flex-col">
+                {/* EVENT HEADER */}
+                <div className="bg-[#0B4D5F] p-8 md:p-10 relative overflow-hidden">
+                  <div className="absolute -right-14 -bottom-14 w-56 h-56 bg-white/5 rounded-full" />
+                  <span className="inline-block bg-white/15 text-white text-xs font-bold tracking-[1.5px] uppercase px-4 py-2 rounded-full mb-5">Open Enrolment</span>
+                  <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] font-black text-white mb-3 relative z-10">Join our cohort</h2>
+                  <p className="text-base text-white/60 font-light relative z-10">The beginning of something remarkable. Register interest for upcoming intakes.</p>
+                </div>
+
+                {/* EVENT DETAILS */}
+                <div className="p-8 md:p-10 space-y-6 flex-1 flex flex-col justify-center">
+                  {[
+                    { label: "Venue", value: "HeartSpace, Kabernet Road, Nairobi" },
+                    { label: "The Space", value: "Teal walls, parquet floors, children's art gallery, fairy lights" },
+                    { label: "Who it's for", value: "Children aged 6 to 17 (All Stages)" },
+                    { label: "Cohort size", value: "Intimate and hands-on groups" },
+                  ].map((row) => (
+                    <div key={row.label} className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-white/6 rounded-xl flex items-center justify-center text-[10px] font-bold text-white/35 shrink-0 font-serif">{row.label.slice(0, 3)}</div>
+                      <div>
+                        <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#1A7A97] block mb-1">{row.label}</span>
+                        <span className="text-sm text-white/75 font-light">{row.value}</span>
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className="h-px bg-white/7 my-4" />
+
+                  <Link href="/contact" data-testid="button-event-register" className="inline-flex items-center gap-2 bg-[#0B4D5F] hover:bg-[#1A7A97] text-white font-bold text-sm px-8 py-4 rounded-full transition-all w-max">
+                    Register your child's interest
+                  </Link>
+                </div>
               </div>
 
-              {/* EVENT DETAILS */}
-              <div className="p-10 space-y-6">
-                {[
-                  { label: "Venue", value: "HeartSpace, Kabernet Road, Nairobi" },
-                  { label: "The Space", value: "Teal walls, parquet floors, children's art gallery, fairy lights" },
-                  { label: "Who it's for", value: "Children aged 6 to 17 (All Stages)" },
-                  { label: "Cohort size", value: "Intimate and hands-on groups" },
-                ].map((row) => (
-                  <div key={row.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-white/6 rounded-xl flex items-center justify-center text-[10px] font-bold text-white/35 shrink-0 font-serif">{row.label.slice(0, 3)}</div>
-                    <div>
-                      <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#1A7A97] block mb-1">{row.label}</span>
-                      <span className="text-sm text-white/75 font-light">{row.value}</span>
-                    </div>
-                  </div>
-                ))}
-
-                <div className="h-px bg-white/7 my-2" />
-
-                <Link href="/contact" data-testid="button-event-register" className="inline-flex items-center gap-2 bg-[#0B4D5F] hover:bg-[#1A7A97] text-white font-bold text-sm px-8 py-4 rounded-full transition-all">
-                  Register your child's interest
-                </Link>
+              {/* EVENT IMAGE */}
+              <div className="relative min-h-[300px] lg:min-h-full">
+                <img src={`${import.meta.env.BASE_URL}event-space.jpg`} alt="AkiliNest Event Space" className="absolute inset-0 w-full h-full object-cover" />
               </div>
             </div>
           </Reveal>
