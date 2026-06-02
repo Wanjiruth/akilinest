@@ -23,8 +23,8 @@ export default function Events() {
               <div className="bg-[#0B4D5F] p-10 relative overflow-hidden">
                 <div className="absolute -right-14 -bottom-14 w-56 h-56 bg-white/5 rounded-full" />
                 <span className="inline-block bg-white/15 text-white text-xs font-bold tracking-[1.5px] uppercase px-4 py-2 rounded-full mb-5">Open Enrolment</span>
-                <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] font-black text-white mb-3 relative z-10">AkiliNest Sprouts:<br />First Cohort</h2>
-                <p className="text-base text-white/60 font-light relative z-10">The beginning of something remarkable. Join the first group of Sprouts.</p>
+                <h2 className="font-serif text-[clamp(1.8rem,3vw,2.4rem)] font-black text-white mb-3 relative z-10">AkiliNest:<br />First Cohort</h2>
+                <p className="text-base text-white/60 font-light relative z-10">The beginning of something remarkable. Join our very first cohorts across all stages.</p>
               </div>
 
               {/* EVENT DETAILS */}
@@ -32,8 +32,8 @@ export default function Events() {
                 {[
                   { label: "Venue", value: "HeartSpace, Kabernet Road, Nairobi" },
                   { label: "The Space", value: "Teal walls, parquet floors, children's art gallery, fairy lights" },
-                  { label: "Who it's for", value: "Children aged 6 to 8, Sprouts stage" },
-                  { label: "Cohort size", value: "20 children, two instructors, intimate and hands-on" },
+                  { label: "Who it's for", value: "Children aged 6 to 17 (All Stages)" },
+                  { label: "Cohort size", value: "Intimate and hands-on groups" },
                 ].map((row) => (
                   <div key={row.label} className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-white/6 rounded-xl flex items-center justify-center text-[10px] font-bold text-white/35 shrink-0 font-serif">{row.label.slice(0, 3)}</div>
