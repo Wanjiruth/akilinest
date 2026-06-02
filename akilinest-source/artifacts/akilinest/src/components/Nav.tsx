@@ -28,20 +28,23 @@ export default function Nav() {
           : "bg-transparent py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
-        {/* LOGO */}
-        <Link href="/" data-testid="link-home-logo" className="shrink-0 flex items-center pr-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4 relative">
+        {/* LOGO SPACER */}
+        <div className="w-[120px] md:w-[150px] shrink-0" />
+
+        {/* LOGO OVERLAY */}
+        <Link href="/" data-testid="link-home-logo" className="absolute left-4 md:left-8 top-0 shrink-0 flex items-center">
           <img
             src={`${import.meta.env.BASE_URL}logo.png`}
             alt="AkiliNest"
-            className={`object-contain transition-all duration-300 mt-2 -mb-32 md:-mb-44 -ml-3 ${
-              isScrolled ? "h-32 md:h-44" : "h-44 md:h-[220px]"
+            className={`object-contain transition-all duration-300 origin-top-left ${
+              isScrolled ? "h-20 md:h-28 mt-2" : "h-32 md:h-[180px] mt-2 md:mt-4"
             }`}
           />
         </Link>
 
         {/* NAV LINKS */}
-        <nav className="flex items-center gap-0.5 md:gap-1 flex-wrap justify-end">
+        <nav className="flex items-center gap-0.5 md:gap-1 flex-wrap justify-end flex-1">
           {navLinks.map((link) => (
             <Link
               key={link.name}
