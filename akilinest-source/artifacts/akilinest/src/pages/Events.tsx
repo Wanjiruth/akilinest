@@ -19,9 +19,11 @@ export default function Events() {
       />
 
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">
-        <img src={asset(IMAGES.flyerHolidayCamps)} alt="AkiliNest holiday camps flyer" className="absolute inset-0 w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0C18] to-[#0B4D5F]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 to-transparent" />
+        <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover">
+          <source src={`${import.meta.env.BASE_URL}space.mp4`} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D0C18]/80 to-[#0B4D5F]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/90 to-transparent" />
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-3 block">Events</span>
           <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Where the<br />learning begins</h1>
