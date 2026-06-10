@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Reveal } from "@/components/Reveal";
+import PageMeta from "@/components/PageMeta";
+import { eventInterestOptions } from "@/content/events";
 
 export default function Contact() {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", stage: "", interest: "Weekend sessions", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", stage: "", interest: eventInterestOptions[0], message: "" });
   const [submitting, setSubmitting] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
@@ -23,7 +25,7 @@ export default function Contact() {
           body: JSON.stringify(form),
         });
         if (res.ok) {
-          setForm({ name: "", email: "", stage: "", interest: "Weekend sessions", message: "" });
+          setForm({ name: "", email: "", stage: "", interest: eventInterestOptions[0], message: "" });
           toast({ title: "Message sent", description: "We'll be in touch shortly. Thank you for your interest in AkiliNest." });
         } else {
           throw new Error("Server error");
@@ -34,7 +36,7 @@ export default function Contact() {
         const waNumber = '254702820845';
         const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
         if (typeof window !== 'undefined') window.open(waUrl, '_blank', 'noopener,noreferrer');
-        setForm({ name: "", email: "", stage: "", interest: "Weekend sessions", message: "" });
+        setForm({ name: "", email: "", stage: "", interest: eventInterestOptions[0], message: "" });
         toast({ title: "Opening WhatsApp", description: "You'll be redirected to WhatsApp to send your message." });
       }
     } catch (err) {
@@ -49,6 +51,12 @@ export default function Contact() {
 
   return (
     <>
+      <PageMeta
+        title="Contact & Register | AkiliNest Nairobi"
+        description="Register your child for AkiliNest programmes, holiday camps, or taster sessions. WhatsApp 0702 820 845 or email akilinest@gmail.com."
+        path="/contact"
+        keywords={["register AkiliNest", "contact creative studio Nairobi", "enrol child Nairobi"]}
+      />
       <div className="relative" style={{ height: "40vh", minHeight: "280px" }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0D0C18] to-[#1A2030]" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 to-transparent" />
@@ -109,10 +117,9 @@ export default function Contact() {
               <div>
                 <label className="block text-xs font-bold text-[#0D0C18] mb-2">I am interested in</label>
                 <select value={form.interest} onChange={(e) => setForm({ ...form, interest: e.target.value })} className={inputClass} data-testid="select-contact-interest">
-                  <option>Weekend sessions</option>
-                  <option>Holiday camps</option>
-                  <option>Parent Intelligence Series</option>
-                  <option>Partnership or general enquiry</option>
+                  {eventInterestOptions.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
                 </select>
               </div>
               <div>

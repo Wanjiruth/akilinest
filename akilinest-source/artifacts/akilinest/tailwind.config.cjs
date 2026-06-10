@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"DM Sans"', 'sans-serif'],
+        serif: ['"Fraunces"', 'serif'],
+      },
       colors: {
         border: 'hsl(var(--color-border) / <alpha-value>)',
         input: 'hsl(var(--color-input) / <alpha-value>)',

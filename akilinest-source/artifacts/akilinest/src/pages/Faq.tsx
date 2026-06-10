@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
+import PageMeta from "@/components/PageMeta";
+import EventCTA from "@/components/EventCTA";
 
 const faqs = [
   { tag: "On AI and effort", q: "Will AI make my child lazy?", a: "No. AI does not make children lazy. <strong>Poor learning systems do.</strong> When AI is used without a thinking structure, children skip the mental effort that builds capability. But when guided properly, AI actually increases curiosity and depth of thinking, because children have to direct it, question its outputs, and explain their reasoning afterwards. At AkiliNest, children think before AI is ever opened. The brain stays active throughout." },
@@ -39,6 +41,24 @@ function FaqItem({ faq }: { faq: typeof faqs[0] }) {
 export default function Faq() {
   return (
     <>
+      <PageMeta
+        title="FAQ — AI, Thinking & Programmes for Children in Nairobi"
+        description="Answers to what Nairobi parents actually ask: Is AI safe? Will my child stop thinking? How is AkiliNest different from school? Ages 6–17."
+        path="/faq"
+        keywords={["AkiliNest FAQ", "AI safe for kids", "creative programmes Nairobi", "children AI education Kenya"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.a.replace(/<[^>]+>/g, ""),
+            },
+          })),
+        }}
+      />
       {/* PAGE HERO */}
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0D0C18] to-[#1A2030]" />
@@ -75,6 +95,8 @@ export default function Faq() {
           </Reveal>
         </div>
       </section>
+
+      <EventCTA />
     </>
   );
 }

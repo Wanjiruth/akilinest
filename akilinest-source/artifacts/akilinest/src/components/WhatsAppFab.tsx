@@ -1,7 +1,9 @@
+import { WHATSAPP_URL } from "@/content/events";
+
 export default function WhatsAppFab() {
   return (
     <a
-      href="https://wa.me/254702820845"
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"

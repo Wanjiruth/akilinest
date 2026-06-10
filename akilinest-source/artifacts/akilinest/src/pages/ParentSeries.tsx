@@ -1,5 +1,8 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
+import PageMeta from "@/components/PageMeta";
+import EventCTA from "@/components/EventCTA";
+import { asset, IMAGES } from "@/lib/images";
 
 const sessions = [
   {
@@ -46,6 +49,12 @@ const formats = [
 export default function ParentSeries() {
   return (
     <>
+      <PageMeta
+        title="Parent Intelligence Series | Raising Kids in the AI Era | AkiliNest"
+        description="Five thoughtful parent sessions for Nairobi families — AI safety, screens, creation, digital identity, and future skills. Not fear-based."
+        path="/pis"
+        keywords={["parenting AI era Nairobi", "parent workshops Kenya", "raising kids technology Africa"]}
+      />
       {/* PAGE HERO */}
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">
         <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}parents-poster.jpg`}>
@@ -63,11 +72,23 @@ export default function ParentSeries() {
       {/* HERO STRIP */}
       <div className="bg-[#0B4D5F] px-6 md:px-14 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <Reveal>
-          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,3rem)] font-black text-white leading-tight mb-4">Not a fear-based talk.<br />A thoughtful, future-focused experience.</h2>
-          <p className="text-base text-white/60 leading-relaxed font-light">Instead of fear-based conversations around screens and technology, the series helps parents understand how to guide children intentionally in a fast-changing digital world. Designed for modern Nairobi families who want their children to become creative thinkers, confident communicators, and future-ready humans.</p>
+          <h2 className="font-serif text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white leading-tight mb-4">Not a fear-based talk.<br />A thoughtful, future-focused experience.</h2>
+          <p className="text-base text-white/60 leading-relaxed">Instead of fear-based conversations around screens and technology, the series helps parents guide children intentionally in a fast-changing digital world.</p>
         </Reveal>
         <Reveal delay={100}>
-          <div className="bg-white/7 border border-white/12 rounded-2xl p-7">
+          <img
+            src={asset(IMAGES.parentLearning3)}
+            alt="A mother and child using laptops and tablets together for learning at home"
+            loading="lazy"
+            className="rounded-2xl object-cover w-full aspect-[4/3] shadow-xl mb-6 lg:mb-0"
+          />
+        </Reveal>
+      </div>
+
+      <div className="bg-[#0B4D5F] px-6 md:px-14 pb-16">
+        <div className="max-w-6xl mx-auto">
+        <Reveal delay={120}>
+          <div className="bg-white/7 border border-white/12 rounded-2xl p-7 max-w-2xl">
             <h4 className="font-serif text-base font-black text-white mb-4">The AkiliNest Parent Series is not:</h4>
             <ul className="space-y-2 mb-6">
               {["A fear-based tech talk", "An anti-screen movement", "A traditional parenting seminar"].map((item) => (
@@ -88,6 +109,7 @@ export default function ParentSeries() {
             </ul>
           </div>
         </Reveal>
+        </div>
       </div>
 
       {/* SESSIONS */}
@@ -142,16 +164,17 @@ export default function ParentSeries() {
         </div>
       </section>
 
-      {/* PIS CTA */}
       <div className="bg-[#FFF0E8] border-t border-[#C4561A]/15 px-6 md:px-14 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <h3 className="font-serif text-2xl font-black text-[#0D0C18] mb-1">Interested in attending?</h3>
-          <p className="text-sm text-[#5C5A70] font-light">Standalone one-day events, open to all parents. No child enrolment required.</p>
+          <h3 className="font-serif text-2xl font-bold text-[#0D0C18] mb-1">Interested in attending?</h3>
+          <p className="text-sm text-[#4A4860]">Standalone one-day events, open to all parents. No child enrolment required.</p>
         </div>
         <Link href="/contact" data-testid="button-pis-register" className="inline-flex items-center gap-2 bg-[#0B4D5F] hover:bg-[#1A7A97] text-white font-bold text-sm px-8 py-4 rounded-full transition-all shrink-0">
           Register Interest
         </Link>
       </div>
+
+      <EventCTA />
     </>
   );
 }

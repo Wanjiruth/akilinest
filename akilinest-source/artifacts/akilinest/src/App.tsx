@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Switch, Route, Router, useLocation } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,10 @@ import Events from "@/pages/Events";
 import About from "@/pages/About";
 import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
+import ParentsGuide from "@/pages/ParentsGuide";
+import FutureSkillsReport from "@/pages/FutureSkillsReport";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -26,7 +29,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location]);
-  
+
   return null;
 }
 
@@ -45,6 +48,10 @@ function AppRouter() {
           <Route path="/about" component={About} />
           <Route path="/faq" component={Faq} />
           <Route path="/contact" component={Contact} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/parents-guide" component={ParentsGuide} />
+          <Route path="/future-skills-report" component={FutureSkillsReport} />
           <Route component={NotFound} />
         </Switch>
       </main>
@@ -58,7 +65,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Router hook={useHashLocation} base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+        <Router base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <AppRouter />
         </Router>
         <Toaster />
