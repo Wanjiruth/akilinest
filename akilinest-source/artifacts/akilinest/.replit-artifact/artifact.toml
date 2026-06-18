@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "AkiliNest"
+version = "1.0.0"
+id = "artifacts/akilinest"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21555
+
+[services.development]
+run = "pnpm --filter @workspace/akilinest run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/akilinest", "run", "build" ]
+publicDir = "artifacts/akilinest/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21555"
+BASE_PATH = "/"
