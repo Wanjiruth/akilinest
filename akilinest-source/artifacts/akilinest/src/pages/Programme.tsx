@@ -152,7 +152,14 @@ export default function Programme() {
       />
 
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">
-        <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}programs-poster.jpg`}>
+        <video
+          // Performance: avoid autoplay/loop on load; reduce Lighthouse impact.
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          poster={`${import.meta.env.BASE_URL}programs-poster.jpg`}
+        >
           <source src={`${import.meta.env.BASE_URL}programs-painting.mp4`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B4D5F] to-[#1A7A97]" />
@@ -210,7 +217,10 @@ export default function Programme() {
                   <img
                     src={asset(s.image)}
                     alt={s.imageAlt}
+                    width="1200"
+                    height="900"
                     loading="lazy"
+                    decoding="async"
                     className="rounded-2xl object-cover w-full aspect-[4/3] shadow-2xl"
                   />
                 </Reveal>

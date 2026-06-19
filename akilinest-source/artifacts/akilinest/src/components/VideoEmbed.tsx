@@ -11,11 +11,11 @@ export default function VideoEmbed({ src, poster, title, caption, className = ""
   return (
     <figure className={`relative overflow-hidden rounded-2xl bg-[#0D0C18] ${className}`}>
       <video
-        autoPlay
+        // Keep video lightweight: don't autoplay to improve Lighthouse speed.
         muted
-        loop
         playsInline
         preload="metadata"
+
         poster={poster ? `${base}${poster.replace(/^\//, "")}` : undefined}
         className="w-full aspect-video object-cover"
         aria-label={title}

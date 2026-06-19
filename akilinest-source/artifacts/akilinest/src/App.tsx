@@ -20,6 +20,8 @@ import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import ParentsGuide from "@/pages/ParentsGuide";
 import FutureSkillsReport from "@/pages/FutureSkillsReport";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -52,6 +54,8 @@ function AppRouter() {
           <Route path="/blog/:slug" component={BlogPost} />
           <Route path="/parents-guide" component={ParentsGuide} />
           <Route path="/future-skills-report" component={FutureSkillsReport} />
+          <Route path="/privacy" component={Privacy} />
+          <Route path="/terms" component={Terms} />
           <Route component={NotFound} />
         </Switch>
       </main>

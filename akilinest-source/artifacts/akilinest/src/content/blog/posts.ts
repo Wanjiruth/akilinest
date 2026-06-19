@@ -2,6 +2,152 @@ import type { BlogPost } from "./types";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "is-ai-safe-for-my-child-nairobi",
+    title: "Is AI Safe for My Child? A Parent’s Guide to AI Education in Nairobi",
+    description:
+      "Is AI safe for kids in Nairobi? A parent’s guide to AI education, safety rules, and how AkiliNest teaches children to think first before using AI.",
+    searchQuery: "Is AI safe for my child Nairobi",
+    category: "ai-safety",
+    date: "2026-06-10",
+    readTime: "7 min",
+    featured: true,
+    heroImage: "images/parent-learning-1.jpg",
+    sections: [
+      {
+        heading: "Is AI safe for children? The real question",
+        paragraphs: [
+          "AI isn’t automatically dangerous. The risk comes from unstructured use: open-ended chatting, missing supervision, and skipping the thinking step. Nairobi parents aren’t asking for bans—they’re asking for safe structure they can trust.",
+          "AkiliNest’s approach is simple: children think first, then use AI as a helper, and finally present what they learned in their own words. This makes AI a coach—not a replacement for reasoning.",
+        ],
+      },
+      {
+        heading: "A safety checklist Nairobi parents can use",
+        paragraphs: [
+          "1) Thinking-first: no tool access until your child can explain the idea in one sentence.",
+          "2) Intentional AI: AI suggests, children decide. They label what came from the model versus their own thinking.",
+          "3) Privacy: never share personal details. Use AI for creative tasks, not data collection.",
+          "4) Accountability: after AI, children re-explain the output and defend their choices.",
+        ],
+      },
+      {
+        heading: "Where to learn the safer way in Nairobi",
+        paragraphs: [
+          "If you want a structured environment, explore AkiliNest programmes for ages 6–17 on /programme.",
+          "For registration and quick answers, book via WhatsApp using the contact options on /contact (and our WhatsApp button).",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "top-5-holiday-camps-nairobi-2026-future-skills",
+    title: "Top 5 Holiday Camps in Nairobi 2026 for Future Skills",
+    description:
+      "Looking for holiday camps in Nairobi 2026? Here are 5 camp types that build future skills—plus why AkiliNest adds thinking-first AI education.",
+    searchQuery: "Top holiday camps in Nairobi 2026 future skills",
+    category: "future-skills",
+    date: "2026-06-11",
+    readTime: "8 min",
+    featured: true,
+    heroImage: "images/kids-crafts.jpg",
+    sections: [
+      {
+        heading: "Why “holiday camps” should build skills",
+        paragraphs: [
+          "Many camps keep kids busy. The better ones build confidence and real capability: communication, problem-solving, creativity, and safe technology use.",
+          "Use this guide to compare camps in Nairobi 2026—then choose the one that matches how your child learns best.",
+        ],
+      },
+      {
+        heading: "The 5 camp types Nairobi parents should consider",
+        paragraphs: [
+          "1) Creative studios (story, design, media) where children create, present, and reflect.",
+          "2) Maker + build camps that teach planning and iteration—not copy-pasting.",
+          "3) Research-based tech camps that require thinking before tools are used.",
+          "4) Team + performance camps that strengthen speaking and confidence in small groups.",
+          "5) AI-structured camps where AI is used as a coach after children express their own ideas.",
+        ],
+      },
+      {
+        heading: "AkiliNest’s holiday camps (June–August 2026)",
+        paragraphs: [
+          "AkiliNest holiday camps run across four stages for children aged 6–17. Sessions are 2 hours daily, with limited spots by design.",
+          "For the exact dates, pricing, and taster options, visit /events. To compare programmes by age, go to /programme.",
+          "To reserve a place quickly, use WhatsApp via our contact flow on /contact.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "what-age-should-kids-start-learning-ai-akilnest",
+    title: "What Age Should Kids Start Learning AI? Expert Advice from AkiliNest",
+    description:
+      "What age should kids start learning AI in Nairobi? AkiliNest expert advice on developmental stages and the thinking-first rules that keep AI safe.",
+    searchQuery: "what age should kids start learning AI Nairobi",
+    category: "ai-safety",
+    date: "2026-06-12",
+    readTime: "7 min",
+    heroImage: "images/parent-learning-2.jpg",
+    sections: [
+      {
+        heading: "AI education should start with thinking",
+        paragraphs: [
+          "Before “AI tools,” children need the habit of thinking: forming an idea, choosing a direction, and explaining why. That habit comes first—at every age.",
+          "At AkiliNest, AI is introduced after the child can express their own idea, so tools amplify creativity instead of replacing reasoning.",
+        ],
+      },
+      {
+        heading: "Our recommended age stages (Nairobi-friendly structure)",
+        paragraphs: [
+          "Ages 6–8 (Sprouts): creativity-first. AI is used only after storytelling and expression.",
+          "Ages 9–11 (Explorers): critical AI literacy. Children learn what AI is good at and how to question it.",
+          "Ages 12–14 (Builders): project-building. AI supports intent, design thinking, and product iteration.",
+          "Ages 15–17 (Innovators): strategy + ethics. Children solve real problems and communicate defensible reasoning.",
+        ],
+      },
+      {
+        heading: "Choose the best fit for your child",
+        paragraphs: [
+          "Explore the stage that matches your child’s age and learning style on /programme.",
+          "If you want guidance and the quickest registration, message us on WhatsApp via /contact.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "a-day-at-akilnest-what-children-learn",
+    title: "A Day at AkiliNest: What Children Actually Learn in Our Workshops",
+    description:
+      "What happens in an AkiliNest workshop day? A Nairobi walkthrough of the thinking-first cycle: think, use AI wisely, and present confidently.",
+    searchQuery: "A Day at AkiliNest workshops what children learn",
+    category: "future-skills",
+    date: "2026-06-13",
+    readTime: "6 min",
+    heroImage: "images/parent-learning-3.jpg",
+    sections: [
+      {
+        paragraphs: [
+          "A typical AkiliNest workshop day is designed to keep children cognitively active—so AI becomes a tool, not a shortcut. Here’s what “actually learn” looks like in Nairobi.",
+        ],
+      },
+      {
+        heading: "The AkiliNest day structure",
+        paragraphs: [
+          "Think first: a warm-up where children form an opinion before any tool opens.",
+          "Create boldly: they build or write something in their own words—story, poster, prototype, or presentation.",
+          "Use AI wisely: AI suggests, challenges, and expands ideas after the child has expressed their own direction.",
+          "Present + defend: children explain the reasoning behind their output, not just the final result.",
+        ],
+      },
+      {
+        heading: "What parents notice by the end",
+        paragraphs: [
+          "Children leave with a tangible output and stronger confidence: clearer thinking, better articulation, and healthier relationships with technology.",
+          "See programme options by age on /programme, and register or book on WhatsApp via /contact.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "how-to-help-child-think-creatively-with-ai",
     title: "How to Help Your Child Think Creatively with AI Without Letting AI Do the Thinking",
     description:

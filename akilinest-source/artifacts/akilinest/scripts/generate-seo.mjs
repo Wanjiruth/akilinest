@@ -78,6 +78,18 @@ const staticPages = [
     description: "Five parent sessions on raising children in the AI era — screens, safety, creation, and future skills.",
     body: "Parent Intelligence Series for Nairobi families. Five thoughtful sessions on technology and parenting.",
   },
+  {
+    path: "/privacy",
+    title: "Privacy Policy | AkiliNest",
+    description: "How AkiliNest collects, uses, and protects your personal information.",
+    body: "AkiliNest privacy policy — your data rights and how we protect your information.",
+  },
+  {
+    path: "/terms",
+    title: "Terms of Service | AkiliNest",
+    description: "Terms and conditions for AkiliNest programmes, enrolment, and website use.",
+    body: "AkiliNest terms of service — enrolment terms, cancellation policy, and website use.",
+  },
 ];
 
 // Blog slugs — keep in sync with src/content/blog/posts.ts

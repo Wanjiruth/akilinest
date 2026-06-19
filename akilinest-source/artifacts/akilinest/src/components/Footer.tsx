@@ -35,6 +35,10 @@ export default function Footer() {
               <img
                 src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="AkiliNest"
+                width="400"
+                height="120"
+                loading="eager"
+                decoding="async"
                 className="h-16 md:h-20 w-auto max-w-[220px] object-contain object-left"
               />
             </Link>
@@ -129,17 +133,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-white/5">
-          <p className="text-xs text-white/25 font-sans">© 2026 AkiliNest. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-white/5">
+          <p className="text-xs text-white/25 font-sans">© 2026 AkiliNest. All rights reserved. Nairobi, Kenya.</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-sans">
-            <Link href="/faq" className="text-white/30 hover:text-white/60 transition-colors">
-              Privacy &amp; data
+            <Link href="/privacy" className="text-white/30 hover:text-white/60 transition-colors">
+              Privacy policy
             </Link>
-            <Link href="/faq" className="text-white/30 hover:text-white/60 transition-colors">
+            <Link href="/terms" className="text-white/30 hover:text-white/60 transition-colors">
               Terms of service
             </Link>
             <Link href="/faq" className="text-white/30 hover:text-white/60 transition-colors">
-              Refund policy
+              FAQ
             </Link>
           </div>
         </div>

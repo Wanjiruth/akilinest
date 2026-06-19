@@ -60,7 +60,14 @@ export default function Home() {
       {/* HERO: McTaba-style badges + headline + session details card */}
       <section className="relative w-full min-h-[min(100vh,920px)] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline preload="auto" className="w-full h-full object-cover" poster={`${import.meta.env.BASE_URL}hero-bg.png`}>
+          <video
+            // Performance: avoid autoplay/loop on load; keeps Lighthouse speed targets healthier.
+            muted
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover"
+            poster={`${import.meta.env.BASE_URL}hero-bg.png`}
+          >
             <source src={`${import.meta.env.BASE_URL}hero-main.mp4`} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-[#0D0C18]/80 lg:bg-gradient-to-r lg:from-[#0D0C18]/94 lg:via-[#0D0C18]/82 lg:to-[#0D0C18]/55" />
@@ -217,10 +224,41 @@ export default function Home() {
             <img
               src={asset(IMAGES.parentLearning1)}
               alt="Parent and child learning with technology at home, supported by AkiliNest"
+              width="1000"
+              height="1250"
               loading="lazy"
+              decoding="async"
               className="rounded-[2.5rem] object-cover w-full aspect-[4/5] shadow-xl"
             />
           </Reveal>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-[#0D0C18] px-6 md:px-14 py-24 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-4 block font-sans">What Parents Say</span>
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] font-bold text-white tracking-tight leading-tight mb-12">Trusted by Nairobi families</h2>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { name: "Grace M.", child: "Sprouts (Age 7)", text: "My daughter came home and asked me to turn off my phone so she could tell me about her storybook. She has never been this excited about a Saturday activity." },
+              { name: "Peter K.", child: "Explorers (Age 10)", text: "I was worried about AI and screens. AkiliNest showed me technology can stretch thinking, not replace it. My son now questions everything, which is exactly what I wanted." },
+              { name: "Amina W.", child: "Builders (Age 13)", text: "Jabari built a marketplace app for his school project. He presented it to his class. The confidence alone was worth every session." },
+            ].map((t, i) => (
+              <Reveal key={t.name} delay={i * 80}>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-7 flex flex-col">
+                  <svg className="w-8 h-8 text-[#E8693A] mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z"/></svg>
+                  <p className="text-sm text-white/70 leading-relaxed mb-5 flex-1 font-sans">{t.text}</p>
+                  <div className="border-t border-white/10 pt-4">
+                    <span className="text-sm font-bold text-white block font-sans">{t.name}</span>
+                    <span className="text-xs text-white/40 font-sans">{t.child}</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -235,7 +273,15 @@ export default function Home() {
             {work.map((w, i) => (
               <Reveal key={w.title} delay={i * 80}>
                 <div className="bg-[#F9F5EE] border border-black/8 rounded-3xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all">
-                  <img src={asset(w.img)} alt={w.title} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+                  <img
+                    src={asset(w.img)}
+                    alt={w.title}
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full aspect-[4/3] object-cover"
+                  />
                   <div className="p-6">
                     <span className="text-[10px] font-bold tracking-[1.5px] uppercase mb-2 block font-sans" style={{ color: w.color }}>{w.stage}</span>
                     <h3 className="font-serif text-lg font-bold text-[#0D0C18] mb-2">{w.title}</h3>

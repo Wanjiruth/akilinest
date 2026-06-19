@@ -21,11 +21,10 @@ export default function Events() {
       {/* FULL-PAGE VIDEO BACKGROUND */}
       <div className="fixed inset-0 w-full h-full -z-10">
         <video
-          autoPlay
+          // Performance: avoid autoplay/loop on load; reduces Lighthouse penalties.
           muted
-          loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className="w-full h-full object-cover"
         >
           <source src={`${import.meta.env.BASE_URL}space.mp4`} type="video/mp4" />
@@ -82,10 +81,13 @@ export default function Events() {
                 </div>
                 {featured.image && (
                   <div className="relative flex items-center justify-center bg-white/5 p-4 lg:max-w-[220px]">
-                    <img
+                  <img
                       src={asset(featured.image)}
                       alt="June 27 taster session flyer"
+                      width="600"
+                      height="450"
                       className="max-h-[200px] w-full object-contain"
+                      loading="lazy"
                     />
                   </div>
                 )}
@@ -154,7 +156,14 @@ export default function Events() {
                 <p className="text-sm text-white/50">Teal walls, parquet floors, children&apos;s art gallery, fairy lights. Intimate and hands-on.</p>
               </div>
               <div className="relative min-h-[200px]">
-                <img src={asset(IMAGES.eventSpace)} alt="heARTspace event venue Nairobi" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img
+                  src={asset(IMAGES.eventSpace)}
+                  alt="heARTspace event venue Nairobi"
+                  width="1200"
+                  height="800"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </Reveal>

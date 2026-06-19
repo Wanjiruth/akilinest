@@ -48,6 +48,10 @@ export default function Nav() {
             <img
               src={`${import.meta.env.BASE_URL}logo.png`}
               alt="AkiliNest"
+              width="400"
+              height="120"
+              loading="eager"
+              decoding="async"
               className={`w-full h-auto object-contain object-left transition-all duration-300 ${
                 isScrolled ? "max-h-11 md:max-h-12" : "max-h-14 md:max-h-[3.75rem]"
               }`}
@@ -123,6 +127,10 @@ export default function Nav() {
             <img
               src={`${import.meta.env.BASE_URL}logo.png`}
               alt="AkiliNest"
+              width="140"
+              height="40"
+              loading="eager"
+              decoding="async"
               className="h-10 w-auto max-w-[140px] object-contain"
             />
             <button onClick={() => setMenuOpen(false)} className="text-white/50 hover:text-white text-2xl leading-none">

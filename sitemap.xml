@@ -51,6 +51,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://akilinest.co.ke/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://akilinest.co.ke/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://akilinest.co.ke/blog/how-to-help-child-think-creatively-with-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -167,6 +177,26 @@
   </url>
   <url>
     <loc>https://akilinest.co.ke/blog/kes-investment-future-proof-mind</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akilinest.co.ke/blog/is-ai-safe-for-my-child-nairobi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akilinest.co.ke/blog/top-5-holiday-camps-nairobi-2026-future-skills</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akilinest.co.ke/blog/what-age-should-kids-start-learning-ai-akilnest</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akilinest.co.ke/blog/a-day-at-akilnest-what-children-learn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

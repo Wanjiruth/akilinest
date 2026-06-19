@@ -14,7 +14,14 @@ export default function About() {
       />
 
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">
-        <img src={asset(IMAGES.parentLearning2)} alt="Parent and child learning together at home" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+        <img
+          src={asset(IMAGES.parentLearning2)}
+          alt="Parent and child learning together at home"
+          width="1200"
+          height="900"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B4D5F] via-[#0D0C18]/90 to-[#0D0C18]" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/70 to-transparent" />
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
@@ -43,6 +50,8 @@ export default function About() {
             <img
               src={asset(IMAGES.kidsCrafts)}
               alt="Children participating in a hands-on creative arts workshop"
+              width="1200"
+              height="900"
               loading="lazy"
               className="rounded-3xl object-cover w-full aspect-[4/3] mb-6 shadow-lg"
             />
