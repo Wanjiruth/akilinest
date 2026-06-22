@@ -61,10 +61,11 @@ export default function Home() {
       <section className="relative w-full min-h-[min(100vh,920px)] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
-            // Performance: avoid autoplay/loop on load; keeps Lighthouse speed targets healthier.
+            autoPlay
+            loop
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             className="w-full h-full object-cover"
             poster={`${import.meta.env.BASE_URL}hero-bg.png`}
           >
