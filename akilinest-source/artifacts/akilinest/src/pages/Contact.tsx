@@ -53,7 +53,7 @@ export default function Contact() {
     <>
       <PageMeta
         title="Contact & Register | AkiliNest Nairobi"
-        description="Register your child for AkiliNest programmes, holiday camps, or taster sessions. WhatsApp 0702 820 845 or email akilinest@gmail.com."
+        description="Register your child for AkiliNest programmes or holiday camps. WhatsApp 0702 820 845 or email akilinest@gmail.com."
         path="/contact"
         keywords={["register AkiliNest", "contact creative studio Nairobi", "enrol child Nairobi"]}
       />

@@ -31,11 +31,11 @@ export default function HeroSessionCard() {
         {featuredEvent.price && (
           <div className="flex items-start gap-3">
             <div className="w-9 h-9 rounded-lg bg-[#E8693A]/20 flex items-center justify-center shrink-0">
-              <span className="text-xs font-bold text-[#E8693A] font-sans">KSh</span>
+              <span className="text-xs font-bold text-[#E8693A] font-sans">i</span>
             </div>
             <div>
               <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/35 block mb-0.5 font-sans">
-                Taster fee
+                Availability
               </span>
               <span className="text-sm text-white font-semibold font-sans">{featuredEvent.price}</span>
             </div>

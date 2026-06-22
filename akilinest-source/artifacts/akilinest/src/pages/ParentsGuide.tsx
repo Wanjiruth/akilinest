@@ -23,8 +23,8 @@ const notIdealFor = [
 const steps = [
   {
     n: "01",
-    title: "Attend a Taster Session",
-    desc: "June 27, 2026 — KSh 2,000, 3 hours at heARTspace. See the Think-First cycle in action with your child.",
+    title: "Book a Holiday Camp Spot",
+    desc: "10 days, 2 hours daily, at heARTspace. See the Think-First cycle in action with your child.",
   },
   {
     n: "02",
@@ -33,8 +33,8 @@ const steps = [
   },
   {
     n: "03",
-    title: "Join Holiday Camp or Weekends",
-    desc: "10-day camps (2 hrs/day) or weekend sessions. Small cohorts, tangible outputs every week.",
+    title: "Continue with Weekend Sessions",
+    desc: "After camp, ongoing weekend cohorts. Small groups, tangible outputs every week.",
   },
   {
     n: "04",

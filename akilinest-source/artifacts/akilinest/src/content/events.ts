@@ -26,11 +26,10 @@ export const events: AkiliEvent[] = [
     dates: "Saturday, 27 June 2026",
     time: "10:00 AM - 1:00 PM",
     price: "KSh 2,000 per child",
-    badge: "Next Up",
+    badge: "Past Event",
     description: "A 3-hour introduction to the AkiliNest Think-First cycle. Ages 6-17. See how we teach children to think before they use AI.",
     highlights: ["Ages 6-17", "3 hours", "KSh 2,000", "Limited spots"],
     image: "images/flyer-june27.png",
-    featured: true,
   },
   {
     id: "camp-july-1",
@@ -39,10 +38,11 @@ export const events: AkiliEvent[] = [
     time: "10:00 AM - 12:00 PM daily",
     duration: "10 days · 2 hours each day",
     price: "Limited spots",
-    badge: "Holiday Camp",
+    badge: "Next Up",
     description: "Hands-on creative intelligence sessions across all four programme stages.",
     highlights: ["10 days", "2 hrs/day", "Small groups", "Tangible outputs weekly"],
     image: "images/flyer-holiday-camps.jpg",
+    featured: true,
   },
   {
     id: "camp-july-2",
@@ -104,7 +104,6 @@ export const holidayCampsFlyer = {
 };
 
 export const eventInterestOptions = [
-  "June 27 Taster Session",
   "Holiday Camp: July 6-19",
   "Holiday Camp: July 20-31",
   "Holiday Camp: August 3-16",

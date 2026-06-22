@@ -14,7 +14,7 @@ const stats = [
   { value: "4", label: "Programme stages at AkiliNest" },
   { value: "6-17", label: "Ages we serve in Nairobi" },
   { value: "2 hrs", label: "Daily holiday camp sessions" },
-  { value: "KSh 2K", label: "June 27 taster at AkiliNest" },
+  { value: "10 days", label: "Per holiday camp intake" },
 ];
 
 const stages = [

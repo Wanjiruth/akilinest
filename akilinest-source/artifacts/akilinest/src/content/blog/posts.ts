@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
         heading: "AkiliNest’s holiday camps (June–August 2026)",
         paragraphs: [
           "AkiliNest holiday camps run across four stages for children aged 6–17. Sessions are 2 hours daily, with limited spots by design.",
-          "For the exact dates, pricing, and taster options, visit /events. To compare programmes by age, go to /programme.",
+          "For exact dates and pricing, visit /events. To compare programmes by age, go to /programme.",
           "To reserve a place quickly, use WhatsApp via our contact flow on /contact.",
         ],
       },
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Upcoming dates",
         paragraphs: [
-          "Start with our Saturday 27 June 2026 taster (10 AM to 1 PM, KSh 2,000 per child) or book a July or August holiday camp (10 days, 2 hours per day, limited spots). Registration takes two minutes online or via WhatsApp.",
+          "Book a July or August holiday camp (10 days, 2 hours per day, limited spots). Registration takes two minutes online or via WhatsApp.",
         ],
       },
       {
@@ -518,8 +518,8 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "AkiliNest weekend sessions",
         paragraphs: [
-          "Our taster sessions and weekend cohorts at heARTspace give children a 2-3 hour creative intelligence experience, think first, create boldly, use AI wisely.",
-          "Check our Events page for June 27 taster (KSh 2,000) and holiday camp dates.",
+          "Our weekend cohorts and holiday camps at heARTspace give children a hands-on creative intelligence experience, think first, create boldly, use AI wisely.",
+          "Check our Events page for July and August holiday camp dates.",
         ],
       },
     ],
@@ -841,9 +841,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "kes-investment-future-proof-mind",
-    title: "The KSh 2,000 Investment That Future-Proofs Your Child's Mind",
+    title: "The KSh 12,000 Holiday Camp That Future-Proofs Your Child's Mind",
     description:
-      "One taster session. A real experience of thinking-first creative intelligence. What Nairobi parents get for KSh 2,000.",
+      "Ten days. A real experience of thinking-first creative intelligence. What Nairobi parents get for KSh 12,000.",
     searchQuery: "affordable creative classes kids Nairobi",
     category: "future-skills",
     date: "2026-02-06",
@@ -851,16 +851,16 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         paragraphs: [
-          "Private tutoring in Nairobi runs KSh 3,000-8,000 per hour. Coding camps run KSh 15,000-40,000 per week. The search for affordable creative classes kids Nairobi is real, you want value, not just volume.",
-          "AkiliNest's June 27 taster session is KSh 2,000 per child. Three hours at heARTspace. Your child experiences the Think-First cycle, think, write, use AI, present, and you see whether this approach fits your family.",
+          "The search for affordable creative classes kids Nairobi is real, you want value, not just volume.",
+          "AkiliNest's holiday camp is KSh 12,000 per child for 10 days. Two hours daily at heARTspace. Your child moves through the Think-First cycle, think, write, use AI, present, and you see whether this approach fits your family.",
         ],
       },
       {
-        heading: "What KSh 2,000 buys",
+        heading: "What KSh 12,000 buys",
         paragraphs: [
-          "A morning of guided creative intelligence, not passive screen time.",
-          "A tangible output your child brings home.",
-          "Your own clarity on whether to enrol in holiday camps (10 days, 2 hours daily).",
+          "10 days of guided creative intelligence, not passive screen time.",
+          "Tangible outputs your child brings home along the way.",
+          "July intakes: 6-19 July and 20-31 July. August intakes: 3-16 August and 17-28 August.",
           "Reserve via WhatsApp 0702 820 845 or our Events page.",
         ],
       },

@@ -125,8 +125,8 @@ export default function Footer() {
             <div className="mt-6">
               <h6 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/25 mb-3 font-sans">Session times</h6>
               <div className="text-sm text-white/40 space-y-1 font-sans">
-                <p>Sat: Taster sessions & weekend programmes</p>
                 <p>Mon-Fri: Holiday camps (July & August)</p>
+                <p>Sat: Weekend programmes</p>
                 <p>WhatsApp: Mon-Sat inquiries</p>
               </div>
             </div>

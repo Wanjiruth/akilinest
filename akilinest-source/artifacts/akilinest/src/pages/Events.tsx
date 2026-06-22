@@ -12,8 +12,8 @@ export default function Events() {
   return (
     <>
       <PageMeta
-        title="Holiday Camps & Taster Sessions June-August 2026 | AkiliNest"
-        description="Register for AkiliNest events in Nairobi. June 27 taster KSh 2,000. Holiday camps July-August 2026 at heARTspace. Ages 6-17. Limited spots."
+        title="Holiday Camps July-August 2026 | AkiliNest"
+        description="Register for AkiliNest holiday camps in Nairobi. July and August 2026 intakes at heARTspace. Ages 6-17, 10 days each, 2 hours daily. Limited spots."
         path="/events"
         keywords={["holiday camps kids Nairobi", "creative classes children Nairobi", "AkiliNest events", "after school activities Kenya"]}
       />
@@ -38,7 +38,7 @@ export default function Events() {
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-3 block">Events</span>
           <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Where the<br />learning begins</h1>
-          <p className="text-base text-white/60 max-w-lg leading-relaxed">Taster sessions, holiday camps, and weekend programmes for children and parents in Nairobi.</p>
+          <p className="text-base text-white/60 max-w-lg leading-relaxed">Holiday camps and weekend programmes for children and parents in Nairobi.</p>
         </div>
       </div>
 
@@ -83,7 +83,7 @@ export default function Events() {
                   <div className="relative flex items-center justify-center bg-white/5 p-4 lg:max-w-[220px]">
                   <img
                       src={asset(featured.image)}
-                      alt="June 27 taster session flyer"
+                      alt={`${featured.title} flyer`}
                       width="600"
                       height="450"
                       className="max-h-[200px] w-full object-contain"

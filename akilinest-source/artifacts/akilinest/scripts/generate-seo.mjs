@@ -27,10 +27,10 @@ const staticPages = [
   },
   {
     path: "/events",
-    title: "Holiday Camps & Taster Sessions June–August 2026 | AkiliNest",
+    title: "Holiday Camps July–August 2026 | AkiliNest",
     description:
-      "Register for AkiliNest holiday camps and taster sessions in Nairobi. June 27 taster KSh 2000. July and August 10-day camps at heARTspace.",
-    body: "June 27 2026 taster session. Holiday camps July 6-19, 20-31 and August 3-16, 17-28 at heARTspace Kabarnet Road Nairobi.",
+      "Register for AkiliNest holiday camps in Nairobi. July and August 2026 intakes at heARTspace. Ages 6-17, 10 days each, 2 hours daily. Limited spots.",
+    body: "Holiday camps July 6-19, 20-31 and August 3-16, 17-28 2026 at heARTspace Kabarnet Road Nairobi.",
   },
   {
     path: "/faq",
@@ -94,6 +94,10 @@ const staticPages = [
 
 // Blog slugs — keep in sync with src/content/blog/posts.ts
 const blogSlugs = [
+  { slug: "is-ai-safe-for-my-child-nairobi", title: "Is AI Safe for My Child? A Parent's Guide to AI Education in Nairobi", description: "Is AI safe for kids in Nairobi? A parent's guide to AI education, safety rules, and how AkiliNest teaches children to think first before using AI." },
+  { slug: "top-5-holiday-camps-nairobi-2026-future-skills", title: "Top 5 Holiday Camps in Nairobi 2026 for Future Skills", description: "Looking for holiday camps in Nairobi 2026? Here are 5 camp types that build future skills, plus why AkiliNest adds thinking-first AI education." },
+  { slug: "what-age-should-kids-start-learning-ai-akilnest", title: "What Age Should Kids Start Learning AI? Expert Advice from AkiliNest", description: "What age should kids start learning AI in Nairobi? AkiliNest expert advice on developmental stages and the thinking-first rules that keep AI safe." },
+  { slug: "a-day-at-akilnest-what-children-learn", title: "A Day at AkiliNest: What Children Actually Learn in Our Workshops", description: "What happens in an AkiliNest workshop day? A Nairobi walkthrough of the thinking-first cycle: think, use AI wisely, and present confidently." },
   { slug: "how-to-help-child-think-creatively-with-ai", title: "How to Help Your Child Think Creatively with AI Without Letting AI Do the Thinking", description: "Three practical tips for Nairobi parents: think first, create boldly, use AI wisely. Plus what AkiliNest does differently." },
   { slug: "is-chatgpt-safe-for-my-child", title: "Is ChatGPT Safe for Your Child? What Nairobi Parents Need to Know", description: "60% of parents worry about inappropriate AI content. Research-backed guide for Nairobi families." },
   { slug: "is-my-kid-cheating-with-ai", title: "Is My Kid Cheating with AI? A Nairobi Parent's Guide", description: "How to tell cheating from learning when your child uses AI for homework." },
@@ -117,7 +121,7 @@ const blogSlugs = [
   { slug: "african-stack-for-kids", title: "The African Stack for Kids: M-Pesa, Climate, Community", description: "African context for children's technology education in Nairobi." },
   { slug: "50-nairobi-parents-ai-era", title: "What I Learned From 50 Nairobi Parents About Raising Kids in the AI Era", description: "Five shared fears and three surprising hopes." },
   { slug: "mom-google-says-to-mom-i-disagree", title: "From Mom Google Says to Mom I Disagree", description: "How children move from accepting AI answers to independent positions." },
-  { slug: "kes-investment-future-proof-mind", title: "The KSh 2000 Investment That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
+  { slug: "kes-investment-future-proof-mind", title: "The KSh 12000 Holiday Camp That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
 ];
 
 function buildHtml({ title, description, path: pagePath, body }) {
