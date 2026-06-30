@@ -3,12 +3,13 @@ import { EVENT_REGISTRATION_URL, SIGNUP_LABEL, VENUE, WHATSAPP_URL } from "@/con
 
 const footerLinks = {
   programmes: [
-    { label: "Sprouts (Ages 6-8)", href: "/programme" },
-    { label: "Explorers (Ages 9-11)", href: "/programme" },
-    { label: "Builders (Ages 12-14)", href: "/programme" },
+    { label: "Sprouts (Ages 8-10)", href: "/programme" },
+    { label: "Explorers (Ages 11-12)", href: "/programme" },
+    { label: "Builders (Ages 13-14)", href: "/programme" },
     { label: "Innovators (Ages 15-17)", href: "/programme" },
     { label: "Parent Intelligence Series", href: "/pis" },
     { label: "Holiday Camps & Events", href: "/events" },
+    { label: "Schools Partnership", href: "/schools" },
   ],
   resources: [
     { label: "Parent Guides (Blog)", href: "/blog" },
@@ -43,10 +44,10 @@ export default function Footer() {
               />
             </Link>
             <p className="font-serif text-lg md:text-xl font-bold text-white/90 leading-snug mb-3">
-              Raising original thinkers for the AI era in Nairobi.
+              Raising original thinkers for the AI era across Kenya.
             </p>
             <p className="text-sm text-white/35 leading-relaxed font-sans">
-              Creative intelligence programmes for children aged 6-17. Think first, create boldly, use AI wisely.
+              Creative intelligence programmes for children aged 8-17. Think first, create boldly, use AI wisely.
             </p>
           </div>
 

@@ -9,7 +9,7 @@ const stages = [
     id: "sprouts",
     letter: "S",
     color: "#1A7A97",
-    agePill: "Ages 6 to 8",
+    agePill: "Ages 8 to 10",
     pillBg: "rgba(26,122,150,0.22)",
     pillText: "#7BCFE8",
     name: "Sprouts",
@@ -25,7 +25,7 @@ const stages = [
     id: "explorers",
     letter: "E",
     color: "#E8693A",
-    agePill: "Ages 9 to 11",
+    agePill: "Ages 11 to 12",
     pillBg: "rgba(232,105,58,0.2)",
     pillText: "#F9B090",
     name: "Explorers",
@@ -41,7 +41,7 @@ const stages = [
     id: "builders",
     letter: "B",
     color: "#E8523A",
-    agePill: "Ages 12 to 14",
+    agePill: "Ages 13 to 14",
     pillBg: "rgba(232,82,58,0.2)",
     pillText: "#F9A090",
     name: "Builders",
@@ -146,7 +146,7 @@ export default function Programme() {
     <>
       <PageMeta
         title="Sprouts to Innovators | Age-Based Creative Programmes | AkiliNest Nairobi"
-        description="Four age-appropriate programmes for children 6–17 in Nairobi: Sprouts, Explorers, Builders, and Innovators. Thinking-first creative intelligence for the AI era."
+        description="Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Thinking-first creative intelligence for the AI era."
         path="/programme"
         keywords={["creative programmes Nairobi", "children AI education Kenya", "extracurricular activities Nairobi", "Sprouts Explorers Builders Innovators"]}
       />
@@ -167,7 +167,7 @@ export default function Programme() {
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-3 block">Our Programmes</span>
           <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Four stages of<br />creative intelligence</h1>
-          <p className="text-base text-white/60 max-w-lg leading-relaxed">Age-appropriate programmes that grow with your child from ages 6 to 17.</p>
+          <p className="text-base text-white/60 max-w-lg leading-relaxed">Age-appropriate programmes that grow with your child from ages 8 to 17.</p>
         </div>
       </div>
 
@@ -253,7 +253,7 @@ export default function Programme() {
           <Reveal>
             <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#1A7A97] mb-4 block">The 6 Functional Domains</span>
             <h2 className="font-serif text-[clamp(2.2rem,4vw,4rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-3">What never changes,<br />even when tools do</h2>
-            <p className="text-base text-[#4A4860] leading-relaxed mb-12 max-w-xl">Six capabilities built across all stages — foundations that outlast any tool.</p>
+            <p className="text-base text-[#4A4860] leading-relaxed mb-12 max-w-xl">Six capabilities built across all stages, foundations that outlast any tool.</p>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {domains.map((d, i) => (

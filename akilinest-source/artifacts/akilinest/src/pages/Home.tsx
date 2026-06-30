@@ -8,19 +8,19 @@ import { EVENT_REGISTRATION_URL, SIGNUP_LABEL, featuredEvent } from "@/content/e
 import { asset, IMAGES } from "@/lib/images";
 import { canonicalUrl } from "@/lib/seo";
 
-const trustPills = ["Think First", "Create Boldly", "Use AI Wisely", "Ages 6-17"];
+const trustPills = ["Think First", "Create Boldly", "Use AI Wisely"];
 
 const stats = [
   { value: "4", label: "Programme stages at AkiliNest" },
-  { value: "6-17", label: "Ages we serve in Nairobi" },
+  { value: "8-17", label: "Ages we serve across Kenya" },
   { value: "2 hrs", label: "Daily holiday camp sessions" },
   { value: "10 days", label: "Per holiday camp intake" },
 ];
 
 const stages = [
-  { letter: "S", name: "Sprouts", age: "Ages 6 to 8", tagline: '"I can imagine and express myself creatively."', desc: "Foundational creativity without AI dependency.", grad: "from-[#0B4D5F] to-[#1AB5DC]" },
-  { letter: "E", name: "Explorers", age: "Ages 9 to 11", tagline: '"I can understand technology and think critically about it."', desc: "Digital literacy and independent reasoning.", grad: "from-[#6B3900] to-[#E8980A]" },
-  { letter: "B", name: "Builders", age: "Ages 12 to 14", tagline: '"I can build with technology."', desc: "Real digital products from structured thinking.", grad: "from-[#6B1A0A] to-[#E8523A]" },
+  { letter: "S", name: "Sprouts", age: "Ages 8 to 10", tagline: '"I can imagine and express myself creatively."', desc: "Foundational creativity without AI dependency.", grad: "from-[#0B4D5F] to-[#1AB5DC]" },
+  { letter: "E", name: "Explorers", age: "Ages 11 to 12", tagline: '"I can understand technology and think critically about it."', desc: "Digital literacy and independent reasoning.", grad: "from-[#6B3900] to-[#E8980A]" },
+  { letter: "B", name: "Builders", age: "Ages 13 to 14", tagline: '"I can build with technology."', desc: "Real digital products from structured thinking.", grad: "from-[#6B1A0A] to-[#E8523A]" },
   { letter: "I", name: "Innovators", age: "Ages 15 to 17", tagline: '"I can solve real-world problems with technology."', desc: "Strategy, ethics, and AI in action.", grad: "from-[#1A0B6B] to-[#7F5AF0]" },
 ];
 
@@ -41,8 +41,8 @@ export default function Home() {
   return (
     <>
       <PageMeta
-        title="Creative AI Programmes for Children 6-17 in Nairobi | AkiliNest"
-        description="AkiliNest trains children aged 6 to 17 in Nairobi to think first, create boldly, and use AI wisely. Four programmes. Holiday camps June-August 2026."
+        title="Creative AI Programmes for Children 8-17 in Kenya | AkiliNest"
+        description="AkiliNest trains children aged 8 to 17 across Kenya to think first, create boldly, and use AI wisely. Four programmes. Holiday camps July-August 2026."
         path="/"
         keywords={["AkiliNest", "creative classes children Nairobi", "AI education kids Kenya"]}
         jsonLd={{
@@ -50,7 +50,7 @@ export default function Home() {
           "@type": "EducationalOrganization",
           name: "AkiliNest",
           url: canonicalUrl("/"),
-          description: "A thinking-first creative studio for children aged 6 to 17 in Nairobi, Kenya.",
+          description: "A thinking-first creative studio for children aged 8 to 17 across Kenya.",
           address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
           telephone: "+254702820845",
           email: "akilinest@gmail.com",
@@ -77,16 +77,12 @@ export default function Home() {
         <div className="relative z-10 w-full px-4 md:px-8 lg:px-14 pt-24 md:pt-28 pb-14 md:pb-16">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8">
-              <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white text-[11px] font-semibold px-4 py-2 rounded-full font-sans">
-                <span className="w-2 h-2 rounded-full bg-[#E8693A] animate-pulse" />
-                Limited spots · {featuredEvent.dates}
-              </span>
               <Link
                 href="/events"
-                className="inline-flex items-center gap-2 bg-white/6 border border-white/12 text-white/80 hover:text-white text-[11px] font-semibold px-4 py-2 rounded-full transition-colors font-sans"
+                className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white text-[11px] font-semibold px-4 py-2 rounded-full hover:bg-white/15 transition-colors font-sans"
               >
-                <span className="bg-[#E8693A] text-white text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">New</span>
-                Holiday camps July-August
+                <span className="w-2 h-2 rounded-full bg-[#E8693A] animate-pulse" />
+                Holiday camps July &amp; August 2026 · Limited spots
                 <span aria-hidden>→</span>
               </Link>
             </div>
@@ -94,12 +90,12 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
               <div className="text-center lg:text-left">
                 <h1 className="font-serif text-[clamp(2.25rem,5.5vw,4rem)] font-bold leading-[1.02] tracking-tight text-white mb-5 max-w-2xl mx-auto lg:mx-0">
-                  Creative intelligence for{" "}
-                  <span className="text-[#E8693A]">Nairobi children.</span>
+                  Kenya leads the world in AI use.{" "}
+                  <span className="text-[#E8693A]">We teach kids to lead it too.</span>
                 </h1>
 
                 <p className="text-base md:text-lg text-white/70 max-w-lg mx-auto lg:mx-0 leading-relaxed mb-8 font-sans">
-                  AkiliNest trains ages 6-17 to think first, create boldly, and use AI wisely. Four programmes, holiday camps, and parent guides at heARTspace.
+                  AkiliNest trains children aged 8 to 17, across Kenya, to think first and use AI as a tool, not a crutch. Four programmes, holiday camps, and parent guides at heARTspace, Nairobi.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 mb-4">
@@ -240,7 +236,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-4 block font-sans">What Parents Say</span>
-            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] font-bold text-white tracking-tight leading-tight mb-12">Trusted by Nairobi families</h2>
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] font-bold text-white tracking-tight leading-tight mb-12">Trusted by Kenyan families</h2>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[

@@ -11,7 +11,7 @@ const faqs = [
   { tag: "On outcomes", q: "What will my child actually learn?", a: "Children learn how to think independently before reaching for any tool, use AI responsibly as a research and thinking partner, explain ideas clearly and confidently in their own words, solve real problems that do not have fixed answers, and build creative outputs they are genuinely proud of. Every week, they take something home that proves it." },
   { tag: "On the philosophy", q: "Why focus on thinking first?", a: "Because in the AI era, <strong>thinking is more valuable than information.</strong> Information is cheap and instantly available. Thinking (the ability to reason, form a position, identify a problem, and build a response) is rare and increasingly valuable. Children who can think first will use AI as an amplifier. Children who skip thinking will be replaced by the tools they depend on." },
   { tag: "On structure", q: "How do you prevent AI dependency?", a: "Through strict learning structure built into every session. No AI is used before a child has reasoned through the problem themselves. AI is then used as a challenger: something that questions and expands their thinking, not answers for them. After AI is used, children must re-explain everything in their own words. This three-step structure (think, use AI, express) is non-negotiable in every session." },
-  { tag: "On age ranges", q: "What age does AkiliNest accept?", a: "AkiliNest accepts children aged 6 to 17, structured across four stages: Sprouts (6 to 8), Explorers (9 to 11), Builders (12 to 14), and Innovators (15 to 17). Each stage has its own curriculum, tools, and learning outcomes." },
+  { tag: "On age ranges", q: "What age does AkiliNest accept?", a: "AkiliNest accepts children aged 8 to 17, structured across four stages: Sprouts (8 to 10), Explorers (11 to 12), Builders (13 to 14), and Innovators (15 to 17). Each stage has its own curriculum, tools, and learning outcomes." },
   { tag: "On the session format", q: "What does a typical session look like?", a: "Sessions run on weekends, one hour and twenty minutes each. Every session begins with a thinking warm-up and a creative bridge question. The main activity involves independent reasoning, guided discussion, and creative work with intentional AI use. Every session ends with a reflection and a take-home creation, something physical or digital that parents can see." },
 ];
 
@@ -42,8 +42,8 @@ export default function Faq() {
   return (
     <>
       <PageMeta
-        title="FAQ — AI, Thinking & Programmes for Children in Nairobi"
-        description="Answers to what Nairobi parents actually ask: Is AI safe? Will my child stop thinking? How is AkiliNest different from school? Ages 6–17."
+        title="FAQ: AI, Thinking & Programmes for Children in Kenya"
+        description="Answers to what Kenyan parents actually ask: Is AI safe? Will my child stop thinking? How is AkiliNest different from school? Ages 8 to 17."
         path="/faq"
         keywords={["AkiliNest FAQ", "AI safe for kids", "creative programmes Nairobi", "children AI education Kenya"]}
         jsonLd={{

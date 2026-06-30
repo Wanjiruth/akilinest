@@ -13,6 +13,7 @@ import Home from "@/pages/Home";
 import Programme from "@/pages/Programme";
 import ParentSeries from "@/pages/ParentSeries";
 import Events from "@/pages/Events";
+import Schools from "@/pages/Schools";
 import About from "@/pages/About";
 import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
@@ -47,6 +48,7 @@ function AppRouter() {
           <Route path="/programme" component={Programme} />
           <Route path="/pis" component={ParentSeries} />
           <Route path="/events" component={Events} />
+          <Route path="/schools" component={Schools} />
           <Route path="/about" component={About} />
           <Route path="/faq" component={Faq} />
           <Route path="/contact" component={Contact} />

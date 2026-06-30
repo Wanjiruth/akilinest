@@ -107,11 +107,12 @@ export default function Contact() {
                 <label className="block text-xs font-bold text-[#0D0C18] mb-2">Child's stage</label>
                 <select value={form.stage} onChange={(e) => setForm({ ...form, stage: e.target.value })} className={inputClass} data-testid="select-contact-stage">
                   <option value="">Select a stage</option>
-                  <option>Ages 6 to 8: Sprouts</option>
-                  <option>Ages 9 to 11: Explorers</option>
-                  <option>Ages 12 to 14: Builders</option>
+                  <option>Ages 8 to 10: Sprouts</option>
+                  <option>Ages 11 to 12: Explorers</option>
+                  <option>Ages 13 to 14: Builders</option>
                   <option>Ages 15 to 17: Innovators</option>
                   <option>Parent Series only</option>
+                  <option>I'm enquiring as a school</option>
                 </select>
               </div>
               <div>

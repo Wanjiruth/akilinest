@@ -6,9 +6,9 @@ import { canonicalUrl } from "@/lib/seo";
 
 const perfectFor = [
   "Parents whose child asks to use ChatGPT and you are not sure what to say",
-  "Families searching extracurricular activities in Nairobi that build real confidence",
+  "Families searching extracurricular activities in Kenya that build real confidence",
   "Parents who discovered their child using AI in secret and want a better path",
-  "Nairobi families navigating CBC who want creative, critical thinking beyond school",
+  "Kenyan families navigating CBC who want creative, critical thinking beyond school",
   "Parents who want their child to create, not just consume technology",
   "Anyone committed to 2–3 hours per week of intentional creative development",
 ];
@@ -17,7 +17,7 @@ const notIdealFor = [
   "Looking for a coding certificate factory or exam-prep tutoring centre",
   "Expecting AI to do the thinking so your child can produce faster outputs",
   "Wanting large anonymous classes where your child disappears in the crowd",
-  "Not ready to engage — this works best when parents understand the philosophy",
+  "Not ready to engage. This works best when parents understand the philosophy",
 ];
 
 const steps = [
@@ -39,19 +39,19 @@ const steps = [
   {
     n: "04",
     title: "Join the Parent Series",
-    desc: "Five sessions on raising children in the AI era — screens, safety, creation, and future skills.",
+    desc: "Five sessions on raising children in the AI era: screens, safety, creation, and future skills.",
   },
   {
     n: "05",
     title: "Watch Your Child Present",
-    desc: "Every cycle ends with presentation — your child explains and defends their reasoning. That is the transformation.",
+    desc: "Every cycle ends with presentation. Your child explains and defends their reasoning. That is the transformation.",
   },
 ];
 
 const requirements = [
-  { title: "Ages 6–17", desc: "Programmes designed for each developmental stage" },
+  { title: "Ages 8–17", desc: "Programmes designed for each developmental stage" },
   { title: "Nairobi-based or able to travel", desc: "Sessions at heARTspace, Kabarnet Road" },
-  { title: "Open-minded about AI", desc: "Not anti-technology — pro-thinking" },
+  { title: "Open-minded about AI", desc: "Not anti-technology, pro-thinking" },
   { title: "Willingness to engage", desc: "Parent Series and family conversations amplify results" },
 ];
 
@@ -60,7 +60,7 @@ export default function ParentsGuide() {
     <>
       <PageMeta
         title="The Nairobi Parent's Guide to Raising Thinkers in the AI Era"
-        description="Is AkiliNest right for your family? A complete guide for Nairobi parents — who it's for, what to expect, how to start, and what children actually learn."
+        description="Is AkiliNest right for your family? A complete guide for Kenyan parents: who it's for, what to expect, how to start, and what children actually learn."
         path="/parents-guide"
         keywords={[
           "Nairobi parent guide AI children",
@@ -72,7 +72,7 @@ export default function ParentsGuide() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "The Nairobi Parent's Guide",
-          description: "Complete guide for Nairobi parents considering AkiliNest creative intelligence programmes.",
+          description: "Complete guide for Kenyan parents considering AkiliNest creative intelligence programmes.",
           url: canonicalUrl("/parents-guide"),
           publisher: { "@type": "Organization", name: "AkiliNest" },
         }}
@@ -87,7 +87,7 @@ export default function ParentsGuide() {
             Is AkiliNest right for your family?
           </h1>
           <p className="text-base text-white/60 max-w-xl leading-relaxed">
-            Everything Nairobi parents need to know before enrolling — who thrives here, what children learn, and how to start.
+            Everything Kenyan parents need to know before enrolling: who thrives here, what children learn, and how to start.
           </p>
         </div>
       </div>
@@ -171,7 +171,7 @@ export default function ParentsGuide() {
           <Reveal>
             <h2 className="font-serif text-3xl font-bold text-[#0D0C18] mb-4">Read what parents search</h2>
             <p className="text-[#5C5A70] mb-8 max-w-xl mx-auto">
-              22+ guides covering AI safety, CBC gaps, Nairobi activities, and future skills — mapped to what parents actually Google.
+              22+ guides covering AI safety, CBC gaps, Nairobi activities, and future skills, mapped to what parents actually Google.
             </p>
             <Link
               href="/blog"

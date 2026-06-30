@@ -2,9 +2,9 @@ import { Calendar, Clock, MapPin, Users } from "lucide-react";
 import { EVENT_REGISTRATION_URL, SIGNUP_LABEL, VENUE, featuredEvent } from "@/content/events";
 
 const rows = [
-  { icon: Calendar, label: "Next session", value: featuredEvent.dates },
+  { icon: Calendar, label: "Camp dates", value: "19 July - 28 August 2026" },
   { icon: Clock, label: "Time", value: featuredEvent.time },
-  { icon: Users, label: "Ages", value: "6-17 · Limited spots" },
+  { icon: Users, label: "Ages", value: "8-17 · Limited spots" },
   { icon: MapPin, label: "Venue", value: VENUE },
 ];
 
@@ -52,7 +52,7 @@ export default function HeroSessionCard() {
         {SIGNUP_LABEL}
       </a>
       <p className="text-xs text-white/40 mt-4 text-center font-sans">
-        Holiday camps run July and August · same sign-up form
+        Three intakes: July 19-31, Aug 5-16, Aug 17-28
       </p>
     </div>
   );

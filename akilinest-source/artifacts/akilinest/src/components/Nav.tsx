@@ -21,6 +21,7 @@ export default function Nav() {
     { name: "Home", href: "/" },
     { name: "Programme", href: "/programme" },
     { name: "Events", href: "/events" },
+    { name: "Schools", href: "/schools" },
     { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },

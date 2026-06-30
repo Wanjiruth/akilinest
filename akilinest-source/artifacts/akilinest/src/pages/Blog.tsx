@@ -10,7 +10,7 @@ export default function Blog() {
     <>
       <PageMeta
         title="Parent Guides & Insights for Raising Kids in the AI Era"
-        description="Research-backed guides for Nairobi parents: AI safety, CBC gaps, extracurriculars, future skills, and creative programmes for children aged 6-17."
+        description="Research-backed guides for Kenyan parents: AI safety, CBC gaps, extracurriculars, future skills, and creative programmes for children aged 8-17."
         path="/blog"
         keywords={[
           "parenting AI era Nairobi",
@@ -30,7 +30,7 @@ export default function Blog() {
             Parent guides &amp; insights
           </h1>
           <p className="text-base text-white/60 max-w-xl leading-relaxed">
-            Answers to what Nairobi parents actually search: AI safety, school gaps, weekend activities, and future skills.
+            Answers to what Kenyan parents actually search: AI safety, school gaps, weekend activities, and future skills.
           </p>
         </div>
       </div>

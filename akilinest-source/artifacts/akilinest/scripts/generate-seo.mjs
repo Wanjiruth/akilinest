@@ -13,51 +13,58 @@ const SITE = "https://akilinest.co.ke";
 const staticPages = [
   {
     path: "/",
-    title: "AkiliNest | Creative AI Programmes for Children 6–17 in Nairobi",
+    title: "AkiliNest | Creative AI Programmes for Children 8–17 in Kenya",
     description:
-      "AkiliNest trains children aged 6 to 17 in Nairobi to think first, create boldly, and use AI wisely. Weekend sessions, holiday camps at heARTspace.",
-    body: "AkiliNest is a thinking-first creative studio in Nairobi for children aged 6 to 17.",
+      "AkiliNest trains children aged 8 to 17 across Kenya to think first, create boldly, and use AI wisely. Weekend sessions, holiday camps at heARTspace, Nairobi.",
+    body: "AkiliNest is a thinking-first creative studio for children aged 8 to 17 across Kenya.",
   },
   {
     path: "/programme",
     title: "Sprouts to Innovators | Age-Based Creative Programmes | AkiliNest",
     description:
-      "Four age-appropriate programmes for children 6–17 in Nairobi: Sprouts, Explorers, Builders, and Innovators. Creative intelligence training for the AI era.",
-    body: "Four stages of creative intelligence: Sprouts ages 6-8, Explorers 9-11, Builders 12-14, Innovators 15-17.",
+      "Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Creative intelligence training for the AI era.",
+    body: "Four stages of creative intelligence: Sprouts ages 8-10, Explorers 11-12, Builders 13-14, Innovators 15-17.",
   },
   {
     path: "/events",
     title: "Holiday Camps July–August 2026 | AkiliNest",
     description:
-      "Register for AkiliNest holiday camps in Nairobi. July and August 2026 intakes at heARTspace. Ages 6-17, 10 days each, 2 hours daily. Limited spots.",
-    body: "Holiday camps July 6-19, 20-31 and August 3-16, 17-28 2026 at heARTspace Kabarnet Road Nairobi.",
+      "Register for AkiliNest holiday camps across Kenya. July and August 2026 intakes at heARTspace, Nairobi. Ages 8-17, 10 days each, 2 hours daily. Limited spots.",
+    body: "Holiday camps July 19-31 and August 5-16, 17-28 2026 at heARTspace Kabarnet Road Nairobi.",
+  },
+  {
+    path: "/schools",
+    title: "Schools Partnership | UNESCO-Aligned AI Literacy | AkiliNest",
+    description:
+      "A ready-made AI literacy programme for Kenyan schools, aligned to the UNESCO AI Competency Framework. Extracurricular or mainstream. Ages 8 to 17.",
+    body: "AkiliNest Schools Partnership: UNESCO AI Competency Framework aligned curriculum for Kenyan schools. Storytelling, design, AI system design, entrepreneurship, leadership, ethics. Extracurricular or mainstream integration.",
   },
   {
     path: "/faq",
-    title: "FAQ | AkiliNest Creative Studio Nairobi",
+    title: "FAQ | AkiliNest Creative Studio Kenya",
     description:
-      "Frequently asked questions about AkiliNest programmes, AI safety, thinking-first learning, and enrolment for children aged 6–17 in Nairobi.",
+      "Frequently asked questions about AkiliNest programmes, AI safety, thinking-first learning, and enrolment for children aged 8–17 across Kenya.",
     body: "FAQ: Will AI make my child lazy? How is AkiliNest different from school? What age ranges do you accept?",
   },
   {
     path: "/blog",
     title: "Parent Guides & Insights for Raising Kids in the AI Era | AkiliNest",
     description:
-      "Research-backed guides for Nairobi parents — AI safety, CBC gaps, extracurriculars, future skills, and creative programmes.",
+      "Research-backed guides for Kenyan parents: AI safety, CBC gaps, extracurriculars, future skills, and creative programmes.",
     body: "Parent guides covering ChatGPT safety, AI cheating, CBC gaps, extracurricular activities Nairobi, future skills 2030.",
   },
   {
     path: "/parents-guide",
     title: "The Nairobi Parent's Guide to Raising Thinkers in the AI Era | AkiliNest",
     description:
-      "Is AkiliNest right for your family? Complete guide for Nairobi parents — who it's for, what children learn, how to start.",
+      "Is AkiliNest right for your family? Complete guide for Kenyan parents: who it's for, what children learn, how to start.",
     body: "Nairobi parent guide: who AkiliNest is perfect for, five steps to enrol, requirements to get started.",
   },
   {
     path: "/future-skills-report",
-    title: "The Future Skills Report 2026: What Nairobi Kids Need | AkiliNest",
+    title: "The Future Skills Report 2026: What Kenyan Kids Need | AkiliNest",
     description:
-      "Research-backed report — six skills children need before 2030, parent data on AI concerns, and what schools are missing.",
+      "Research-backed report: six skills children need before 2030, parent data on AI concerns, and what schools are missing.",
     body: "Future Skills Report 2026: independent reasoning, creative articulation, AI literacy, digital safety, problem framing, ethical technology.",
   },
   {
@@ -75,24 +82,24 @@ const staticPages = [
   {
     path: "/pis",
     title: "Parent Intelligence Series | AkiliNest Nairobi",
-    description: "Five parent sessions on raising children in the AI era — screens, safety, creation, and future skills.",
-    body: "Parent Intelligence Series for Nairobi families. Five thoughtful sessions on technology and parenting.",
+    description: "Five parent sessions on raising children in the AI era: screens, safety, creation, and future skills.",
+    body: "Parent Intelligence Series for Kenyan families. Five thoughtful sessions on technology and parenting.",
   },
   {
     path: "/privacy",
     title: "Privacy Policy | AkiliNest",
     description: "How AkiliNest collects, uses, and protects your personal information.",
-    body: "AkiliNest privacy policy — your data rights and how we protect your information.",
+    body: "AkiliNest privacy policy: your data rights and how we protect your information.",
   },
   {
     path: "/terms",
     title: "Terms of Service | AkiliNest",
     description: "Terms and conditions for AkiliNest programmes, enrolment, and website use.",
-    body: "AkiliNest terms of service — enrolment terms, cancellation policy, and website use.",
+    body: "AkiliNest terms of service: enrolment terms, cancellation policy, and website use.",
   },
 ];
 
-// Blog slugs — keep in sync with src/content/blog/posts.ts
+// Blog slugs: keep in sync with src/content/blog/posts.ts
 const blogSlugs = [
   { slug: "is-ai-safe-for-my-child-nairobi", title: "Is AI Safe for My Child? A Parent's Guide to AI Education in Nairobi", description: "Is AI safe for kids in Nairobi? A parent's guide to AI education, safety rules, and how AkiliNest teaches children to think first before using AI." },
   { slug: "top-5-holiday-camps-nairobi-2026-future-skills", title: "Top 5 Holiday Camps in Nairobi 2026 for Future Skills", description: "Looking for holiday camps in Nairobi 2026? Here are 5 camp types that build future skills, plus why AkiliNest adds thinking-first AI education." },
@@ -104,24 +111,24 @@ const blogSlugs = [
   { slug: "what-is-my-child-doing-on-ai", title: "What Is Your Child Actually Doing on AI? The 37% Awareness Gap", description: "Only 37% of parents knew their teen used AI. How to find out and start the conversation." },
   { slug: "ai-chatbots-inappropriate-kids", title: "Can AI Chatbots Be Inappropriate with Kids?", description: "What parents need to know about companion chatbots and child safety." },
   { slug: "will-ai-harm-critical-thinking", title: "Will AI Make My Child Lose Critical Thinking Skills?", description: "What 56% of parents fear and what actually protects young minds." },
-  { slug: "best-ai-tools-kids-learning", title: "Best AI Tools for My Child's Learning — A Parent's Shortlist", description: "77% of parents want AI education tools. Age-appropriate list for Nairobi families." },
+  { slug: "best-ai-tools-kids-learning", title: "Best AI Tools for My Child's Learning: A Parent's Shortlist", description: "77% of parents want AI education tools. Age-appropriate list for Nairobi families." },
   { slug: "extracurriculars-nairobi-confidence", title: "Nairobi Parent's Guide to Extracurriculars That Build Confidence", description: "How to choose extracurricular activities for kids in Nairobi." },
   { slug: "after-school-nairobi-child-mind", title: "After School in Nairobi: What Develops Your Child's Mind", description: "After school activities for kids in Kenya beyond homework and screens." },
-  { slug: "creative-classes-nairobi-think", title: "Where Nairobi Kids Learn to Think — Not Just Click", description: "Creative classes for children in Nairobi that prioritise original thinking." },
+  { slug: "creative-classes-nairobi-think", title: "Where Nairobi Kids Learn to Think, Not Just Click", description: "Creative classes for children in Nairobi that prioritise original thinking." },
   { slug: "weekend-activities-nairobi-smarter", title: "Weekend Activities in Nairobi That Make Kids Smarter", description: "Things to do with kids in Nairobi this weekend." },
   { slug: "raise-confident-kids-kenya", title: "The Confidence Gap: Raising Bold Kids in Kenya", description: "How to raise confident kids in Kenya." },
-  { slug: "shy-child-find-voice-nairobi", title: "From Quiet to Confident: Helping Shy Kids Find Their Voice", description: "My child is shy what to do — Nairobi creative studio approach." },
-  { slug: "kids-not-interested-school-nairobi", title: "When School Feels Boring: Reigniting Curiosity in Nairobi", description: "Kids not interested in school — how to reconnect curious children." },
-  { slug: "parenting-digital-age-africa", title: "Raising Thinkers in the AI Era: A Nairobi Parent's Playbook", description: "Parenting in the digital age Africa — practical playbook." },
+  { slug: "shy-child-find-voice-nairobi", title: "From Quiet to Confident: Helping Shy Kids Find Their Voice", description: "My child is shy what to do, Nairobi creative studio approach." },
+  { slug: "kids-not-interested-school-nairobi", title: "When School Feels Boring: Reigniting Curiosity in Nairobi", description: "Kids not interested in school, how to reconnect curious children." },
+  { slug: "parenting-digital-age-africa", title: "Raising Thinkers in the AI Era: A Nairobi Parent's Playbook", description: "Parenting in the digital age Africa, practical playbook." },
   { slug: "cbc-promises-vs-reality", title: "What CBC Promises vs. What Your Child Actually Needs", description: "CBC curriculum gaps in Kenya." },
   { slug: "cbc-digital-literacy-question-algorithm", title: "CBC Added Digital Literacy. Who Teaches Kids to Question the Algorithm?", description: "Critical AI literacy missing from most Kenyan classrooms." },
   { slug: "school-principals-ai-question", title: "10 Nairobi School Principals Couldn't Answer This AI Question", description: "83% of parents say schools have not communicated AI policy." },
-  { slug: "future-skills-2030-one-skill", title: "The One Skill Your Child Needs Before 2030", description: "Future skills for children 2030 — independent reasoning beats coding certificates." },
+  { slug: "future-skills-2030-one-skill", title: "The One Skill Your Child Needs Before 2030", description: "Future skills for children 2030, independent reasoning beats coding certificates." },
   { slug: "coding-certificate-wont-matter-2030", title: "Why Your Child's Coding Certificate Won't Matter in 2030", description: "Creative intelligence and reasoning matter more than certificates." },
   { slug: "african-stack-for-kids", title: "The African Stack for Kids: M-Pesa, Climate, Community", description: "African context for children's technology education in Nairobi." },
   { slug: "50-nairobi-parents-ai-era", title: "What I Learned From 50 Nairobi Parents About Raising Kids in the AI Era", description: "Five shared fears and three surprising hopes." },
   { slug: "mom-google-says-to-mom-i-disagree", title: "From Mom Google Says to Mom I Disagree", description: "How children move from accepting AI answers to independent positions." },
-  { slug: "kes-investment-future-proof-mind", title: "The KSh 12000 Holiday Camp That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
+  { slug: "kes-investment-future-proof-mind", title: "The KSh 10000 Holiday Camp That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
 ];
 
 function buildHtml({ title, description, path: pagePath, body }) {

@@ -51,7 +51,7 @@ export default function ParentSeries() {
     <>
       <PageMeta
         title="Parent Intelligence Series | Raising Kids in the AI Era | AkiliNest"
-        description="Five thoughtful parent sessions for Nairobi families — AI safety, screens, creation, digital identity, and future skills. Not fear-based."
+        description="Five thoughtful parent sessions for Kenyan families: AI safety, screens, creation, digital identity, and future skills. Not fear-based."
         path="/pis"
         keywords={["parenting AI era Nairobi", "parent workshops Kenya", "raising kids technology Africa"]}
       />
@@ -65,7 +65,7 @@ export default function ParentSeries() {
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-white/35 mb-3 block">For Parents</span>
           <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-black text-white tracking-tight leading-tight mb-3">Parent Intelligence<br />Series</h1>
-          <p className="text-base text-white/60 max-w-lg font-light leading-relaxed">Not a fear-based talk. A thoughtful, future-focused experience for modern Nairobi families.</p>
+          <p className="text-base text-white/60 max-w-lg font-light leading-relaxed">Not a fear-based talk. A thoughtful, future-focused experience for modern Kenyan families.</p>
         </div>
       </div>
 

@@ -8,7 +8,7 @@ export default function About() {
     <>
       <PageMeta
         title="About AkiliNest | Thinking-First Creative Studio Nairobi"
-        description="Our philosophy: protect thinking, then use AI. Cognitive resilience training for children aged 6–17 in Nairobi, Kenya."
+        description="Our philosophy: protect thinking, then use AI. Cognitive resilience training for children aged 8–17 across Kenya."
         path="/about"
         keywords={["AkiliNest about", "creative studio Nairobi children", "AI education philosophy"]}
       />
@@ -74,7 +74,7 @@ export default function About() {
               <div className="mt-10 pt-8 border-t border-white/10">
                 <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/30 mb-4">Based in</p>
                 <p className="text-base text-white font-medium">Nairobi, Kenya</p>
-                <p className="text-sm text-white/50 mt-1">Serving children ages 6 to 17</p>
+                <p className="text-sm text-white/50 mt-1">Serving children ages 8 to 17</p>
               </div>
             </div>
           </Reveal>

@@ -15,11 +15,10 @@ export default function EventCTA() {
           <strong className="text-white">{featuredEvent.title}</strong>
         </p>
         <p className="text-sm text-white/55 leading-relaxed mb-2 font-sans">
-          {featuredEvent.dates} · {featuredEvent.time}
-          {featuredEvent.price ? ` · ${featuredEvent.price}` : ""}
+          July 19-31 &amp; August 5-16 &amp; 17-28, 2026 · {featuredEvent.time}
         </p>
         <p className="text-sm text-white/45 leading-relaxed mb-6 font-sans">
-          {holidayCampsFlyer.subtitle}. July and August intakes at heARTspace, Nairobi.
+          {holidayCampsFlyer.subtitle}. Four intakes, choose what fits your schedule.
         </p>
 
         <div className="flex flex-col items-center gap-4">

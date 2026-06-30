@@ -21,7 +21,7 @@ export default function BlogPostBody({ post }: { post: BlogPost }) {
         <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/40 mb-3 font-sans">AkiliNest</p>
         <h3 className="font-serif text-2xl font-bold text-white mb-3">See the AkiliNest approach in action</h3>
         <p className="text-white/70 mb-6 max-w-md mx-auto font-sans">
-          Join our holiday camps at heARTspace, Nairobi. AkiliNest trains children aged 6-17 to think first, then use AI wisely.
+          Join our holiday camps at heARTspace, Nairobi. AkiliNest trains children aged 8-17 across Kenya to think first, then use AI wisely.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
