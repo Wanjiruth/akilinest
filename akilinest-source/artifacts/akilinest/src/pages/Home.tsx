@@ -4,11 +4,9 @@ import PageMeta from "@/components/PageMeta";
 import EventCTA from "@/components/EventCTA";
 import HeroSessionCard from "@/components/HeroSessionCard";
 import VideoEmbed from "@/components/VideoEmbed";
-import { EVENT_REGISTRATION_URL, SIGNUP_LABEL, featuredEvent } from "@/content/events";
+import { EVENT_REGISTRATION_URL, SIGNUP_LABEL } from "@/content/events";
 import { asset, IMAGES } from "@/lib/images";
 import { canonicalUrl } from "@/lib/seo";
-
-const trustPills = ["Think First", "Create Boldly", "Use AI Wisely"];
 
 const stats = [
   { value: "4", label: "Programme stages at AkiliNest" },
@@ -115,20 +113,6 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <p className="text-sm text-white/45 mb-6 font-sans">
-                  Takes 2 minutes · {featuredEvent.price} · {featuredEvent.time}
-                </p>
-
-                <div className="flex flex-wrap justify-center lg:justify-start gap-2">
-                  {trustPills.map((pill) => (
-                    <span
-                      key={pill}
-                      className="text-[10px] font-semibold tracking-wide uppercase text-white/50 bg-white/6 border border-white/10 px-3 py-1.5 rounded-full font-sans"
-                    >
-                      {pill}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               <HeroSessionCard />
