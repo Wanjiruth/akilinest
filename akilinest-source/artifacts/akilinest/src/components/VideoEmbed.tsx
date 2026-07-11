@@ -14,7 +14,7 @@ export default function VideoEmbed({ src, poster, title, caption, className = ""
         // Keep video lightweight: don't autoplay to improve Lighthouse speed.
         muted
         playsInline
-        preload="none"
+        preload="metadata"
 
         poster={poster ? `${base}${poster.replace(/^\//, "")}` : undefined}
         className="w-full aspect-video object-cover"
