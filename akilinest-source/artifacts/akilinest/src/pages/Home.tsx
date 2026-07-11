@@ -63,7 +63,7 @@ export default function Home() {
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             className="w-full h-full object-cover"
             poster={`${import.meta.env.BASE_URL}hero-bg.png`}
           >
