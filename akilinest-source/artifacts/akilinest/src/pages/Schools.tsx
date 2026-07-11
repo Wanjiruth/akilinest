@@ -40,14 +40,22 @@ export default function Schools() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0D0C18]/90 to-transparent" />
         <div className="relative z-10 px-6 md:px-14 pb-16 pt-28 max-w-4xl">
           <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-white/35 mb-4 block">For Schools</span>
-          <h1 className="font-serif text-[clamp(2.6rem,5.5vw,5rem)] font-black text-white tracking-tight leading-[1.05] mb-6">
-            What if schools prepared children for the{" "}
-            <span className="text-[#E8693A]">next 20 years?</span>
+          <h1 className="font-serif text-[clamp(2.4rem,5vw,4.5rem)] font-black text-white tracking-tight leading-[1.05] mb-8">
+            AkiliNest partners with schools to prepare students for{" "}
+            <span className="text-[\#E8693A]">what comes after the classroom.</span>
           </h1>
           <p className="text-base md:text-lg text-white/65 max-w-2xl font-light leading-relaxed mb-4">
-            AkiliNest partners with schools to help learners develop creativity, communication, entrepreneurship, leadership, digital fluency, and responsible AI skills through hands-on, project-based learning.
-          </p>
-          <p className="text-base md:text-lg text-white/85 max-w-2xl font-semibold leading-relaxed mb-8">
+          <div className="space-y-4 max-w-2xl mb-10">
+            <p className="text-base md:text-lg text-white/65 font-light leading-relaxed">
+              Kenya has the highest ChatGPT usage in the world. That is not a compliment. It is a signal. Students across the country are using AI every day without ever being taught to question what it says, direct what it does, or think beyond what it produces. The LLM ends up leading the student. Not the other way around.
+            </p>
+            <p className="text-base md:text-lg text-white/65 font-light leading-relaxed">
+              We are in the AI era. What comes after it will move faster. Some jobs that exist today will not exist by the time your current students enter the workforce. The skills that will matter across every era ahead are not found in any single subject: original thinking, creative judgment, the ability to critique AI, lead it, and create beyond it.
+            </p>
+            <p className="text-base md:text-lg text-white/85 font-semibold leading-relaxed">
+              AkiliNest partners with schools to build that layer. Not to replace what you already do well. To add the one thing that makes your students genuinely future-ready: the ability to think for themselves when AI is doing the thinking for everyone else.
+            </p>
+          </div>
             Because the future will not only reward what students know. It will reward what they can create, build, and lead.
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-[#E8693A] hover:bg-[#C4561A] text-white font-bold text-base px-10 py-4 rounded-full transition-all shadow-lg">
