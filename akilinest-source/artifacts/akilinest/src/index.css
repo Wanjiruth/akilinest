@@ -178,3 +178,7 @@
   transition: opacity 0.5s;
   mix-blend-mode: multiply;
 }
+
+/* FAQ accordions: hide the native marker so the + control reads as the affordance. */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }

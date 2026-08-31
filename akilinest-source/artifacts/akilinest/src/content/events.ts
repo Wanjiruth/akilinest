@@ -14,88 +14,44 @@ export type AkiliEvent = {
 
 export const VENUE = "heARTspace, Kabarnet Road, off Ngong Road, Nairobi";
 export const EVENT_REGISTRATION_URL = "https://forms.gle/soVzS7zP3UECs56M9";
-export const SIGNUP_LABEL = "Sign up now";
-export const SIGNUP_LABEL_SHORT = "Sign up";
+export const SIGNUP_LABEL = "Register your child";
+export const SIGNUP_LABEL_SHORT = "Register";
 export const WHATSAPP_URL =
-  "https://wa.me/254702820845?text=Hi%2C%20I%27d%20like%20to%20register%20my%20child%20for%20AkiliNest";
+  "https://wa.me/254702820845?text=Hi%2C%20I%27d%20like%20to%20hear%20about%20the%20next%20AkiliNest%20kids%20bootcamp";
+
+/**
+ * Camp intakes are announced per school holiday. While no intake is live,
+ * CAMPS_ANNOUNCED stays false and every surface shows a waiting-list state
+ * instead of dates. Never list an intake here until the dates are confirmed.
+ */
+export const CAMPS_ANNOUNCED = true;
 
 export const events: AkiliEvent[] = [
   {
-    id: "taster-june-27",
-    title: "Raising Curious Minds: Taster Session",
-    dates: "Saturday, 27 June 2026",
-    time: "10:00 AM - 1:00 PM",
-    price: "KSh 2,000 per child",
-    badge: "Past Event",
-    description: "A 3-hour introduction to the AkiliNest Think-First cycle. Ages 8-17. See how we teach children to think before they use AI.",
-    highlights: ["Ages 8-17", "3 hours", "KSh 2,000", "Limited spots"],
-    image: "images/flyer-june27.png",
-  },
-  {
-    id: "camp-july-1",
-    title: "Holiday Camp: July Intake",
-    dates: "19 - 31 July 2026",
-    time: "10:00 AM - 12:00 PM daily",
-    duration: "10 days · 2 hours each day",
-    price: "KSh 10,000 per child",
-    badge: "Next Up",
-    description: "Hands-on creative intelligence sessions across all four programme stages.",
-    highlights: ["10 days", "2 hrs/day", "Small groups", "Tangible outputs weekly"],
+    id: "camp-nov-dec",
+    title: "Creative AI Bootcamp: November - December Intake",
+    dates: "November - December 2026",
+    time: "Session times confirmed on registration",
+    badge: "Next intake",
+    description:
+      "The next AkiliNest creative AI bootcamp for children aged 8 to 17, across all four programme stages.",
+    highlights: ["Ages 8-17", "Small groups", "Hands-on projects", "heARTspace, Nairobi"],
     image: "images/flyer-holiday-camps.jpg",
     featured: true,
   },
-  {
-    id: "camp-aug-1",
-    title: "Holiday Camp: August Intake 1",
-    dates: "5 - 16 August 2026",
-    time: "10:00 AM - 12:00 PM daily",
-    duration: "10 days · 2 hours each day",
-    price: "KSh 10,000 per child",
-    badge: "Holiday Camp",
-    description: "August holiday creative programme at AkiliNest: think first, create boldly, use AI wisely.",
-    highlights: ["10 days", "2 hrs/day", "Small groups", "heARTspace venue"],
-    image: "images/flyer-holiday-camps.jpg",
-  },
-  {
-    id: "camp-aug-2",
-    title: "Holiday Camp: August Intake 2",
-    dates: "17 - 28 August 2026",
-    time: "10:00 AM - 12:00 PM daily",
-    duration: "10 days · 2 hours each day",
-    price: "KSh 10,000 per child",
-    badge: "Holiday Camp",
-    description: "Final August intake before school term resumes.",
-    highlights: ["10 days", "2 hrs/day", "Small groups", "Register early"],
-    image: "images/flyer-holiday-camps.jpg",
-  },
 ];
 
-export const featuredEvent = events.find((e) => e.featured) ?? events[0];
+export const featuredEvent: AkiliEvent | undefined = events.find((e) => e.featured) ?? events[0];
 
 export const holidayCamps = events.filter((e) => !e.featured);
 
 export const holidayCampsFlyer = {
-  tagline: "Raising Curious Minds in the Age of AI",
-  subtitle: "Book classes · 10 days each",
+  tagline: "Creative AI Bootcamps for Kids",
+  subtitle: "November - December 2026 intake",
   ages: "For children aged 8-17",
-  time: "10:00 AM - 12:00 PM daily",
-  duration: "2 hours each day",
+  time: "Daily sessions during school holidays",
+  duration: "Small groups, hands-on projects",
   image: "images/flyer-holiday-camps.jpg",
   pillars: ["Think First", "Create Boldly", "Use AI Wisely"],
-  intakes: [
-    { month: "July", dates: "19th - 31st July" },
-    { month: "August", dates: "5th - 16th August" },
-    { month: "August", dates: "17th - 28th August" },
-  ],
-  highlights: ["2 hours each day", "Limited spots", "Small class sizes"],
+  highlights: ["Ages 8-17", "Small class sizes", "Hands-on projects"],
 };
-
-export const eventInterestOptions = [
-  "Holiday Camp: July 19-31",
-  "Holiday Camp: August 5-16",
-  "Holiday Camp: August 17-28",
-  "Schools Partnership (extracurricular or mainstream)",
-  "Weekend sessions (coming soon)",
-  "Parent Intelligence Series",
-  "Partnership or general enquiry",
-];

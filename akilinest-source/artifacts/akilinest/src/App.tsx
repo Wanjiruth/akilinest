@@ -10,10 +10,15 @@ import WhatsAppFab from "@/components/WhatsAppFab";
 import { CursorTrail } from "@/components/CursorTrail";
 
 import Home from "@/pages/Home";
+import Teams from "@/pages/Teams";
+import TeamsEducators from "@/pages/TeamsEducators";
+import TeamsCorporate from "@/pages/TeamsCorporate";
+import KidsBootcamps from "@/pages/KidsBootcamps";
+import Hero2026 from "@/pages/Hero2026";
+import Insights from "@/pages/Insights";
 import Programme from "@/pages/Programme";
 import ParentSeries from "@/pages/ParentSeries";
 import Events from "@/pages/Events";
-import Schools from "@/pages/Schools";
 import About from "@/pages/About";
 import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
@@ -45,10 +50,15 @@ function AppRouter() {
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/teams/educators" component={TeamsEducators} />
+          <Route path="/teams/corporate" component={TeamsCorporate} />
+          <Route path="/teams" component={Teams} />
+          <Route path="/kids-ai-bootcamps" component={KidsBootcamps} />
+          <Route path="/hero-2026" component={Hero2026} />
+          <Route path="/insights" component={Insights} />
           <Route path="/programme" component={Programme} />
           <Route path="/pis" component={ParentSeries} />
           <Route path="/events" component={Events} />
-          <Route path="/schools" component={Schools} />
           <Route path="/about" component={About} />
           <Route path="/faq" component={Faq} />
           <Route path="/contact" component={Contact} />

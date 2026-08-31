@@ -13,10 +13,59 @@ const SITE = "https://akilinest.co.ke";
 const staticPages = [
   {
     path: "/",
-    title: "AkiliNest | Creative AI Programmes for Children 8–17 in Kenya",
+    h1: "Turn AI Into Your Everyday Work Advantage.",
+    title: "AI Training in Kenya for Teams & Kids | AkiliNest",
     description:
-      "AkiliNest trains children aged 8 to 17 across Kenya to think first, create boldly, and use AI wisely. Weekend sessions, holiday camps at heARTspace, Nairobi.",
-    body: "AkiliNest is a thinking-first creative studio for children aged 8 to 17 across Kenya.",
+      "Practical AI training in Kenya for workplace teams, educator teams and young people. AkiliNest helps people build useful AI skills and workflows for real work and learning.",
+    body: "AkiliNest closes the gap on both sides: practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17.",
+  },
+  {
+    path: "/teams",
+    h1: "Empowering people for the AI era.",
+    title: "Corporate AI Training in Kenya | AI Upskilling for Teams | AkiliNest",
+    description:
+      "Practical corporate AI training in Kenya for workplace and educator teams. Readiness audits, custom playbooks, applied cohorts and leadership labs with AkiliNest.",
+    body: "Technology moves fast, but the human capability to use it effectively is often left behind. AkiliNest builds practical operating systems and hands-on training tracks for two environments: corporate teams and educator teams. AI use is running ahead of formal AI training. AkiliNest for Teams: AI Opportunity Session, AI Workflow Bootcamp, Team AI Playbook and AI Adoption Support for workplace and educator teams in Kenya.",
+  },
+  {
+    path: "/teams/corporate",
+    h1: "Stop wasting AI subscriptions. Start building real output.",
+    title: "Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest",
+    description:
+      "Corporate AI training in Kenya for enterprise teams. Workflow readiness audits, custom AI playbooks, applied team cohorts and executive transformation labs from AkiliNest.",
+    body: "AkiliNest Enterprise Solutions: the Operational Workflow and Readiness Audit, the AkiliNest Custom Playbook, Applied Team Cohorts and Training Academies, and Executive Alignment and Transformation Labs, for organisations in Nairobi and across Kenya.",
+  },
+  {
+    path: "/teams/educators",
+    h1: "Empowering teachers and learning institutions to lead with intelligence.",
+    title: "AI Training for Teachers in Kenya | Educator Solutions | AkiliNest",
+    description:
+      "Practical AI training for teachers and schools in Kenya. Educator readiness audits, integration playbooks, hands-on teacher cohorts and leadership labs from AkiliNest.",
+    body: "AkiliNest Educator Solutions: the Educator AI Readiness Audit, the Educator AI Integration Playbook, Applied Educator Cohorts and Training Academies, and Educational Leadership and Transformation Labs, building on frameworks like the TSC AI Educator Pathways powered by Microsoft Elevate.",
+  },
+  {
+    path: "/kids-ai-bootcamps",
+    h1: "Creative AI Bootcamps for Kids in Kenya.",
+    title: "AI Bootcamp for Kids in Nairobi & Kenya | AkiliNest",
+    description:
+      "Creative AI bootcamps for children aged 8-17 in Nairobi and across Kenya. Young people explore AI, creativity, digital skills and real-world projects with AkiliNest.",
+    body: "Creative AI bootcamps for children aged 8 to 17 in Nairobi and across Kenya. Four programme stages: Sprouts, Explorers, Builders and Innovators.",
+  },
+  {
+    path: "/hero-2026",
+    h1: "AkiliNest selected for H.E.R.O. 2026.",
+    title: "AkiliNest Selected for H.E.R.O. 2026 | Harmonic Innovation Group",
+    description:
+      "AkiliNest was selected for H.E.R.O. 2026, the Harmonic Euro-African Ramp-up Orbit acceleration and internationalisation programme. One of 20 startups selected from 324 applications across 23 countries.",
+    body: "AkiliNest was selected for H.E.R.O., the Harmonic Euro-African Ramp-up Orbit, supported by Harmonic Innovation Group, BeEntrepreneurs and Startup Africa Roadtrip. One of 20 startups selected from 324 applications across 23 countries.",
+  },
+  {
+    path: "/insights",
+    h1: "Practical notes on using AI well.",
+    title: "Insights on Practical AI for Kenyan Teams | AkiliNest",
+    description:
+      "Founder-led articles on using AI well at work and in the classroom: safe everyday use, practical workflows, and responsible AI habits for Kenyan teams.",
+    body: "Practical notes on using AI well at work and in the classroom, written from real workshops with Kenyan teams.",
   },
   {
     path: "/programme",
@@ -27,17 +76,10 @@ const staticPages = [
   },
   {
     path: "/events",
-    title: "Holiday Camps July–August 2026 | AkiliNest",
+    title: "Kids AI Bootcamps & Holiday Camps in Nairobi | AkiliNest",
     description:
-      "Register for AkiliNest holiday camps across Kenya. July and August 2026 intakes at heARTspace, Nairobi. Ages 8-17, 10 days each, 2 hours daily. Limited spots.",
-    body: "Holiday camps July 19-31 and August 5-16, 17-28 2026 at heARTspace Kabarnet Road Nairobi.",
-  },
-  {
-    path: "/schools",
-    title: "Schools Partnership | UNESCO-Aligned AI Literacy | AkiliNest",
-    description:
-      "A ready-made AI literacy programme for Kenyan schools, aligned to the UNESCO AI Competency Framework. Extracurricular or mainstream. Ages 8 to 17.",
-    body: "AkiliNest Schools Partnership: UNESCO AI Competency Framework aligned curriculum for Kenyan schools. Storytelling, design, AI system design, entrepreneurship, leadership, ethics. Extracurricular or mainstream integration.",
+      "AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. Join the waiting list to hear when the next intake opens.",
+    body: "AkiliNest creative AI bootcamps and holiday camps for children aged 8 to 17 at heARTspace, Kabarnet Road, Nairobi. Next intake dates announced soon.",
   },
   {
     path: "/faq",
@@ -69,15 +111,17 @@ const staticPages = [
   },
   {
     path: "/about",
-    title: "About AkiliNest | Thinking-First Creative Studio Nairobi",
-    description: "Our philosophy: protect thinking, then use AI. Cognitive resilience training for children in the AI era.",
-    body: "AkiliNest philosophy: AI should stretch thinking not replace it. Based in Nairobi Kenya.",
+    h1: "We help people in Kenya work and learn well with AI.",
+    title: "About AkiliNest | Practical AI Upskilling in Kenya",
+    description: "AkiliNest helps workplace and educator teams in Kenya use AI well, and runs creative AI bootcamps for young people aged 8 to 17.",
+    body: "AkiliNest is a Nairobi-based company providing practical AI upskilling for teams and creative AI bootcamps for young people.",
   },
   {
     path: "/contact",
-    title: "Contact AkiliNest | Register Your Child Nairobi",
-    description: "Contact AkiliNest to register your child. Email akilinest@gmail.com or WhatsApp 0702 820 845.",
-    body: "Contact AkiliNest Nairobi. WhatsApp 0702820845. Email akilinest@gmail.com.",
+    h1: "Tell us what you are trying to do.",
+    title: "Contact AkiliNest | Book a Team Discovery Call",
+    description: "Book a team discovery call or ask about kids bootcamps. Email akilinest@gmail.com or WhatsApp 0702 820 845.",
+    body: "Contact AkiliNest Nairobi. Book a team discovery call, or join the kids bootcamp waiting list. WhatsApp 0702820845. Email akilinest@gmail.com.",
   },
   {
     path: "/pis",
@@ -131,7 +175,7 @@ const blogSlugs = [
   { slug: "kes-investment-future-proof-mind", title: "The KSh 10000 Holiday Camp That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
 ];
 
-function buildHtml({ title, description, path: pagePath, body }) {
+function buildHtml({ title, description, path: pagePath, body, h1 }) {
   const url = `${SITE}${pagePath === "/" ? "" : pagePath}`;
   const fullTitle = title.includes("AkiliNest") ? title : `${title} | AkiliNest`;
 
@@ -159,15 +203,19 @@ function buildHtml({ title, description, path: pagePath, body }) {
 <body>
   <div id="root">
     <main>
-      <h1>${title.split(" | ")[0]}</h1>
+      <h1>${h1 ?? title.split(" | ")[0]}</h1>
       <p>${description}</p>
       <p>${body}</p>
       <nav>
         <a href="${SITE}/">Home</a> |
-        <a href="${SITE}/programme">Programmes</a> |
-        <a href="${SITE}/events">Events</a> |
+        <a href="${SITE}/teams">For Teams</a> |
+        <a href="${SITE}/teams/corporate">Corporate Teams</a> |
+        <a href="${SITE}/teams/educators">Educator Teams</a> |
+        <a href="${SITE}/kids-ai-bootcamps">Kids Bootcamps</a> |
+        <a href="${SITE}/insights">Insights</a> |
+        <a href="${SITE}/hero-2026">H.E.R.O. 2026</a> |
         <a href="${SITE}/blog">Parent Guides</a> |
-        <a href="${SITE}/faq">FAQ</a> |
+        <a href="${SITE}/about">About</a> |
         <a href="${SITE}/contact">Contact</a>
       </nav>
     </main>
@@ -186,8 +234,11 @@ function writeRoute(pagePath, html, indexHtml) {
   const dir = pagePath === "/" ? DIST : path.join(DIST, pagePath.slice(1));
   if (pagePath !== "/") fs.mkdirSync(dir, { recursive: true });
 
-  const scriptMatch = indexHtml.match(/<script[^>]+src="([^"]+)"[^>]*><\/script>/);
-  const cssMatch = indexHtml.match(/<link[^>]+href="([^"]+\.css)"[^>]*>/);
+  // Match the built bundle specifically. A bare /<script[^>]+src=/ also matches
+  // the Google Analytics tag that sits first in index.html, which produced a
+  // malformed src and stopped the app hydrating on every prerendered route.
+  const scriptMatch = indexHtml.match(/<script[^>]+src="(\/assets\/[^"]+\.js)"[^>]*><\/script>/);
+  const cssMatch = indexHtml.match(/<link[^>]+href="(\/assets\/[^"]+\.css)"[^>]*>/);
   const prefix = assetPrefix(pagePath);
 
   let patched = html;
@@ -213,6 +264,46 @@ function writeRoute(pagePath, html, indexHtml) {
     const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1];
     if (desc) {
       root = root.replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${desc}"`);
+    }
+    // The homepage otherwise ships an empty #root, so crawlers that do not run
+    // JavaScript (OAI-SearchBot among them) see no copy at all on the one page
+    // that matters most. React replaces this markup on hydration.
+    // Organization data is emitted by react-helmet at runtime, so it never
+    // reaches crawlers that do not execute JavaScript. Emit it statically too.
+    const orgLd = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "AkiliNest",
+      url: `${SITE}/`,
+      logo: `${SITE}/logo.png`,
+      sameAs: ["https://www.linkedin.com/company/akilinest/"],
+      description:
+        "AkiliNest provides practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17.",
+      address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        telephone: "+254702820845",
+        email: "akilinest@gmail.com",
+        areaServed: "KE",
+        availableLanguage: "English",
+      },
+    };
+    root = root.replace(
+      "</head>",
+      `  <script type="application/ld+json">${JSON.stringify(orgLd)}</script>\n</head>`,
+    );
+
+    const fallback = html.match(/<main>[\s\S]*?<\/main>/)?.[0];
+    if (fallback) {
+      // Match the container whether or not a previous run already filled it,
+      // so re-running without a fresh vite build still refreshes the copy.
+      // The injected markup contains no nested divs, so the lazy match ends on
+      // the container's own closing tag whether or not it is already filled.
+      root = root.replace(
+        /<div id="root">[\s\S]*?<\/div>/,
+        `<div id="root">${fallback}</div>`,
+      );
     }
     fs.writeFileSync(outFile, root);
   } else {
@@ -272,9 +363,54 @@ function main() {
   const robots = `User-agent: *
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: ${SITE}/sitemap.xml
 `;
   fs.writeFileSync(path.join(DIST, "robots.txt"), robots);
+
+  // llms.txt: a short, curated summary for AI assistants. Generated here so it
+  // is regenerated with every build and cannot drift from the real routes.
+  const llms = `# AkiliNest
+
+> Practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17. Based in Nairobi.
+
+AkiliNest runs two programmes. For organisations, we help workplace and educator teams turn AI into practical workflows, better output and responsible everyday use, through the AI Workflow Bootcamp and related engagements. For families, we run creative AI bootcamps where children aged 8 to 17 build original projects with AI and digital tools across four stages: Sprouts (8-10), Explorers (11-12), Builders (13-14) and Innovators (15-17).
+
+AI use is running ahead of formal AI training. AkiliNest exists to close that gap on both sides.
+
+AkiliNest was selected for H.E.R.O. 2026, the Harmonic Euro-African Ramp-up Orbit, one of 20 startups selected from 324 applications across 23 countries.
+
+## For Teams
+- AI upskilling for teams: ${SITE}/teams
+- Corporate and enterprise solutions: ${SITE}/teams/corporate
+- AI training for educator teams and teachers: ${SITE}/teams/educators
+- Book a team discovery call: ${SITE}/contact
+
+## For Families
+- Creative AI bootcamps for kids aged 8-17: ${SITE}/kids-ai-bootcamps
+- Programme stages: ${SITE}/programme
+- Camps and events: ${SITE}/events
+- Parent Intelligence Series: ${SITE}/pis
+- Parents' guide: ${SITE}/parents-guide
+
+## Company
+- About AkiliNest: ${SITE}/about
+- Insights for teams: ${SITE}/insights
+- H.E.R.O. 2026 selection: ${SITE}/hero-2026
+- Parent guides and articles: ${SITE}/blog
+- FAQ: ${SITE}/faq
+- Contact: ${SITE}/contact
+
+## Contact
+- Email: akilinest@gmail.com
+- WhatsApp: +254 702 820 845
+- Location: Nairobi, Kenya
+- Kids bootcamp venue: heARTspace, Kabarnet Road, off Ngong Road, Nairobi
+`;
+  fs.writeFileSync(path.join(DIST, "llms.txt"), llms);
+  console.log("Generated llms.txt");
 
   generateSitemap();
   console.log("SEO generation complete.");

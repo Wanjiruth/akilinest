@@ -12,8 +12,8 @@ export default function Events() {
   return (
     <>
       <PageMeta
-        title="Holiday Camps July-August 2026 | AkiliNest"
-        description="Register for AkiliNest holiday camps across Kenya. July and August 2026 intakes at heARTspace, Nairobi. Ages 8-17, 10 days each, 2 hours daily. Limited spots."
+        title="Kids AI Bootcamps & Holiday Camps in Nairobi | AkiliNest"
+        description="AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. Join the waiting list to hear when the next intake opens."
         path="/events"
         keywords={["holiday camps kids Nairobi", "creative classes children Nairobi", "AkiliNest events", "after school activities Kenya"]}
       />
@@ -38,7 +38,7 @@ export default function Events() {
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-3 block">Events</span>
           <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Where the<br />learning begins</h1>
-          <p className="text-base text-white/60 max-w-lg leading-relaxed">Holiday camps and weekend programmes for children across Kenya, held at heARTspace, Nairobi.</p>
+          <p className="text-base text-white/60 max-w-lg leading-relaxed">Creative AI bootcamps and holiday programmes for children across Kenya, held at heARTspace, Nairobi.</p>
         </div>
       </div>
 
@@ -106,13 +106,13 @@ export default function Events() {
               <p className="text-base text-white/70 leading-relaxed mb-6 max-w-2xl">
                 {holidayCampsFlyer.subtitle}. {holidayCampsFlyer.ages}. Think first, create boldly, use AI wisely.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-                {holidayCampsFlyer.intakes.map((intake) => (
-                  <div key={intake.dates} className="bg-white/8 border border-white/12 rounded-xl px-4 py-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wide text-[#7BCFE8] block mb-1">{intake.month}</span>
-                    <span className="text-sm text-white/85">{intake.dates}</span>
-                  </div>
-                ))}
+              <div className="bg-white/8 border border-white/12 rounded-xl px-5 py-4 mb-6">
+                <span className="text-[10px] font-bold uppercase tracking-wide text-[#7BCFE8] block mb-1">
+                  Next intake
+                </span>
+                <span className="text-sm text-white/85">
+                  Dates are being confirmed. Join the waiting list to hear first.
+                </span>
               </div>
               <div className="flex flex-wrap gap-2 mb-8">
                 {[holidayCampsFlyer.time, holidayCampsFlyer.duration, ...holidayCampsFlyer.highlights].map((item) => (

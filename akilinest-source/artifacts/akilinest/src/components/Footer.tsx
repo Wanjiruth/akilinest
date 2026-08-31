@@ -1,28 +1,28 @@
 import { Link } from "wouter";
-import { EVENT_REGISTRATION_URL, SIGNUP_LABEL, VENUE, WHATSAPP_URL } from "@/content/events";
+import { VENUE, WHATSAPP_URL } from "@/content/events";
+import { TEAM_CTA_LABEL } from "@/content/teams";
 
 const footerLinks = {
-  programmes: [
-    { label: "Sprouts (Ages 8-10)", href: "/programme" },
-    { label: "Explorers (Ages 11-12)", href: "/programme" },
-    { label: "Builders (Ages 13-14)", href: "/programme" },
-    { label: "Innovators (Ages 15-17)", href: "/programme" },
+  teams: [
+    { label: "AkiliNest Teams", href: "/teams" },
+    { label: "Corporate teams", href: "/teams/corporate" },
+    { label: "Educator teams", href: "/teams/educators" },
+    { label: "Book a discovery call", href: "/contact" },
+  ],
+  kids: [
+    { label: "Kids AI bootcamps", href: "/kids-ai-bootcamps" },
+    { label: "Programme stages", href: "/programme" },
     { label: "Parent Intelligence Series", href: "/pis" },
-    { label: "Holiday Camps & Events", href: "/events" },
-    { label: "Schools Partnership", href: "/schools" },
+    { label: "Camps & events", href: "/events" },
+    { label: "Parents' guide", href: "/parents-guide" },
   ],
-  resources: [
-    { label: "Parent Guides (Blog)", href: "/blog" },
-    { label: "Nairobi Parent's Guide", href: "/parents-guide" },
-    { label: "Future Skills Report 2026", href: "/future-skills-report" },
-    { label: "FAQ", href: "/faq" },
-  ],
-  learn: [
+  company: [
     { label: "About AkiliNest", href: "/about" },
-    { label: "Our Philosophy", href: "/about" },
-    { label: "Full Programme Overview", href: "/programme" },
-    { label: "Contact Us", href: "/contact" },
-    { label: "Partner With Us", href: "/contact" },
+    { label: "Insights", href: "/insights" },
+    { label: "H.E.R.O. 2026", href: "/hero-2026" },
+    { label: "Parent guides (blog)", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ],
 };
 
@@ -34,43 +34,44 @@ export default function Footer() {
           <div className="max-w-md">
             <Link href="/" data-testid="link-footer-logo" className="inline-block mb-5">
               <img
-                src={`${import.meta.env.BASE_URL}logo.png`}
+                src={`${import.meta.env.BASE_URL}logo-wordmark-light.png`}
                 alt="AkiliNest"
-                width="400"
-                height="120"
-                loading="eager"
+                width="587"
+                height="437"
+                loading="lazy"
                 decoding="async"
-                className="h-16 md:h-20 w-auto max-w-[220px] object-contain object-left"
+                className="h-16 md:h-20 w-auto object-contain"
               />
             </Link>
             <p className="font-serif text-lg md:text-xl font-bold text-white/90 leading-snug mb-3">
-              Raising original thinkers for the AI era across Kenya.
+              Practical AI upskilling for Kenyan teams.
             </p>
             <p className="text-sm text-white/35 leading-relaxed font-sans">
-              Creative intelligence programmes for children aged 8-17. Think first, create boldly, use AI wisely.
+              AI workflows and responsible everyday use for workplace and educator teams, plus
+              creative AI bootcamps for young people aged 8 to 17.
             </p>
           </div>
 
-          <a
-            href={EVENT_REGISTRATION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="inline-flex shrink-0 items-center justify-center bg-[#E8693A] hover:bg-[#C4561A] text-white font-bold text-sm px-8 py-4 rounded-full transition-all font-sans self-start"
-            data-testid="button-footer-signup"
+            data-testid="button-footer-cta"
           >
-            {SIGNUP_LABEL}
-          </a>
+            {TEAM_CTA_LABEL}
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
           <div>
-            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">Programmes</h5>
-            <div className="flex flex-col gap-2.5">
-              {footerLinks.programmes.map((link) => (
+            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">
+              For Teams
+            </h5>
+            <div className="flex flex-col gap-1">
+              {footerLinks.teams.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-white/45 hover:text-white transition-colors font-sans"
+                  className="text-sm text-white/45 hover:text-white transition-colors font-sans py-2"
                 >
                   {link.label}
                 </Link>
@@ -79,13 +80,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">Resources</h5>
-            <div className="flex flex-col gap-2.5">
-              {footerLinks.resources.map((link) => (
+            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">
+              Kids Bootcamps
+            </h5>
+            <div className="flex flex-col gap-1">
+              {footerLinks.kids.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-white/45 hover:text-white transition-colors font-sans"
+                  className="text-sm text-white/45 hover:text-white transition-colors font-sans py-2"
                 >
                   {link.label}
                 </Link>
@@ -94,13 +97,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">Learn</h5>
-            <div className="flex flex-col gap-2.5">
-              {footerLinks.learn.map((link) => (
+            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">
+              Company
+            </h5>
+            <div className="flex flex-col gap-1">
+              {footerLinks.company.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-white/45 hover:text-white transition-colors font-sans"
+                  className="text-sm text-white/45 hover:text-white transition-colors font-sans py-2"
                 >
                   {link.label}
                 </Link>
@@ -109,41 +114,50 @@ export default function Footer() {
           </div>
 
           <div className="col-span-2 md:col-span-1">
-            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">Contact</h5>
+            <h5 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/30 mb-5 font-sans">
+              Contact
+            </h5>
             <div className="flex flex-col gap-3 text-sm text-white/45 font-sans">
               <p className="leading-relaxed">{VENUE}</p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" data-testid="link-footer-whatsapp">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors py-1"
+                data-testid="link-footer-whatsapp"
+              >
                 +254 702 820 845
               </a>
-              <a href="mailto:akilinest@gmail.com" className="hover:text-white transition-colors" data-testid="link-footer-email">
+              <a
+                href="mailto:akilinest@gmail.com"
+                className="hover:text-white transition-colors py-1"
+                data-testid="link-footer-email"
+              >
                 akilinest@gmail.com
               </a>
-              <Link href="/contact" className="hover:text-white transition-colors font-semibold text-[#E8693A]" data-testid="link-footer-contact">
+              <Link
+                href="/contact"
+                className="hover:text-white transition-colors font-semibold text-[#E8693A] py-1"
+                data-testid="link-footer-contact"
+              >
                 Get in touch
               </Link>
-            </div>
-
-            <div className="mt-6">
-              <h6 className="text-[10px] font-bold tracking-[1.5px] uppercase text-white/25 mb-3 font-sans">Session times</h6>
-              <div className="text-sm text-white/40 space-y-1 font-sans">
-                <p>Mon-Fri: Holiday camps (July & August)</p>
-                <p>Sat: Weekend programmes</p>
-                <p>WhatsApp: Mon-Sat inquiries</p>
-              </div>
             </div>
           </div>
         </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-white/5">
-          <p className="text-xs text-white/25 font-sans">© 2026 AkiliNest. All rights reserved. Nairobi, Kenya.</p>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-white/5">
+          <p className="text-xs text-white/25 font-sans">
+            &copy; 2026 AkiliNest. All rights reserved. Nairobi, Kenya.
+          </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-sans">
-            <Link href="/privacy" className="text-white/30 hover:text-white/60 transition-colors">
+            <Link href="/privacy" className="text-white/30 hover:text-white/60 transition-colors py-1.5">
               Privacy policy
             </Link>
-            <Link href="/terms" className="text-white/30 hover:text-white/60 transition-colors">
+            <Link href="/terms" className="text-white/30 hover:text-white/60 transition-colors py-1.5">
               Terms of service
             </Link>
-            <Link href="/faq" className="text-white/30 hover:text-white/60 transition-colors">
+            <Link href="/faq" className="text-white/30 hover:text-white/60 transition-colors py-1.5">
               FAQ
             </Link>
           </div>

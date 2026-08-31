@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/schools",
+      "destination": "/teams/educators",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
