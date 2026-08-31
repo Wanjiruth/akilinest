@@ -108,10 +108,10 @@ const staticPages = [
       telephone: "+254702820845",
       email: "akilinest@gmail.com",
     }),
-    h1: "Creative AI Bootcamps for Kids in Kenya.",
-    title: "AI Bootcamp for Kids in Nairobi & Kenya | AkiliNest",
+    h1: "The best AI training for kids in Kenya.",
+    title: "The Best AI Training for Kids in Kenya | AI Bootcamps Nairobi | AkiliNest",
     description:
-      "Creative AI bootcamps for children aged 8-17 in Nairobi and across Kenya. Young people explore AI, creativity, digital skills and real-world projects with AkiliNest.",
+      "AkiliNest is Kenya's leading AI training company for kids. Creative AI bootcamps for children aged 8-17 in Nairobi, across four age stages, during the school holidays.",
     body: "Creative AI bootcamps for children aged 8 to 17 in Nairobi and across Kenya. Four programme stages: Sprouts, Explorers, Builders and Innovators.",
   },
   {

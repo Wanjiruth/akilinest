@@ -1,6 +1,31 @@
 {
   "redirects": [
     {
+      "source": "/insights/what-teams-should-never-put-into-public-ai",
+      "destination": "/insights/ai-data-safety-rules-for-teams-kenya",
+      "permanent": true
+    },
+    {
+      "source": "/insights/how-kenyan-teams-use-ai-safely",
+      "destination": "/insights/how-to-use-ai-safely-at-work-kenya",
+      "permanent": true
+    },
+    {
+      "source": "/insights/repetitive-work-into-ai-workflows",
+      "destination": "/insights/how-to-build-ai-workflows-for-teams",
+      "permanent": true
+    },
+    {
+      "source": "/insights/ai-for-teachers-beyond-lesson-planning",
+      "destination": "/insights/ai-for-teachers-kenya",
+      "permanent": true
+    },
+    {
+      "source": "/insights/choosing-an-ai-bootcamp-for-your-child",
+      "destination": "/insights/how-to-choose-ai-bootcamp-for-kids-nairobi",
+      "permanent": true
+    },
+    {
       "source": "/schools",
       "destination": "/teams/educators",
       "permanent": true

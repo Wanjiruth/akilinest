@@ -34,7 +34,7 @@ const QUESTIONS = [
   },
   {
     q: "Do you offer AI training for children?",
-    a: "Yes, separately. Our creative AI bootcamps run during the school holidays at heARTspace, Nairobi, for young people aged 8 to 17, across four age stages. They are a different programme from our team training, with different staff and a different approach.",
+    a: "Yes, separately, and it is the work we are best known for in Kenya. Our creative AI bootcamps run during the school holidays at heARTspace, Nairobi, for young people aged 8 to 17, across four age stages. They are a different programme from our team training, with a different approach.",
   },
 ];
 

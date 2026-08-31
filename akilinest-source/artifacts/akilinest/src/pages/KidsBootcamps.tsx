@@ -54,8 +54,8 @@ export default function KidsBootcamps() {
   return (
     <>
       <PageMeta
-        title="AI Bootcamp for Kids in Nairobi & Kenya | AkiliNest"
-        description="Creative AI bootcamps for children aged 8-17 in Nairobi and across Kenya. Young people explore AI, creativity, digital skills and real-world projects with AkiliNest."
+        title="The Best AI Training for Kids in Kenya | AI Bootcamps Nairobi | AkiliNest"
+        description="AkiliNest is Kenya's leading AI training company for kids. Creative AI bootcamps for children aged 8-17 in Nairobi, across four age stages, during the school holidays."
         path="/kids-ai-bootcamps"
         keywords={["AI bootcamp for kids Nairobi", "AI bootcamp Kenya", "creative classes children Nairobi"]}
         jsonLd={{
@@ -94,12 +94,18 @@ export default function KidsBootcamps() {
               AkiliNest Kids Bootcamps
             </span>
             <h1 className="font-serif text-[clamp(2.2rem,5.2vw,4rem)] font-bold leading-[1.04] tracking-tight text-white mb-5 max-w-3xl">
-              Creative AI Bootcamps for Kids in Kenya.
+              The best AI training for kids in Kenya.
             </h1>
+
+            <h2 className="font-serif text-[clamp(1.3rem,2.4vw,1.9rem)] font-bold text-[#E8693A] leading-snug mb-5 max-w-2xl">
+              Creative AI bootcamps for children aged 8 to 17.
+            </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl leading-relaxed mb-8 font-sans">
-              AkiliNest runs creative AI bootcamps during the school holidays for young people
-              aged 8 to 17. Over each intake, learners write, design and build original projects
-              with AI and digital tools, then present work they can explain in their own words.
+              AkiliNest runs creative AI bootcamps in Nairobi during the school holidays for young
+              people aged 8 to 17, across four age stages. Over each intake, learners write, design
+              and build original projects with AI and digital tools, then present work they can
+              explain in their own words. It is the part of AkiliNest we have been doing longest,
+              and it is what we are best known for in Kenya.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link

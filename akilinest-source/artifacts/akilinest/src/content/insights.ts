@@ -31,7 +31,7 @@ export const AUDIENCE_LABELS: Record<InsightAudience, string> = {
 
 export const insights: InsightPost[] = [
   {
-    slug: "what-teams-should-never-put-into-public-ai",
+    slug: "ai-data-safety-rules-for-teams-kenya",
     title: "What should a workplace team never put into a public AI tool?",
     description:
       "A short, practical list your team can agree on in one meeting, and the reasoning behind each item.",
@@ -102,7 +102,7 @@ export const insights: InsightPost[] = [
     ],
   },
   {
-    slug: "how-kenyan-teams-use-ai-safely",
+    slug: "how-to-use-ai-safely-at-work-kenya",
     title: "How Kenyan teams can use AI safely in everyday work",
     description:
       "Kenya leads the world in AI use and almost none of it has been formally taught. Here is what safe, useful adoption looks like for an ordinary team.",
@@ -170,7 +170,7 @@ export const insights: InsightPost[] = [
     ],
   },
   {
-    slug: "repetitive-work-into-ai-workflows",
+    slug: "how-to-build-ai-workflows-for-teams",
     title: "How to turn repetitive team work into practical AI workflows",
     description:
       "Finding the work that repeats every week, and turning it into something the whole team reuses rather than a one-off prompt.",
@@ -239,7 +239,7 @@ export const insights: InsightPost[] = [
     ],
   },
   {
-    slug: "ai-for-teachers-beyond-lesson-planning",
+    slug: "ai-for-teachers-kenya",
     title: "AI for teachers in Kenya: practical uses beyond lesson planning",
     description:
       "Lesson plans are the obvious use and the least interesting one. The bigger wins are in feedback, differentiation and the administrative load.",
@@ -308,7 +308,7 @@ export const insights: InsightPost[] = [
     ],
   },
   {
-    slug: "choosing-an-ai-bootcamp-for-your-child",
+    slug: "how-to-choose-ai-bootcamp-for-kids-nairobi",
     title: "How parents can choose an AI bootcamp for their child",
     description:
       "The questions worth asking any programme before you enrol, including ours.",
