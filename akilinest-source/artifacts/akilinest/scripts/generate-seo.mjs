@@ -175,6 +175,25 @@ const blogSlugs = [
   { slug: "kes-investment-future-proof-mind", title: "The KSh 10000 Holiday Camp That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
 ];
 
+/**
+ * The prerendered copy exists for crawlers that do not run JavaScript. In a real
+ * browser it would flash unstyled for a moment before React replaces #root, so
+ * this hides it the instant scripting is available. The class lands on <html>
+ * before the body paints, so nothing is ever shown and then taken away.
+ * Crawlers without JS never get the class and read the markup normally.
+ */
+const PRERENDER_HEAD = `<style>html.js [data-prerender]{display:none}</style>
+  <script>document.documentElement.className+=" js"</script>`;
+
+/**
+ * Fonts are linked rather than @imported from the CSS, so every prerendered
+ * route needs the same links the Vite shell has, or it renders in a fallback
+ * face until the user navigates.
+ */
+const FONT_HEAD = `<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" />`;
+
 function buildHtml({ title, description, path: pagePath, body, h1 }) {
   const url = `${SITE}${pagePath === "/" ? "" : pagePath}`;
   const fullTitle = title.includes("AkiliNest") ? title : `${title} | AkiliNest`;
@@ -199,10 +218,12 @@ function buildHtml({ title, description, path: pagePath, body, h1 }) {
   <meta name="twitter:description" content="${description}" />
   <meta name="twitter:image" content="${SITE}/opengraph.jpg" />
   <link rel="icon" type="image/png" href="/logo.png" />
+  ${FONT_HEAD}
+  ${PRERENDER_HEAD}
 </head>
 <body>
   <div id="root">
-    <main>
+    <main data-prerender>
       <h1>${h1 ?? title.split(" | ")[0]}</h1>
       <p>${description}</p>
       <p>${body}</p>
@@ -291,10 +312,10 @@ function writeRoute(pagePath, html, indexHtml) {
     };
     root = root.replace(
       "</head>",
-      `  <script type="application/ld+json">${JSON.stringify(orgLd)}</script>\n</head>`,
+      `  <script type="application/ld+json">${JSON.stringify(orgLd)}</script>\n  ${PRERENDER_HEAD}\n</head>`,
     );
 
-    const fallback = html.match(/<main>[\s\S]*?<\/main>/)?.[0];
+    const fallback = html.match(/<main data-prerender>[\s\S]*?<\/main>/)?.[0];
     if (fallback) {
       // Match the container whether or not a previous run already filled it,
       // so re-running without a fresh vite build still refreshes the copy.

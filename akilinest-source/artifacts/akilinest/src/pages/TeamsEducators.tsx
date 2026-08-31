@@ -92,10 +92,10 @@ export default function TeamsEducators() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <Reveal>
             <img
-              src={asset(IMAGES.sessionLaptop)}
-              alt="A facilitator working with a group of learners around a laptop during an AkiliNest session"
-              width="1200"
-              height="1600"
+              src={asset(IMAGES.sessionClassroom)}
+              alt="A teacher working with a class gathered around a laptop during an AkiliNest school session"
+              width="1100"
+              height="1466"
               loading="lazy"
               decoding="async"
               className="rounded-3xl object-cover w-full aspect-[4/3] shadow-lg"

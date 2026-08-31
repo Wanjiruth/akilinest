@@ -15,6 +15,8 @@ export const IMAGES = {
   pitchStage: "images/pitch-stage.jpg",
   pitchGroup: "images/pitch-group.jpg",
   sessionLaptop: "images/session-laptop.jpg",
+  sessionClassroom: "images/session-classroom.jpg",
+  heroCohort: "images/hero-cohort.jpg",
   pitchStage2: "images/pitch-stage-2.jpg",
   sessionScreen: "images/session-screen.jpg",
   workSprouts: "work-sprouts.png",

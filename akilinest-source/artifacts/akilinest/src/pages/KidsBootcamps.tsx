@@ -289,8 +289,50 @@ export default function KidsBootcamps() {
         </div>
       </section>
 
+      {/* GALLERY */}
+      <section className="bg-white px-6 md:px-14 py-20 md:py-24 border-t border-black/5">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#1A7A97] mb-4 block font-sans">
+              In the room
+            </span>
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-12">
+              Work they can hold up and explain
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {[
+              {
+                img: IMAGES.sessionClassroom,
+                alt: "A class gathered around a laptop with their teacher during an AkiliNest session",
+              },
+              {
+                img: IMAGES.sessionScreen,
+                alt: "Learners presenting their work at the front of a session",
+              },
+              {
+                img: IMAGES.kidsCrafts,
+                alt: "Children working on a hands-on creative activity at an AkiliNest session",
+              },
+            ].map((shot, i) => (
+              <Reveal key={shot.img} delay={i * 70}>
+                <img
+                  src={asset(shot.img)}
+                  alt={shot.alt}
+                  width="1100"
+                  height="1100"
+                  loading="lazy"
+                  decoding="async"
+                  className="rounded-3xl object-cover w-full aspect-[4/5] shadow-md"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* IN ACTION */}
-      <section className="bg-white px-6 md:px-14 py-20 md:py-24">
+      <section className="bg-[#F9F5EE] px-6 md:px-14 py-20 md:py-24 border-t border-black/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#1A7A97] mb-4 block font-sans">
@@ -325,7 +367,7 @@ export default function KidsBootcamps() {
       </section>
 
       {/* FOR PARENTS */}
-      <section className="bg-[#F9F5EE] px-6 md:px-14 py-20 md:py-24 border-t border-black/5">
+      <section className="bg-white px-6 md:px-14 py-20 md:py-24 border-t border-black/5">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
           <Reveal>
             <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#E8693A] mb-5 block font-sans">

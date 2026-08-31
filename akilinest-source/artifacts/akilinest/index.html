@@ -12,6 +12,17 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- Fonts are requested here rather than via @import in the CSS, which made
+         the browser wait for the stylesheet to parse before it even discovered
+         them. Starting the connection early cuts a round trip off first paint. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+    />
+
     <title>AkiliNest | Creative AI Programmes for Children 8-17 in Kenya</title>
     <meta name="description" content="AkiliNest trains children aged 8 to 17 across Kenya to think first, create boldly, and use AI wisely. Holiday camps July-August 2026 at heARTspace, Nairobi." />
     <meta name="robots" content="index, follow" />

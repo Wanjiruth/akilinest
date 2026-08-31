@@ -38,6 +38,24 @@ export default function Hero2026() {
 
       {/* PHOTOS */}
       <section className="bg-white px-6 md:px-14 pt-16 md:pt-20">
+        <div className="max-w-4xl mx-auto mb-6">
+          <Reveal>
+            <figure className="m-0">
+              <img
+                src={asset(IMAGES.heroCohort)}
+                alt="The H.E.R.O. Kenya Edition 2026 cohort on stage in Nairobi, in front of the programme backdrop"
+                width="1400"
+                height="933"
+                loading="lazy"
+                decoding="async"
+                className="rounded-2xl object-cover w-full aspect-[3/2] shadow-md"
+              />
+              <figcaption className="mt-2.5 text-xs text-[#5C5A70] font-sans">
+                The H.E.R.O. Kenya Edition 2026 cohort, Nairobi.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           <Reveal>
             <figure className="m-0">
