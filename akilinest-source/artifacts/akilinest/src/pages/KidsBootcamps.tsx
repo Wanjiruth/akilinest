@@ -149,7 +149,7 @@ export default function KidsBootcamps() {
               The programme
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3.6rem)] font-bold text-white tracking-tight leading-tight mb-4">
-              What children actually do
+              What do children do at an AI bootcamp?
             </h2>
             <p className="text-base text-white/55 max-w-xl mb-12 font-sans leading-relaxed">
               Four stages by age. Each one starts with the child&rsquo;s own idea, and only then
@@ -233,7 +233,7 @@ export default function KidsBootcamps() {
               The AkiliNest method
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3.6rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-4">
-              Four steps every session follows
+              How does an AkiliNest AI bootcamp session work?
             </h2>
             <p className="text-base text-[#4A4860] max-w-xl mb-12 font-sans">
               Every AkiliNest cohort uses the same thinking cycle, so children stay in charge of
@@ -339,7 +339,7 @@ export default function KidsBootcamps() {
               AkiliNest in action
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-4">
-              See how a bootcamp works
+              What does an AI bootcamp in Nairobi look like?
             </h2>
             <p className="text-base text-[#4A4860] max-w-xl mb-12 font-sans">
               Creative sessions for children and thoughtful sessions for parents, at {VENUE}.
@@ -374,7 +374,7 @@ export default function KidsBootcamps() {
               For parents
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3.4rem)] font-bold text-[#0D0C18] tracking-tight leading-[1.1] mb-6">
-              Children who can explain their own work.
+              Is an AI bootcamp right for my child?
             </h2>
             <p className="text-base text-[#4A4860] leading-relaxed max-w-xl mb-8 font-sans">
               At AkiliNest, mental effort matters. Children think first, use AI as a sparring

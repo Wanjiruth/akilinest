@@ -9,6 +9,7 @@ AI use is running ahead of formal AI training. AkiliNest exists to close that ga
 AkiliNest was selected for H.E.R.O. 2026, the Harmonic Euro-African Ramp-up Orbit, one of 20 startups selected from 324 applications across 23 countries.
 
 ## For Teams
+- AI training in Kenya: https://akilinest.co.ke/ai-training-kenya
 - AI upskilling for teams: https://akilinest.co.ke/teams
 - Corporate and enterprise solutions: https://akilinest.co.ke/teams/corporate
 - AI training for educator teams and teachers: https://akilinest.co.ke/teams/educators

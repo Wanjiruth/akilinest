@@ -45,8 +45,12 @@ export default function TeamsCorporate() {
               Enterprise Solutions
             </span>
             <h1 className="font-serif text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#0D0C18] mb-6 max-w-3xl">
-              Stop wasting AI subscriptions. Start building real output.
+              Corporate AI training in Kenya.
             </h1>
+
+            <h2 className="font-serif text-[clamp(1.3rem,2.4vw,1.9rem)] font-bold text-[#0B4D5F] leading-snug mb-6 max-w-2xl">
+              Stop wasting AI subscriptions. Start building real output.
+            </h2>
             <p className="text-base md:text-lg text-[#4A4860] max-w-2xl leading-relaxed mb-5 font-sans">
               Most teams are told to &ldquo;just use AI&rdquo;, but end up experimenting in silos.
               The outcome is always the same: messy brand voices, inconsistent outputs, and software
@@ -78,7 +82,7 @@ export default function TeamsCorporate() {
               What we offer
             </span>
             <h2 className="font-serif text-[clamp(1.9rem,3.6vw,3rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-12 max-w-2xl">
-              Deep-dive enterprise solutions.
+              What does corporate AI training with AkiliNest include?
             </h2>
           </Reveal>
           <SolutionCards solutions={corporateSolutions} />
@@ -101,7 +105,7 @@ export default function TeamsCorporate() {
           </Reveal>
           <Reveal delay={100}>
             <h2 className="font-serif text-[clamp(1.8rem,3.4vw,2.6rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-5">
-              We run sessions where the work happens.
+              Where do you run AI training in Kenya?
             </h2>
             <p className="text-base text-[#4A4860] leading-relaxed mb-6 font-sans">
               We run AI workshops in Nairobi and work with teams across Kenya, on site at your

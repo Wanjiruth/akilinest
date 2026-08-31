@@ -75,12 +75,17 @@ export default function Home() {
               AkiliNest &middot; AI Upskilling in Kenya
             </span>
             <h1 className="font-serif text-[clamp(2.2rem,5vw,3.9rem)] font-bold leading-[1.05] tracking-tight text-[#0D0C18] mb-6 max-w-3xl">
-              Turn AI Into Your Everyday Work Advantage.
+              Practical AI training in Kenya, for teams and for kids.
             </h1>
 
+            <h2 className="font-serif text-[clamp(1.3rem,2.4vw,1.9rem)] font-bold text-[#0B4D5F] leading-snug mb-6 max-w-2xl">
+              Turn AI Into Your Everyday Work Advantage.
+            </h2>
+
             <p className="text-base md:text-lg text-[#4A4860] max-w-2xl leading-relaxed mb-7 font-sans">
-              AkiliNest closes the gap on both sides: practical AI upskilling for workplace and
-              educator teams, and creative AI bootcamps for young people aged 8 to 17.
+              AkiliNest is an AI training company in Nairobi, Kenya. We close the gap on both
+              sides: practical AI upskilling for workplace and educator teams across Kenya, and
+              creative AI bootcamps for young people aged 8 to 17 in Nairobi.
             </p>
 
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-9">
@@ -124,7 +129,7 @@ export default function Home() {
               What we do
             </span>
             <h2 className="font-serif text-[clamp(1.9rem,3.8vw,3.2rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-4 max-w-2xl">
-              Two programmes. One idea.
+              What does AkiliNest actually do?
             </h2>
             <p className="text-base text-[#4A4860] max-w-xl mb-12 font-sans leading-relaxed">
               People should be able to use AI well, and explain the work they produce with it.
@@ -179,7 +184,7 @@ export default function Home() {
               How team upskilling works
             </span>
             <h2 className="font-serif text-[clamp(1.9rem,3.8vw,3.2rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-12 max-w-3xl">
-              From scattered AI experiments to practical team workflows.
+              How does AI training for teams in Kenya work?
             </h2>
           </Reveal>
 
@@ -207,7 +212,7 @@ export default function Home() {
               For teams
             </span>
             <h2 className="font-serif text-[clamp(1.9rem,3.8vw,3.2rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-12 max-w-3xl">
-              One practical approach. Built around your team&apos;s work.
+              Who is AkiliNest AI training for?
             </h2>
           </Reveal>
 

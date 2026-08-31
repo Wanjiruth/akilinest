@@ -45,8 +45,12 @@ export default function TeamsEducators() {
               Educator Solutions
             </span>
             <h1 className="font-serif text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#0D0C18] mb-6 max-w-3xl">
-              Empowering teachers and learning institutions to lead with intelligence.
+              AI training for teachers in Kenya.
             </h1>
+
+            <h2 className="font-serif text-[clamp(1.3rem,2.4vw,1.9rem)] font-bold text-[#0B4D5F] leading-snug mb-6 max-w-2xl">
+              Empowering teachers and learning institutions to lead with intelligence.
+            </h2>
             <p className="text-base md:text-lg text-[#4A4860] max-w-2xl leading-relaxed mb-5 font-sans">
               Technology is transforming classrooms and administrative desks faster than ever, but
               educators are often left to figure out new tools on their own. The result is uneven
@@ -80,7 +84,7 @@ export default function TeamsEducators() {
               What we offer
             </span>
             <h2 className="font-serif text-[clamp(1.9rem,3.6vw,3rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-12 max-w-2xl">
-              Educator and institutional pathways.
+              What does AI training for teachers in Kenya cover?
             </h2>
           </Reveal>
           <SolutionCards solutions={educatorSolutions} />
@@ -103,7 +107,7 @@ export default function TeamsEducators() {
           </Reveal>
           <Reveal delay={100}>
             <h2 className="font-serif text-[clamp(1.8rem,3.4vw,2.6rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-5">
-              We teach in classrooms, not only in slide decks.
+              Why choose AkiliNest for teacher AI training?
             </h2>
             <p className="text-base text-[#4A4860] leading-relaxed mb-5 font-sans">
               AkiliNest runs sessions with learners as well as with the adults who teach them. What

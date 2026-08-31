@@ -34,8 +34,12 @@ export default function Teams() {
               AkiliNest Teams
             </span>
             <h1 className="font-serif text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#0D0C18] mb-6 max-w-3xl">
-              Empowering people for the AI era.
+              AI training and upskilling for teams in Kenya.
             </h1>
+
+            <h2 className="font-serif text-[clamp(1.3rem,2.4vw,1.9rem)] font-bold text-[#0B4D5F] leading-snug mb-6 max-w-2xl">
+              Empowering people for the AI era.
+            </h2>
             <p className="text-base md:text-lg text-[#4A4860] max-w-2xl leading-relaxed mb-5 font-sans">
               Technology moves fast, but the human capability to use it effectively is often left
               behind. Whether in a high-performing corporate office or a modern classroom, the
@@ -65,7 +69,7 @@ export default function Teams() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-center">
           <Reveal>
             <h2 className="font-serif text-[clamp(1.8rem,3.4vw,2.6rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-4">
-              AI use is running ahead of formal AI training.
+              Why does Kenya need practical AI training now?
             </h2>
             <p className="text-base text-[#4A4860] leading-relaxed font-sans">
               Access to tools is no longer the constraint. Knowing which work they belong in, how to
@@ -94,7 +98,7 @@ export default function Teams() {
               Choose your pathway
             </span>
             <h2 className="font-serif text-[clamp(1.9rem,3.6vw,3rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-4 max-w-2xl">
-              Two environments. One practical approach.
+              Which AI training pathway fits your organisation?
             </h2>
             <p className="text-base text-[#4A4860] max-w-xl mb-12 font-sans leading-relaxed">
               Select the pathway below to see how we partner with your organisation.

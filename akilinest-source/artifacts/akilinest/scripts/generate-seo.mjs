@@ -62,6 +62,14 @@ const staticPages = [
     body: "AkiliNest closes the gap on both sides: practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17.",
   },
   {
+    path: "/ai-training-kenya",
+    h1: "AI training in Kenya.",
+    title: "AI Training in Kenya | Corporate, Teacher & Kids AI Training | AkiliNest",
+    description:
+      "AI training in Kenya from AkiliNest. Corporate AI training for workplace teams, AI training for teachers, and creative AI bootcamps for kids in Nairobi.",
+    body: "AkiliNest is an AI training company based in Nairobi, Kenya. We run practical AI training for workplace teams, AI training for teachers and school leadership, and creative AI bootcamps for young people aged 8 to 17. Kenya has the highest rate of ChatGPT use of any country in the world, at 42.1% of internet users aged 16 and over in the past month, according to the DataReportal and Meltwater Global Digital Report 2025. AI use is running ahead of formal AI training. Team sessions run on site at your offices in Nairobi or at our space, and we work with organisations across Kenya.",
+  },
+  {
     path: "/teams",
     h1: "Empowering people for the AI era.",
     title: "Corporate AI Training in Kenya | AI Upskilling for Teams | AkiliNest",
@@ -284,6 +292,7 @@ ${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd())}</sc
       <p>${body}</p>
       <nav>
         <a href="${SITE}/">Home</a> |
+        <a href="${SITE}/ai-training-kenya">AI Training Kenya</a> |
         <a href="${SITE}/teams">For Teams</a> |
         <a href="${SITE}/teams/corporate">Corporate Teams</a> |
         <a href="${SITE}/teams/educators">Educator Teams</a> |
@@ -485,6 +494,7 @@ AI use is running ahead of formal AI training. AkiliNest exists to close that ga
 AkiliNest was selected for H.E.R.O. 2026, the Harmonic Euro-African Ramp-up Orbit, one of 20 startups selected from 324 applications across 23 countries.
 
 ## For Teams
+- AI training in Kenya: ${SITE}/ai-training-kenya
 - AI upskilling for teams: ${SITE}/teams
 - Corporate and enterprise solutions: ${SITE}/teams/corporate
 - AI training for educator teams and teachers: ${SITE}/teams/educators

@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://akilinest.co.ke/ai-training-kenya</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://akilinest.co.ke/teams</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

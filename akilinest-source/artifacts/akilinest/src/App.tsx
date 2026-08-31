@@ -11,6 +11,7 @@ import { CursorTrail } from "@/components/CursorTrail";
 
 import Home from "@/pages/Home";
 import Teams from "@/pages/Teams";
+import AiTrainingKenya from "@/pages/AiTrainingKenya";
 import TeamsEducators from "@/pages/TeamsEducators";
 import TeamsCorporate from "@/pages/TeamsCorporate";
 import KidsBootcamps from "@/pages/KidsBootcamps";
@@ -51,6 +52,7 @@ function AppRouter() {
       <main className="flex-1">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/ai-training-kenya" component={AiTrainingKenya} />
           <Route path="/teams/educators" component={TeamsEducators} />
           <Route path="/teams/corporate" component={TeamsCorporate} />
           <Route path="/teams" component={Teams} />
