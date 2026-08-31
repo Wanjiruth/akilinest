@@ -7,6 +7,21 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+/** Same source the pages render from, so the schema cannot drift from the copy. */
+const faqs = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, "../src/content/faqs.json"), "utf8"),
+);
+
+const faqPage = (items) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+});
 const DIST = path.resolve(__dirname, "../dist/public");
 const SITE = "https://akilinest.co.ke";
 
@@ -29,6 +44,7 @@ const staticPages = [
   },
   {
     path: "/teams/corporate",
+    jsonLd: () => faqPage(faqs.teamFaqs),
     h1: "Stop wasting AI subscriptions. Start building real output.",
     title: "Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest",
     description:
@@ -37,6 +53,7 @@ const staticPages = [
   },
   {
     path: "/teams/educators",
+    jsonLd: () => faqPage(faqs.educatorFaqs),
     h1: "Empowering teachers and learning institutions to lead with intelligence.",
     title: "AI Training for Teachers in Kenya | Educator Solutions | AkiliNest",
     description:
@@ -45,6 +62,17 @@ const staticPages = [
   },
   {
     path: "/kids-ai-bootcamps",
+    jsonLd: () => ({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      name: "AkiliNest",
+      url: `${SITE}/kids-ai-bootcamps`,
+      description:
+        "Creative AI bootcamps for children aged 8 to 17 in Nairobi and across Kenya.",
+      address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
+      telephone: "+254702820845",
+      email: "akilinest@gmail.com",
+    }),
     h1: "Creative AI Bootcamps for Kids in Kenya.",
     title: "AI Bootcamp for Kids in Nairobi & Kenya | AkiliNest",
     description:
@@ -172,7 +200,7 @@ const blogSlugs = [
   { slug: "african-stack-for-kids", title: "The African Stack for Kids: M-Pesa, Climate, Community", description: "African context for children's technology education in Nairobi." },
   { slug: "50-nairobi-parents-ai-era", title: "What I Learned From 50 Nairobi Parents About Raising Kids in the AI Era", description: "Five shared fears and three surprising hopes." },
   { slug: "mom-google-says-to-mom-i-disagree", title: "From Mom Google Says to Mom I Disagree", description: "How children move from accepting AI answers to independent positions." },
-  { slug: "kes-investment-future-proof-mind", title: "The KSh 10000 Holiday Camp That Future-Proofs Your Child's Mind", description: "Affordable creative classes for kids in Nairobi." },
+  { slug: "kes-investment-future-proof-mind", title: "What Should a Holiday Programme in Nairobi Actually Give Your Child?", description: "How to judge whether a Nairobi holiday programme is worth paying for: what to look for, what to avoid, and the questions to ask before you book." },
 ];
 
 /**
@@ -194,7 +222,7 @@ const FONT_HEAD = `<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" />`;
 
-function buildHtml({ title, description, path: pagePath, body, h1 }) {
+function buildHtml({ title, description, path: pagePath, body, h1, jsonLd }) {
   const url = `${SITE}${pagePath === "/" ? "" : pagePath}`;
   const fullTitle = title.includes("AkiliNest") ? title : `${title} | AkiliNest`;
 
@@ -218,7 +246,7 @@ function buildHtml({ title, description, path: pagePath, body, h1 }) {
   <meta name="twitter:description" content="${description}" />
   <meta name="twitter:image" content="${SITE}/opengraph.jpg" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  ${FONT_HEAD}
+${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd())}</script>\n` : ""}  ${FONT_HEAD}
   ${PRERENDER_HEAD}
 </head>
 <body>

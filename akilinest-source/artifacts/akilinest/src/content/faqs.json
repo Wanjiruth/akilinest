@@ -1,0 +1,54 @@
+{
+  "teamFaqs": [
+    {
+      "q": "How long does the AI Workflow Bootcamp take?",
+      "a": "It depends on the size of your team and how much work you want to cover, so we scope it on the discovery call. Every engagement includes live sessions plus a 30-day implementation clinic afterwards, because the month after the workshop is where adoption is usually won or lost."
+    },
+    {
+      "q": "How many people should take part?",
+      "a": "It works best with one team or department at a time rather than a whole organisation at once, because the sessions are built around the specific work that group does each week."
+    },
+    {
+      "q": "Do you come to us?",
+      "a": "Yes. We run sessions on site at your offices in Nairobi and work with teams across Kenya, or you can come to our space. Educator teams often use a staff development day."
+    },
+    {
+      "q": "Does the team need to have chosen AI tools already?",
+      "a": "No. Part of the work is deciding which tools are worth using for which tasks, and which work should not go near AI at all."
+    },
+    {
+      "q": "What about our confidential information?",
+      "a": "We agree up front what may be used in sessions and what must not. A standing part of the programme is helping your team set its own rules for what never goes into a public AI tool."
+    },
+    {
+      "q": "What does it cost?",
+      "a": "We scope and price each engagement on the discovery call, based on team size and what you want to improve. There is no rate card yet."
+    }
+  ],
+  "educatorFaqs": [
+    {
+      "q": "Is this training for teachers, or for learners?",
+      "a": "For the adults. This programme is for teachers, trainers and learning teams. We run separate creative AI bootcamps for young people aged 8 to 17."
+    },
+    {
+      "q": "Will this replace teachers' professional judgement?",
+      "a": "No, and the sessions are built to protect it. Teachers decide what is accurate, appropriate and worth using; AI drafts and suggests."
+    },
+    {
+      "q": "Can it run during a staff development day?",
+      "a": "Yes. We shape the sessions around the school or training calendar and can run them on site."
+    },
+    {
+      "q": "How does this compare with the free TSC AI pathways?",
+      "a": "TSC and Microsoft Elevate offer free, self-paced AI pathways for TSC-employed teachers, aligned to TPD and KePTS. They are worth doing and we will say so. We work differently: live sessions with a whole department at once, built on your own schemes of work and the tools your school actually uses, ending in shared standards rather than individual certificates. We also work with private and international schools, whose staff sit outside the TSC scheme."
+    },
+    {
+      "q": "Do you only teach Microsoft tools?",
+      "a": "No. We work with whatever your school already runs, whether that is Google Workspace, Microsoft 365 or a mix, and we are honest about which tasks are worth using AI for at all."
+    },
+    {
+      "q": "How do you handle learner privacy?",
+      "a": "It is part of the programme. Teams work through what learner information must never be entered into a public AI tool, and set clear expectations for classroom AI use."
+    }
+  ]
+}

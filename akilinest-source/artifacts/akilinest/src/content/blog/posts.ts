@@ -841,27 +841,62 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "kes-investment-future-proof-mind",
-    title: "The KSh 10,000 Holiday Camp That Future-Proofs Your Child's Mind",
+    title: "What Should a Holiday Programme in Nairobi Actually Give Your Child?",
     description:
-      "Ten days. A real experience of thinking-first creative intelligence. What Kenyan parents get for KSh 10,000.",
+      "How to judge whether a Nairobi holiday programme is worth paying for: what to look for, what to avoid, and the questions to ask before you book.",
     searchQuery: "affordable creative classes kids Nairobi",
     category: "future-skills",
     date: "2026-02-06",
-    readTime: "5 min",
+    readTime: "6 min",
     sections: [
       {
         paragraphs: [
-          "The search for affordable creative classes kids Nairobi is real, you want value, not just volume.",
-          "AkiliNest's holiday camp is KSh 10,000 per child for 10 days. Two hours daily at heARTspace. Your child moves through the Think-First cycle, think, write, use AI, present, and you see whether this approach fits your family.",
+          "Every school holiday, the same question goes round Nairobi parent groups: where can I take my child that is actually worth the money? The listings all promise the same things. Creativity. Confidence. Future skills. Almost none of them explain what a child will have done by the end of it.",
+          "Cost is the easiest thing to compare and the least useful. A cheap programme that occupies a child for two weeks and produces nothing has cost you more than a pricier one that changes how they think. What follows is how to tell the difference before you pay, whichever programme you end up choosing.",
         ],
       },
       {
-        heading: "What KSh 10,000 buys",
+        heading: "Ask what your child will have made by the last day",
         paragraphs: [
-          "10 days of guided creative intelligence, not passive screen time.",
-          "Tangible outputs your child brings home along the way.",
-          "Three intakes: July 19-31, August 5-16, and August 17-28.",
-          "Reserve via WhatsApp 0702 820 845 or our Events page.",
+          "This single question separates most programmes. A good one can answer it immediately and specifically: a finished story, a working prototype, a research poster, a short film. A weak one answers in adjectives, telling you your child will be inspired, engaged, or exposed to technology.",
+          "Tangible output matters for a practical reason beyond the fridge door. A child who has finished something can explain it, and a child who can explain their own work has understood it. Exposure without production leaves nothing behind by February.",
+        ],
+      },
+      {
+        heading: "Ask who is in the room and how many of them",
+        paragraphs: [
+          "Group size decides how much attention any one child gets. Thirty children and one facilitator is a holding pattern, however good the facilitator is. Small groups cost more to run, which is usually why the cheapest option is the cheapest.",
+          "Ask about age banding too. An eight-year-old and a fifteen-year-old need genuinely different work, and a programme that puts them through identical material is designing for the middle and serving neither well.",
+        ],
+      },
+      {
+        heading: "Ask how technology is actually used",
+        paragraphs: [
+          "This one matters more every year. Kenya has the highest rate of ChatGPT use of any country in the world, and most of that use has never been formally taught. Children are already using these tools, whether a programme addresses it or not.",
+          "There is a real difference between a programme where children type a prompt and collect the output, and one where they form their own idea first and then use AI to stretch, question or produce it. The first teaches dependence. The second teaches judgement. Ask which one you are buying, and ask for an example.",
+          "Be equally direct about safety: what tools will your child have access to, what accounts are involved, and what happens to anything they upload.",
+        ],
+      },
+      {
+        heading: "Ask what happens after the last session",
+        paragraphs: [
+          "Most holiday programmes end and evaporate. The better ones send something home with the parent as well as the child, whether that is the work itself, a record of what was covered, or guidance on continuing at home.",
+          "You do not need a certificate. You need to know what your child did, so you can ask them about it in a way that keeps it alive.",
+        ],
+      },
+      {
+        heading: "How AkiliNest answers these questions",
+        paragraphs: [
+          "Our creative AI bootcamps run during the school holidays at heARTspace on Kabarnet Road, Nairobi, for children aged 8 to 17, in four age stages: Sprouts, Explorers, Builders and Innovators.",
+          "Children work through the Think-First cycle in every session. They form an idea and put it in their own words, then bring AI in to challenge and extend it, then present work they can defend without the tool in front of them. Every stage produces something finished, from illustrated stories at Sprouts to real prototypes at Builders and Innovators.",
+          "Groups are deliberately small, and the stages exist so that a nine-year-old and a sixteen-year-old are not doing the same work.",
+          "The next intake runs November to December 2026. Fees depend on the intake, so ask us directly on WhatsApp at 0702 820 845 or through the contact page, and we will tell you the current figure along with exactly what your child will be doing.",
+        ],
+      },
+      {
+        heading: "The honest summary",
+        paragraphs: [
+          "Price is worth comparing last, not first. Ask what a child produces, how many children share the facilitator, how technology is handled, and what comes home afterwards. A programme that answers all four clearly is usually worth what it costs, and one that cannot answer them is rarely worth even a low price.",
         ],
       },
     ],
