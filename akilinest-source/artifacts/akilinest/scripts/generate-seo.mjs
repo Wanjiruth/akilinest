@@ -13,6 +13,33 @@ const faqs = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../src/content/faqs.json"), "utf8"),
 );
 
+/**
+ * Insight articles are parsed straight out of insights.ts at build time, so
+ * there is no second copy of the metadata to fall out of step with the pages.
+ */
+function readInsights() {
+  const src = fs.readFileSync(path.resolve(__dirname, "../src/content/insights.ts"), "utf8");
+  const unescape = (v) => v.replace(/\\"/g, '"').replace(/\\n/g, "\n");
+  const out = [];
+  const re =
+    /slug:\s*"([^"]+)",\s*\n\s*title:\s*"((?:[^"\\]|\\.)*)",\s*\n\s*description:\s*\n?\s*"((?:[^"\\]|\\.)*)",\s*\n\s*audience:\s*"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(src))) {
+    const rest = src.slice(m.index + m[0].length);
+    const first = /paragraphs:\s*\[\s*\n\s*"((?:[^"\\]|\\.)*)"/.exec(rest);
+    out.push({
+      slug: m[1],
+      title: unescape(m[2]),
+      description: unescape(m[3]),
+      audience: m[4],
+      body: first ? unescape(first[1]) : unescape(m[3]),
+    });
+  }
+  return out;
+}
+
+const insightPosts = readInsights();
+
 const faqPage = (items) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -363,6 +390,7 @@ function writeRoute(pagePath, html, indexHtml) {
 function generateSitemap() {
   const urls = [
     ...staticPages.map((p) => p.path),
+    ...insightPosts.map((p) => `/insights/${p.slug}`),
     ...blogSlugs.map((b) => `/blog/${b.slug}`),
   ];
 
@@ -395,6 +423,31 @@ function main() {
     const html = buildHtml(page);
     writeRoute(page.path, html, indexHtml);
     console.log(`SEO page: ${page.path}`);
+  }
+
+  for (const post of insightPosts) {
+    const html = buildHtml({
+      path: `/insights/${post.slug}`,
+      title: `${post.title} | AkiliNest`,
+      h1: post.title,
+      description: post.description,
+      body: post.body,
+      jsonLd: () => ({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.description,
+        author: { "@type": "Organization", name: "AkiliNest" },
+        publisher: {
+          "@type": "Organization",
+          name: "AkiliNest",
+          logo: { "@type": "ImageObject", url: `${SITE}/logo.png` },
+        },
+        mainEntityOfPage: `${SITE}/insights/${post.slug}`,
+      }),
+    });
+    writeRoute(`/insights/${post.slug}`, html, indexHtml);
+    console.log(`SEO insight: /insights/${post.slug}`);
   }
 
   for (const post of blogSlugs) {

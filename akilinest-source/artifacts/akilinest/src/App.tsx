@@ -16,6 +16,7 @@ import TeamsCorporate from "@/pages/TeamsCorporate";
 import KidsBootcamps from "@/pages/KidsBootcamps";
 import Hero2026 from "@/pages/Hero2026";
 import Insights from "@/pages/Insights";
+import InsightPost from "@/pages/InsightPost";
 import Programme from "@/pages/Programme";
 import ParentSeries from "@/pages/ParentSeries";
 import Events from "@/pages/Events";
@@ -56,6 +57,7 @@ function AppRouter() {
           <Route path="/kids-ai-bootcamps" component={KidsBootcamps} />
           <Route path="/hero-2026" component={Hero2026} />
           <Route path="/insights" component={Insights} />
+          <Route path="/insights/:slug" component={InsightPost} />
           <Route path="/programme" component={Programme} />
           <Route path="/pis" component={ParentSeries} />
           <Route path="/events" component={Events} />

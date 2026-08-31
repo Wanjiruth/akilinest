@@ -2,47 +2,12 @@ import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
 import TeamCTA from "@/components/TeamCTA";
+import { AUDIENCE_LABELS, insights, type InsightAudience } from "@/content/insights";
 
-/**
- * Founder-led articles. Each entry stays `published: false` until the article
- * is actually written; nothing here should read as live content before it is.
- */
-const articles = [
-  {
-    title: "How Kenyan teams can use AI safely in everyday work",
-    topic: "Workplace teams",
-    summary:
-      "Where the real risks sit for a small team, and the handful of habits that remove most of them.",
-    published: false,
-  },
-  {
-    title: "AI for teachers in Kenya: practical uses beyond lesson planning",
-    topic: "Educator teams",
-    summary:
-      "Lesson plans are the obvious use. The bigger wins are in feedback, differentiation and administration.",
-    published: false,
-  },
-  {
-    title: "What should a workplace team never put into a public AI tool?",
-    topic: "Responsible use",
-    summary:
-      "A short, practical list your team can agree on in one meeting, and why each item is on it.",
-    published: false,
-  },
-  {
-    title: "How to turn repetitive team work into practical AI workflows",
-    topic: "Workflows",
-    summary:
-      "Finding the work that repeats every week, and turning it into something reusable rather than a one-off prompt.",
-    published: false,
-  },
-  {
-    title: "How parents can choose an AI bootcamp for their child",
-    topic: "For parents",
-    summary:
-      "The questions worth asking any programme before you enrol, including ours.",
-    published: false,
-  },
+const FILTERS: { key: InsightAudience; label: string }[] = [
+  { key: "workplace", label: AUDIENCE_LABELS.workplace },
+  { key: "educators", label: AUDIENCE_LABELS.educators },
+  { key: "parents", label: AUDIENCE_LABELS.parents },
 ];
 
 export default function Insights() {
@@ -65,10 +30,21 @@ export default function Insights() {
             <h1 className="font-serif text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#0D0C18] mb-6 max-w-3xl">
               Practical notes on using AI well.
             </h1>
-            <p className="text-base md:text-lg text-[#4A4860] max-w-2xl leading-relaxed font-sans">
+            <p className="text-base md:text-lg text-[#4A4860] max-w-2xl leading-relaxed mb-8 font-sans">
               Short, founder-led pieces written from what we see in real workshops with Kenyan
-              teams and classrooms. No generic AI commentary.
+              teams and classrooms. No generic AI commentary, no invented numbers, and every
+              external figure carries its source.
             </p>
+            <div className="flex flex-wrap gap-2">
+              {FILTERS.map((f) => (
+                <span
+                  key={f.key}
+                  className="text-[11px] font-bold tracking-[1px] uppercase text-[#0B4D5F] bg-white border border-black/8 px-3.5 py-1.5 rounded-full font-sans"
+                >
+                  {f.label} · {insights.filter((p) => p.audience === f.key).length}
+                </span>
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>
@@ -76,37 +52,31 @@ export default function Insights() {
       {/* ARTICLES */}
       <section className="bg-white px-6 md:px-14 py-20 md:py-24">
         <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <h2 className="font-serif text-[clamp(1.7rem,3.2vw,2.4rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-3">
-              In progress
-            </h2>
-            <p className="text-base text-[#4A4860] max-w-xl mb-12 font-sans leading-relaxed">
-              These are the pieces we are writing next. They will appear here as they are
-              published.
-            </p>
-          </Reveal>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {articles.map((article, i) => (
-              <Reveal key={article.title} delay={i * 60}>
-                <article className="bg-[#F9F5EE] border border-black/8 rounded-3xl p-8 h-full flex flex-col">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#0B4D5F] font-sans">
-                      {article.topic}
-                    </span>
-                    {!article.published && (
-                      <span className="text-[10px] font-bold tracking-[1px] uppercase text-[#4A4860]/60 bg-black/5 px-2.5 py-1 rounded-full font-sans">
-                        Coming soon
+            {insights.map((post, i) => (
+              <Reveal key={post.slug} delay={i * 60}>
+                <Link href={`/insights/${post.slug}`} data-testid={`link-insight-${post.slug}`}>
+                  <article className="group bg-[#F9F5EE] border border-black/8 rounded-3xl p-8 h-full flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer">
+                    <div className="flex items-center gap-3 mb-4 flex-wrap">
+                      <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#0B4D5F] font-sans">
+                        {AUDIENCE_LABELS[post.audience]}
                       </span>
-                    )}
-                  </div>
-                  <h3 className="font-serif text-xl font-bold text-[#0D0C18] mb-3 leading-snug">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm text-[#4A4860] leading-relaxed font-sans">
-                    {article.summary}
-                  </p>
-                </article>
+                      <span className="text-[11px] text-[#5C5A70] font-sans">{post.readTime}</span>
+                    </div>
+                    <h2 className="font-serif text-xl md:text-2xl font-bold text-[#0D0C18] mb-3 leading-snug">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-[#4A4860] leading-relaxed mb-7 flex-1 font-sans">
+                      {post.description}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-[#0D0C18] group-hover:text-[#E8693A] transition-colors font-sans">
+                      Read it
+                      <span aria-hidden className="transition-transform group-hover:translate-x-1">
+                        &rarr;
+                      </span>
+                    </span>
+                  </article>
+                </Link>
               </Reveal>
             ))}
           </div>
@@ -121,8 +91,8 @@ export default function Insights() {
               Looking for the parent guides?
             </h2>
             <p className="text-base text-[#4A4860] leading-relaxed mb-8 font-sans">
-              Our existing writing for parents, on raising children who think for themselves in the
-              AI era, lives in the AkiliNest blog.
+              Our writing for parents, on raising children who think for themselves in the AI era,
+              lives in the AkiliNest blog.
             </p>
             <Link
               href="/blog"
