@@ -55,7 +55,7 @@ const SITE = "https://akilinest.co.ke";
 const staticPages = [
   {
     path: "/",
-    h1: "Turn AI Into Your Everyday Work Advantage.",
+    h1: "Practical AI training in Kenya, for teams and for kids.",
     title: "AI Training in Kenya for Teams & Kids | AkiliNest",
     description:
       "Practical AI training in Kenya for workplace teams, educator teams and young people. AkiliNest helps people build useful AI skills and workflows for real work and learning.",
@@ -71,7 +71,7 @@ const staticPages = [
   },
   {
     path: "/teams",
-    h1: "Empowering people for the AI era.",
+    h1: "AI training and upskilling for teams in Kenya.",
     title: "Corporate AI Training in Kenya | AI Upskilling for Teams | AkiliNest",
     description:
       "Practical corporate AI training in Kenya for workplace and educator teams. Readiness audits, custom playbooks, applied cohorts and leadership labs with AkiliNest.",
@@ -80,7 +80,7 @@ const staticPages = [
   {
     path: "/teams/corporate",
     jsonLd: () => faqPage(faqs.teamFaqs),
-    h1: "Stop wasting AI subscriptions. Start building real output.",
+    h1: "Corporate AI training in Kenya.",
     title: "Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest",
     description:
       "Corporate AI training in Kenya for enterprise teams. Workflow readiness audits, custom AI playbooks, applied team cohorts and executive transformation labs from AkiliNest.",
@@ -89,7 +89,7 @@ const staticPages = [
   {
     path: "/teams/educators",
     jsonLd: () => faqPage(faqs.educatorFaqs),
-    h1: "Empowering teachers and learning institutions to lead with intelligence.",
+    h1: "AI training for teachers in Kenya.",
     title: "AI Training for Teachers in Kenya | Educator Solutions | AkiliNest",
     description:
       "Practical AI training for teachers and schools in Kenya. Educator readiness audits, integration playbooks, hands-on teacher cohorts and leadership labs from AkiliNest.",
