@@ -23,8 +23,8 @@ const notIdealFor = [
 const steps = [
   {
     n: "01",
-    title: "Book a Holiday Camp Spot",
-    desc: "10 days, 2 hours daily, at heARTspace. See the Think-First cycle in action with your child.",
+    title: "Book a Holiday Bootcamp Spot",
+    desc: "The next intake runs November to December 2026 at heARTspace, Nairobi. See the Think-First cycle in action with your child.",
   },
   {
     n: "02",
