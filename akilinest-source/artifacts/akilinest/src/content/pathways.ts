@@ -243,3 +243,71 @@ export const CORPORATE_PROGRAMME = {
     },
   ],
 } as const;
+
+/**
+ * The educator equivalent of the corporate programme, shaped around a school
+ * term rather than a business quarter. Same six-session spine, different work:
+ * schemes of work, marking, differentiation, parent communication and the
+ * institutional standards a department has to agree together.
+ */
+export const EDUCATOR_PROGRAMME = {
+  name: "The AkiliNest 6-Session Educator AI Program",
+  format:
+    "6 live sessions for a whole teaching team, plus asynchronous support between sessions. Often run across staff development days.",
+  sessions: [
+    {
+      n: "Session 1",
+      title: "Foundations, Learner Data & Baseline",
+      points: [
+        "Define exactly what AI can and cannot do in a classroom and a staff room, including where it fails.",
+        "Establish what learner information never goes into a tool, under Kenya's Data Protection Act 2019, and agree the anonymising habit that replaces it.",
+        "Pick 1–2 recurring tasks per department to measure for time and quality: marking turnaround, lesson preparation, report writing.",
+      ],
+    },
+    {
+      n: "Session 2",
+      title: "Prompting on Real Teaching Work",
+      points: [
+        "Structured prompting built from your own schemes of work rather than from generic examples.",
+        "Teachers bring real material — a lesson plan, a worksheet, a set of report comments — and build 2 documented workflows.",
+        "Create quality checklists so a resource is checked before it reaches learners.",
+      ],
+    },
+    {
+      n: "Session 3",
+      title: "Department Use-Case Labs",
+      points: [
+        "Deep dives by department, since a science scheme of work and an English one need different things.",
+        "Convert 3–5 time-consuming tasks into workflows: differentiating a resource three ways, drafting quizzes and rubrics, writing feedback, parent communication.",
+        "Identify AI Champions in each department to support colleagues between sessions.",
+      ],
+    },
+    {
+      n: "Session 4",
+      title: "Tools, Classroom Practice & Safe Usage",
+      points: [
+        "Hands-on with whatever your school actually runs, whether that is Google Workspace, Microsoft 365 and Copilot, or a mix, rather than one vendor's stack.",
+        "Agree account and access rules for staff, and what learners are permitted to do in which subjects.",
+        "Set human-in-the-loop checkpoints so grading judgement and pastoral decisions stay with teachers.",
+      ],
+    },
+    {
+      n: "Session 5",
+      title: "Reinforcement & Problem-Solving Clinic",
+      points: [
+        "Small-group sessions on what worked in real lessons, what failed, and where staff got stuck.",
+        "Fix broken prompts, refine workflows, and share what is working across departments.",
+        "Re-measure the baseline tasks from Session 1 and capture the first hours-saved figures.",
+      ],
+    },
+    {
+      n: "Session 6",
+      title: "Standards, Governance & Rollout",
+      points: [
+        "Review results across the teaching team: time saved, resource quality, and how widely it is being used.",
+        "Agree institutional standards as a leadership team: staff use, learner expectations, and what is communicated to parents.",
+        "Deliver a 90-day rollout plan with named owners, mapped to your professional development cycle.",
+      ],
+    },
+  ],
+} as const;

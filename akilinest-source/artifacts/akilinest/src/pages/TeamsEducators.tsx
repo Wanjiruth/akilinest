@@ -7,7 +7,7 @@ import WhyPartner from "@/components/WhyPartner";
 import TeamEnquiryForm from "@/components/TeamEnquiryForm";
 import Faq from "@/components/Faq";
 import { asset, IMAGES } from "@/lib/images";
-import { educatorSolutions, educatorWhy } from "@/content/pathways";
+import { EDUCATOR_PROGRAMME, educatorSolutions, educatorWhy } from "@/content/pathways";
 import { educatorFaqs } from "@/content/teams";
 
 export default function TeamsEducators() {
@@ -76,8 +76,63 @@ export default function TeamsEducators() {
 
       <CredibilityStrip />
 
+
+      {/* THE PROGRAMME */}
+      <section className="bg-white px-6 md:px-14 py-20 md:py-24">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#0B4D5F] mb-4 block font-sans">
+              The programme
+            </span>
+            <h2 className="font-serif text-[clamp(1.9rem,3.6vw,3rem)] font-bold text-[#0D0C18] tracking-tight leading-tight mb-4 max-w-3xl">
+              {EDUCATOR_PROGRAMME.name}
+            </h2>
+            <p className="text-base text-[#0D0C18] font-semibold max-w-2xl mb-12 font-sans leading-relaxed">
+              Format: {EDUCATOR_PROGRAMME.format}
+            </p>
+          </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {EDUCATOR_PROGRAMME.sessions.map((session, i) => (
+              <Reveal key={session.n} delay={i * 50}>
+                <div className="bg-[#F9F5EE] border border-black/8 rounded-3xl p-7 md:p-8 h-full">
+                  <span className="text-[10px] font-bold tracking-[1.5px] uppercase text-[#E8693A] mb-2 block font-sans">
+                    {session.n}
+                  </span>
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-[#0D0C18] mb-5 leading-snug">
+                    {session.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {session.points.map((point) => (
+                      <li key={point} className="flex items-start gap-3">
+                        <span
+                          aria-hidden
+                          className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0B4D5F] shrink-0"
+                        />
+                        <span className="text-sm text-[#4A4860] leading-relaxed font-sans">
+                          {point}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal>
+            <a
+              href="#enquire"
+              className="inline-flex items-center justify-center bg-[#E8693A] text-white font-bold text-base px-9 py-4 rounded-full hover:bg-[#C4561A] hover:-translate-y-0.5 hover:shadow-xl transition-all font-sans mt-12"
+            >
+              Discuss the 6-session programme
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
       {/* SOLUTIONS */}
-      <section className="bg-[#F9F5EE] px-6 md:px-14 py-20 md:py-24 border-b border-black/5">
+      <section className="bg-[#F9F5EE] px-6 md:px-14 py-20 md:py-24 border-y border-black/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#0B4D5F] mb-4 block font-sans">

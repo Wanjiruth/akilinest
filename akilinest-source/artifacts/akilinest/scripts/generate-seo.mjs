@@ -93,7 +93,7 @@ const staticPages = [
     title: "AI Training for Teachers in Kenya | Educator Solutions | AkiliNest",
     description:
       "Practical AI training for teachers and schools in Kenya. Educator readiness audits, integration playbooks, hands-on teacher cohorts and leadership labs from AkiliNest.",
-    body: "AkiliNest Educator Solutions: the Educator AI Readiness Audit, the Educator AI Integration Playbook, Applied Educator Cohorts and Training Academies, and Educational Leadership and Transformation Labs, building on frameworks like the TSC AI Educator Pathways powered by Microsoft Elevate.",
+    body: "AkiliNest delivers practical AI training for teachers and schools in Kenya. The AkiliNest 6-Session Educator AI Program runs for a whole teaching team, often across staff development days: Session 1 Foundations, Learner Data and Baseline; Session 2 Prompting on Real Teaching Work; Session 3 Department Use-Case Labs; Session 4 Tools, Classroom Practice and Safe Usage; Session 5 Reinforcement and Problem-Solving Clinic; Session 6 Standards, Governance and Rollout, closing with a 90-day rollout plan. We also offer the Educator AI Readiness Audit, the Educator AI Integration Playbook, Applied Educator Cohorts and Training Academies, and Educational Leadership and Transformation Labs, building on frameworks like the TSC AI Educator Pathways powered by Microsoft Elevate.",
   },
   {
     path: "/kids-ai-bootcamps",
