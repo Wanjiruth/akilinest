@@ -115,7 +115,7 @@ const staticPages = [
   {
     path: "/ai-training-kenya",
     h1: "AI training in Kenya.",
-    title: "AI Training in Kenya | Corporate, Teacher & Kids AI Training | AkiliNest",
+    title: "AI Training in Kenya | Corporate, Teacher & Kids | AkiliNest",
     description:
       "AI training in Kenya from AkiliNest. Corporate AI training for workplace teams, AI training for teachers, and creative AI bootcamps for kids in Nairobi.",
     body: "AkiliNest is an AI training company based in Nairobi, Kenya. We run practical AI training for workplace teams, AI training for teachers and school leadership, and creative AI bootcamps for young people aged 8 to 17. Kenya has the highest rate of ChatGPT use of any country in the world, at 42.1% of internet users aged 16 and over in the past month, according to the DataReportal and Meltwater Global Digital Report 2025. AI use is running ahead of formal AI training. Team sessions run on site at your offices in Nairobi or at our space, and we work with organisations across Kenya.",
@@ -123,9 +123,9 @@ const staticPages = [
   {
     path: "/teams",
     h1: "AI training and upskilling for teams in Kenya.",
-    title: "Corporate AI Training in Kenya | AI Upskilling for Teams | AkiliNest",
+    title: "AI Training for Teams in Kenya | Corporate & Educator | AkiliNest",
     description:
-      "Practical corporate AI training in Kenya for workplace and educator teams. Readiness audits, custom playbooks, applied cohorts and leadership labs with AkiliNest.",
+      "AI training for teams in Kenya, for two audiences: workplace teams and educator teams. Compare the corporate and educator programmes, readiness audits and applied cohorts.",
     body: "Technology moves fast, but the human capability to use it effectively is often left behind. AkiliNest builds practical operating systems and hands-on training tracks for two environments: corporate teams and educator teams. AI use is running ahead of formal AI training. AkiliNest for Teams: AI Opportunity Session, AI Workflow Bootcamp, Team AI Playbook and AI Adoption Support for workplace and educator teams in Kenya.",
   },
   {
@@ -193,7 +193,7 @@ const staticPages = [
   },
   {
     path: "/programme",
-    title: "Sprouts to Innovators | Age-Based Creative Programmes | AkiliNest",
+    title: "Kids AI Programme Stages, Ages 8 to 17 | AkiliNest",
     description:
       "Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Creative intelligence training for the AI era.",
     body: "Four stages of creative intelligence: Sprouts ages 8-10, Explorers 11-12, Builders 13-14, Innovators 15-17.",
@@ -201,14 +201,14 @@ const staticPages = [
   {
     path: "/events",
     jsonLd: () => (featuredCamp ? campEventSchema(featuredCamp) : undefined),
-    title: "Kids AI Bootcamps & Holiday Camps in Nairobi | AkiliNest",
+    title: "Holiday AI Camps for Kids in Nairobi 2026 | AkiliNest",
     description:
       "AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. The November to December 2026 intake is open for registration.",
     body: "AkiliNest creative AI bootcamps and holiday camps for children aged 8 to 17 at heARTspace, Kabarnet Road, off Ngong Road, Nairobi. The next intake runs November to December 2026, across all four programme stages, with session times confirmed on registration.",
   },
   {
     path: "/faq",
-    title: "FAQ | AkiliNest Creative Studio Kenya",
+    title: "AI Training FAQ for Parents & Teams in Kenya | AkiliNest",
     description:
       "Frequently asked questions about AkiliNest programmes, AI safety, thinking-first learning, and enrolment for children aged 8–17 across Kenya.",
     body: "FAQ: Will AI make my child lazy? How is AkiliNest different from school? What age ranges do you accept?",
@@ -250,7 +250,7 @@ const staticPages = [
   },
   {
     path: "/pis",
-    title: "Parent Intelligence Series | AkiliNest Nairobi",
+    title: "AI Workshops for Parents in Nairobi | AkiliNest",
     description: "Five parent sessions on raising children in the AI era: screens, safety, creation, and future skills.",
     body: "Parent Intelligence Series for Kenyan families. Five thoughtful sessions on technology and parenting.",
   },

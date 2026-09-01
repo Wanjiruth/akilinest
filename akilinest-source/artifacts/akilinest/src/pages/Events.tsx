@@ -13,7 +13,7 @@ export default function Events() {
   return (
     <>
       <PageMeta
-        title="Kids AI Bootcamps & Holiday Camps in Nairobi | AkiliNest"
+        title="Holiday AI Camps for Kids in Nairobi 2026 | AkiliNest"
         description="AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. Join the waiting list to hear when the next intake opens."
         path="/events"
         keywords={["holiday camps kids Nairobi", "creative classes children Nairobi", "AkiliNest events", "after school activities Kenya"]}

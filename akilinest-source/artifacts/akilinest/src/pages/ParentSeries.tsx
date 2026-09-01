@@ -50,7 +50,7 @@ export default function ParentSeries() {
   return (
     <>
       <PageMeta
-        title="Parent Intelligence Series | Raising Kids in the AI Era | AkiliNest"
+        title="AI Workshops for Parents in Nairobi | AkiliNest"
         description="Five thoughtful parent sessions for Kenyan families: AI safety, screens, creation, digital identity, and future skills. Not fear-based."
         path="/pis"
         keywords={["parenting AI era Nairobi", "parent workshops Kenya", "raising kids technology Africa"]}

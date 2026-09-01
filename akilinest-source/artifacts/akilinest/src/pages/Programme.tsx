@@ -145,7 +145,7 @@ export default function Programme() {
   return (
     <>
       <PageMeta
-        title="Sprouts to Innovators | Age-Based Creative Programmes | AkiliNest Nairobi"
+        title="Kids AI Programme Stages, Ages 8 to 17 | AkiliNest"
         description="Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Thinking-first creative intelligence for the AI era."
         path="/programme"
         keywords={["creative programmes Nairobi", "children AI education Kenya", "extracurricular activities Nairobi", "Sprouts Explorers Builders Innovators"]}

@@ -63,7 +63,7 @@ export default function AiTrainingKenya() {
   return (
     <>
       <PageMeta
-        title="AI Training in Kenya | Corporate, Teacher & Kids AI Training | AkiliNest"
+        title="AI Training in Kenya | Corporate, Teacher & Kids | AkiliNest"
         description="AI training in Kenya from AkiliNest. Corporate AI training for workplace teams, AI training for teachers, and creative AI bootcamps for kids in Nairobi."
         path="/ai-training-kenya"
         keywords={[

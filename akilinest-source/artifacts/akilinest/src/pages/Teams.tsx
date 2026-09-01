@@ -11,8 +11,8 @@ export default function Teams() {
   return (
     <>
       <PageMeta
-        title="Corporate AI Training in Kenya | AI Upskilling for Teams | AkiliNest"
-        description="Practical corporate AI training in Kenya for workplace and educator teams. Readiness audits, custom playbooks, applied cohorts and leadership labs with AkiliNest."
+        title="AI Training for Teams in Kenya | Corporate & Educator | AkiliNest"
+        description="AI training for teams in Kenya, for two audiences: workplace teams and educator teams. Compare the corporate and educator programmes, readiness audits and applied cohorts."
         path="/teams"
         keywords={[
           "corporate AI training Kenya",
