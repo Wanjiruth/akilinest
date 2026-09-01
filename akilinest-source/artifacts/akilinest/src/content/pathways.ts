@@ -178,3 +178,68 @@ export const teamPathways = [
     href: "/teams/educators",
   },
 ] as const;
+
+/**
+ * The core corporate programme. Six live sessions with asynchronous support
+ * between them; every session ends in something the team keeps.
+ */
+export const CORPORATE_PROGRAMME = {
+  name: "The AkiliNest 6-Session Corporate AI Program",
+  format: "6 live sessions, plus dedicated asynchronous support between sessions.",
+  sessions: [
+    {
+      n: "Session 1",
+      title: "Foundations, Policy & Baseline",
+      points: [
+        "Define exactly what AI can and cannot do in your business, including limits and risks.",
+        "Establish company policy, data classification, and strict “do not do this” scenarios.",
+        "Pick 1–2 baseline tasks per department to measure for time, volume, and quality.",
+      ],
+    },
+    {
+      n: "Session 2",
+      title: "Prompt Engineering & Core Workflows",
+      points: [
+        "Learn structured prompting: setting the objective, context, constraints, examples, and output format.",
+        "Participants bring real work — emails, reports, briefs — and build 2 documented AI workflows.",
+        "Create simple, standardised quality checklists for each workflow.",
+      ],
+    },
+    {
+      n: "Session 3",
+      title: "Department-Specific Use-Case Labs",
+      points: [
+        "Deep dives by department: HR, finance, sales, operations and others.",
+        "Convert 3–5 real, time-consuming tasks into AI-assisted workflows: summaries, drafts, analysis, follow-ups.",
+        "Identify internal AI Champions in each team to lead peer support and drive long-term adoption.",
+      ],
+    },
+    {
+      n: "Session 4",
+      title: "Tools, Integration & Safe Usage",
+      points: [
+        "Go beyond ChatGPT: hands-on with Claude, Copilot, Gemini and domain-specific tools relevant to your stack.",
+        "Configure team sandboxes, access rules, and basic integrations with Slack, Teams, CRM and Workspace.",
+        "Establish strict human-in-the-loop checkpoints and escalation rules.",
+      ],
+    },
+    {
+      n: "Session 5",
+      title: "Reinforcement & Problem-Solving Clinic",
+      points: [
+        "Small-group sessions focused on what worked, what failed, and where people got stuck.",
+        "Fix broken prompts, refine workflows, and share wins across departments.",
+        "Re-measure baseline tasks and capture your first hours-saved metrics.",
+      ],
+    },
+    {
+      n: "Session 6",
+      title: "Metrics, Governance & Scale Plan",
+      points: [
+        "Review programme results: time saved, quality changes, and adoption rates.",
+        "Decide as a leadership team what to standardise, what to automate next, and what to stop doing.",
+        "Deliver a 90-day scale roadmap complete with owners, budgets, and governance guardrails.",
+      ],
+    },
+  ],
+} as const;
