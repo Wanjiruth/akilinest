@@ -11,12 +11,16 @@ export default function VideoEmbed({ src, poster, title, caption, className = ""
   return (
     <figure className={`relative overflow-hidden rounded-2xl bg-[#0D0C18] ${className}`}>
       <video
-        // A poster carries the still frame, so no video bytes are fetched until
-        // the viewer presses play. Without controls the element was unplayable.
+        // A poster carries the still frame, so the video body is not fetched
+        // until the viewer presses play. Without controls the element was
+        // unplayable. "metadata" rather than "none": with nothing loaded at all
+        // Chrome disables the unmute and full-screen buttons and leaves the
+        // scrubber dead, which reads as a broken player. Metadata is a few KB of
+        // headers, not the video.
         muted
         playsInline
         controls
-        preload="none"
+        preload="metadata"
         poster={poster ? `${base}${poster.replace(/^\//, "")}` : undefined}
         className="w-full aspect-video object-cover"
         aria-label={title}

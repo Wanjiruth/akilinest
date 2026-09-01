@@ -12,6 +12,12 @@ export function Reveal({ children, className = "", delay = 0 }: RevealProps) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Without an observer nothing would ever add .revealed and the section
+    // would stay at opacity 0 forever. Better to show it unanimated.
+    if (typeof IntersectionObserver === "undefined") {
+      el.classList.add("revealed");
+      return;
+    }
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

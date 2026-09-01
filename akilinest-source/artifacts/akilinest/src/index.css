@@ -163,6 +163,18 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* The reveal starts at opacity 0, so anyone who has asked for less motion
+   would otherwise watch the page slide at them section by section. Show the
+   content outright for them; the observer still runs, it just has nothing to
+   animate. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* Ticker animation */
 @keyframes ticker {
