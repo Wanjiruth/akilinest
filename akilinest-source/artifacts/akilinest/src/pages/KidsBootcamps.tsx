@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { kidsCoursesSchema } from "@/lib/schema.mjs";
 import EventCTA from "@/components/EventCTA";
 import VideoEmbed from "@/components/VideoEmbed";
 import { asset, IMAGES } from "@/lib/images";
@@ -58,17 +59,7 @@ export default function KidsBootcamps() {
         description="AkiliNest is Kenya's leading AI training company for kids. Creative AI bootcamps for children aged 8-17 in Nairobi, across four age stages, during the school holidays."
         path="/kids-ai-bootcamps"
         keywords={["AI bootcamp for kids Nairobi", "AI bootcamp Kenya", "creative classes children Nairobi"]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "EducationalOrganization",
-          name: "AkiliNest",
-          url: canonicalUrl("/kids-ai-bootcamps"),
-          description:
-            "Creative AI bootcamps for children aged 8 to 17 in Nairobi and across Kenya.",
-          address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
-          telephone: "+254702820845",
-          email: "akilinest@gmail.com",
-        }}
+        jsonLd={kidsCoursesSchema(kidsStages)}
       />
 
       {/* HERO */}

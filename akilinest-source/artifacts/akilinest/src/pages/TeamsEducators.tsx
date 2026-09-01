@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { standaloneCourse } from "@/lib/schema.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import SolutionCards from "@/components/SolutionCards";
 import WhyPartner from "@/components/WhyPartner";
@@ -23,6 +24,14 @@ export default function TeamsEducators() {
           "AI workshop Nairobi",
           "AI training Kenya",
         ]}
+        jsonLd={standaloneCourse({
+          name: EDUCATOR_PROGRAMME.name,
+          description: EDUCATOR_PROGRAMME.format,
+          path: "/teams/educators",
+          courseMode: "Blended",
+          audience: "Teachers, school leaders and education teams",
+          onsite: false,
+        })}
       />
 
       {/* HERO */}

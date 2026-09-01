@@ -40,6 +40,56 @@ function readInsights() {
 
 const insightPosts = readInsights();
 
+/**
+ * The same builders the React pages use, so the shell a scraper reads and the
+ * head a browser renders cannot disagree. Course and Event data is regex-read
+ * from the content modules for the same reason the insights are above: one copy.
+ */
+const {
+  organizationSchema,
+  kidsCoursesSchema,
+  standaloneCourse,
+  campEventSchema,
+} = await import("../src/lib/schema.mjs");
+
+function readKidsStages() {
+  const src = fs.readFileSync(path.resolve(__dirname, "../src/content/kids.ts"), "utf8");
+  const re = /name:\s*"([^"]+)",\s*\n\s*age:\s*"([^"]+)",[\s\S]*?about:\s*\n?\s*"((?:[^"\\]|\\.)*)"/g;
+  const out = [];
+  let m;
+  while ((m = re.exec(src))) out.push({ name: m[1], age: m[2], about: m[3].replace(/\\"/g, '"') });
+  return out;
+}
+
+function readProgramme(constName) {
+  const src = fs.readFileSync(path.resolve(__dirname, "../src/content/pathways.ts"), "utf8");
+  const block = new RegExp(
+    `export const ${constName} = \\{\\s*\\n\\s*name:\\s*"([^"]+)",\\s*\\n\\s*format:\\s*\\n?\\s*"((?:[^"\\\\]|\\\\.)*)"`,
+  ).exec(src);
+  if (!block) throw new Error(`Could not read ${constName} out of pathways.ts`);
+  return { name: block[1], format: block[2].replace(/\\"/g, '"') };
+}
+
+function readFeaturedCamp() {
+  const src = fs.readFileSync(path.resolve(__dirname, "../src/content/events.ts"), "utf8");
+  const reg = /EVENT_REGISTRATION_URL\s*=\s*"([^"]+)"/.exec(src);
+  const title = /title:\s*"([^"]+)",\s*\n\s*dates:/.exec(src);
+  const start = /startDate:\s*"([^"]+)"/.exec(src);
+  const end = /endDate:\s*"([^"]+)"/.exec(src);
+  const desc = /description:\s*\n?\s*"((?:[^"\\]|\\.)*)"/.exec(src);
+  if (!title || !start) return null;
+  return {
+    name: title[1],
+    description: desc ? desc[1].replace(/\\"/g, '"') : title[1],
+    startDate: start[1],
+    endDate: end ? end[1] : undefined,
+    registrationUrl: reg ? reg[1] : undefined,
+  };
+}
+
+const kidsStages = readKidsStages();
+const featuredCamp = readFeaturedCamp();
+
 const faqPage = (items) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -55,6 +105,7 @@ const SITE = "https://akilinest.co.ke";
 const staticPages = [
   {
     path: "/",
+    jsonLd: () => organizationSchema(),
     h1: "Practical AI training in Kenya, for teams and for kids.",
     title: "AI Training in Kenya for Teams & Kids | AkiliNest",
     description:
@@ -79,7 +130,17 @@ const staticPages = [
   },
   {
     path: "/teams/corporate",
-    jsonLd: () => faqPage(faqs.teamFaqs),
+    jsonLd: () => [
+      faqPage(faqs.teamFaqs),
+      standaloneCourse({
+        ...readProgramme("CORPORATE_PROGRAMME"),
+        description: readProgramme("CORPORATE_PROGRAMME").format,
+        path: "/teams/corporate",
+        courseMode: "Blended",
+        audience: "Workplace and leadership teams",
+        onsite: false,
+      }),
+    ],
     h1: "Corporate AI training in Kenya.",
     title: "Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest",
     description:
@@ -88,7 +149,17 @@ const staticPages = [
   },
   {
     path: "/teams/educators",
-    jsonLd: () => faqPage(faqs.educatorFaqs),
+    jsonLd: () => [
+      faqPage(faqs.educatorFaqs),
+      standaloneCourse({
+        ...readProgramme("EDUCATOR_PROGRAMME"),
+        description: readProgramme("EDUCATOR_PROGRAMME").format,
+        path: "/teams/educators",
+        courseMode: "Blended",
+        audience: "Teachers, school leaders and education teams",
+        onsite: false,
+      }),
+    ],
     h1: "AI training for teachers in Kenya.",
     title: "AI Training for Teachers in Kenya | Educator Solutions | AkiliNest",
     description:
@@ -97,17 +168,7 @@ const staticPages = [
   },
   {
     path: "/kids-ai-bootcamps",
-    jsonLd: () => ({
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      name: "AkiliNest",
-      url: `${SITE}/kids-ai-bootcamps`,
-      description:
-        "Creative AI bootcamps for children aged 8 to 17 in Nairobi and across Kenya.",
-      address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
-      telephone: "+254702820845",
-      email: "akilinest@gmail.com",
-    }),
+    jsonLd: () => kidsCoursesSchema(kidsStages),
     h1: "The best AI training for kids in Kenya.",
     title: "The Best AI Training for Kids in Kenya | AI Bootcamps Nairobi | AkiliNest",
     description:
@@ -139,10 +200,11 @@ const staticPages = [
   },
   {
     path: "/events",
+    jsonLd: () => (featuredCamp ? campEventSchema(featuredCamp) : undefined),
     title: "Kids AI Bootcamps & Holiday Camps in Nairobi | AkiliNest",
     description:
-      "AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. Join the waiting list to hear when the next intake opens.",
-    body: "AkiliNest creative AI bootcamps and holiday camps for children aged 8 to 17 at heARTspace, Kabarnet Road, Nairobi. Next intake dates announced soon.",
+      "AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. The November to December 2026 intake is open for registration.",
+    body: "AkiliNest creative AI bootcamps and holiday camps for children aged 8 to 17 at heARTspace, Kabarnet Road, off Ngong Road, Nairobi. The next intake runs November to December 2026, across all four programme stages, with session times confirmed on registration.",
   },
   {
     path: "/faq",
@@ -257,6 +319,19 @@ const FONT_HEAD = `<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" />`;
 
+/**
+ * Page copy is written as plain prose, so an "&" in a title reaches the HTML
+ * bare. Browsers forgive it, but it is invalid in an attribute and there is no
+ * reason to hand a social scraper something it has to guess at.
+ */
+function esc(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function buildHtml({ title, description, path: pagePath, body, h1, jsonLd }) {
   const url = `${SITE}${pagePath === "/" ? "" : pagePath}`;
   const fullTitle = title.includes("AkiliNest") ? title : `${title} | AkiliNest`;
@@ -266,30 +341,30 @@ function buildHtml({ title, description, path: pagePath, body, h1, jsonLd }) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${fullTitle}</title>
-  <meta name="description" content="${description}" />
+  <title>${esc(fullTitle)}</title>
+  <meta name="description" content="${esc(description)}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="${url}" />
   <meta property="og:site_name" content="AkiliNest" />
-  <meta property="og:title" content="${fullTitle}" />
-  <meta property="og:description" content="${description}" />
+  <meta property="og:title" content="${esc(fullTitle)}" />
+  <meta property="og:description" content="${esc(description)}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${SITE}/opengraph.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${fullTitle}" />
-  <meta name="twitter:description" content="${description}" />
+  <meta name="twitter:title" content="${esc(fullTitle)}" />
+  <meta name="twitter:description" content="${esc(description)}" />
   <meta name="twitter:image" content="${SITE}/opengraph.jpg" />
   <link rel="icon" type="image/png" href="/logo.png" />
-${jsonLd ? `  <script type="application/ld+json">${JSON.stringify(jsonLd())}</script>\n` : ""}  ${FONT_HEAD}
+${(() => { const d = jsonLd?.(); return d ? `  <script type="application/ld+json" data-prerender-ld>${JSON.stringify(d)}</script>\n` : ""; })()}  ${FONT_HEAD}
   ${PRERENDER_HEAD}
 </head>
 <body>
   <div id="root">
     <main data-prerender>
-      <h1>${h1 ?? title.split(" | ")[0]}</h1>
-      <p>${description}</p>
-      <p>${body}</p>
+      <h1>${esc(h1 ?? title.split(" | ")[0])}</h1>
+      <p>${esc(description)}</p>
+      <p>${esc(body)}</p>
       <nav>
         <a href="${SITE}/">Home</a> |
         <a href="${SITE}/ai-training-kenya">AI Training Kenya</a> |
@@ -345,38 +420,33 @@ function writeRoute(pagePath, html, indexHtml) {
   if (pagePath === "/") {
     let root = indexHtml;
     const title = html.match(/<title>([^<]*)<\/title>/)?.[1] || "AkiliNest";
-    root = root.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+    root = root.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`); // already escaped by buildHtml
     const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1];
     if (desc) {
       root = root.replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${desc}"`);
+    }
+    // Social scrapers never run our JavaScript, so whatever sits in index.html
+    // is the card WhatsApp and LinkedIn show forever. Syncing it from the same
+    // title and description as the rest of the shell stops the two drifting,
+    // which is how the homepage came to advertise only the kids programmes.
+    root = root
+      .replace(/<meta property="og:title" content="[^"]*"/, `<meta property="og:title" content="${title}"`)
+      .replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${title}"`);
+    if (desc) {
+      root = root
+        .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${desc}"`)
+        .replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${desc}"`);
     }
     // The homepage otherwise ships an empty #root, so crawlers that do not run
     // JavaScript (OAI-SearchBot among them) see no copy at all on the one page
     // that matters most. React replaces this markup on hydration.
     // Organization data is emitted by react-helmet at runtime, so it never
-    // reaches crawlers that do not execute JavaScript. Emit it statically too.
-    const orgLd = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "AkiliNest",
-      url: `${SITE}/`,
-      logo: `${SITE}/logo.png`,
-      sameAs: ["https://www.linkedin.com/company/akilinest/"],
-      description:
-        "AkiliNest provides practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17.",
-      address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "sales",
-        telephone: "+254702820845",
-        email: "akilinest@gmail.com",
-        areaServed: "KE",
-        availableLanguage: "English",
-      },
-    };
+    // reaches crawlers that do not execute JavaScript. Emit it statically too,
+    // from the same builder the page uses rather than a second copy that drifts.
+    const orgLd = organizationSchema();
     root = root.replace(
       "</head>",
-      `  <script type="application/ld+json">${JSON.stringify(orgLd)}</script>\n  ${PRERENDER_HEAD}\n</head>`,
+      `  <script type="application/ld+json" data-prerender-ld>${JSON.stringify(orgLd)}</script>\n  ${PRERENDER_HEAD}\n</head>`,
     );
 
     const fallback = html.match(/<main data-prerender>[\s\S]*?<\/main>/)?.[0];

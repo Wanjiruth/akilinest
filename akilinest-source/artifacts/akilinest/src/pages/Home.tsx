@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { organizationSchema } from "@/lib/schema.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import TeamCTA from "@/components/TeamCTA";
 import { teamAudiences, teamSteps } from "@/content/teams";
@@ -38,29 +39,7 @@ export default function Home() {
         description="Practical AI training in Kenya for workplace teams, educator teams and young people. AkiliNest helps people build useful AI skills and workflows for real work and learning."
         path="/"
         keywords={["AI training Kenya", "AI upskilling Kenya", "AI training Nairobi", "AI bootcamp Kenya"]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "AkiliNest",
-          url: canonicalUrl("/"),
-          logo: canonicalUrl("/logo.png"),
-          sameAs: ["https://www.linkedin.com/company/akilinest/"],
-          description:
-            "AkiliNest provides practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17.",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Nairobi",
-            addressCountry: "KE",
-          },
-          contactPoint: {
-            "@type": "ContactPoint",
-            contactType: "sales",
-            telephone: "+254702820845",
-            email: "akilinest@gmail.com",
-            areaServed: "KE",
-            availableLanguage: "English",
-          },
-        }}
+        jsonLd={organizationSchema()}
       />
 
       {/* HERO */}

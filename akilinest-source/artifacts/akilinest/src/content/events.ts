@@ -2,6 +2,14 @@ export type AkiliEvent = {
   id: string;
   title: string;
   dates: string;
+  /**
+   * The same intake as ISO 8601, for structured data. Kept at the precision the
+   * intake is actually announced at: a bare "2026-11" is honest when only the
+   * month is confirmed, where a made-up "2026-11-01" would put a day we never
+   * promised into Google's results. Widen to a full date once sessions are set.
+   */
+  startDate?: string;
+  endDate?: string;
   time: string;
   price?: string;
   duration?: string;
@@ -31,6 +39,8 @@ export const events: AkiliEvent[] = [
     id: "camp-nov-dec",
     title: "Creative AI Bootcamp: November - December Intake",
     dates: "November - December 2026",
+    startDate: "2026-11",
+    endDate: "2026-12",
     time: "Session times confirmed on registration",
     badge: "Next intake",
     description:

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { campEventSchema } from "@/lib/schema.mjs";
 import EventCTA from "@/components/EventCTA";
 import { events, EVENT_REGISTRATION_URL, holidayCampsFlyer, SIGNUP_LABEL, VENUE, WHATSAPP_URL } from "@/content/events";
 import { asset, IMAGES } from "@/lib/images";
@@ -16,6 +17,18 @@ export default function Events() {
         description="AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. Join the waiting list to hear when the next intake opens."
         path="/events"
         keywords={["holiday camps kids Nairobi", "creative classes children Nairobi", "AkiliNest events", "after school activities Kenya"]}
+        jsonLd={
+          featured?.startDate
+            ? campEventSchema({
+                name: featured.title,
+                description: featured.description,
+                startDate: featured.startDate,
+                endDate: featured.endDate,
+                registrationUrl: EVENT_REGISTRATION_URL,
+                price: featured.price,
+              })
+            : undefined
+        }
       />
 
       {/* FULL-PAGE VIDEO BACKGROUND */}

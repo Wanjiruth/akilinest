@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { canonicalUrl, DEFAULT_OG_IMAGE, fullTitle, SITE_NAME, type PageSeo } from "@/lib/seo";
 
@@ -14,6 +15,14 @@ export default function PageMeta({
   image = DEFAULT_OG_IMAGE,
   jsonLd,
 }: PageMetaProps) {
+  // The prerendered shell carries its own JSON-LD for crawlers that never run
+  // this code. Once we have hydrated, Helmet emits the same data again, and two
+  // identical Course or FAQPage blocks read as two of the thing. Drop the static
+  // copies; anything that cannot execute JS never gets this far and keeps them.
+  useEffect(() => {
+    document.querySelectorAll("script[data-prerender-ld]").forEach((el) => el.remove());
+  }, []);
+
   const pageTitle = fullTitle(title);
   const url = canonicalUrl(path);
   const imageUrl = image.startsWith("http") ? image : canonicalUrl(image);

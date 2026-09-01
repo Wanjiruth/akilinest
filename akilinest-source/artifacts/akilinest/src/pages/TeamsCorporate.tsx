@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { standaloneCourse } from "@/lib/schema.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import SolutionCards from "@/components/SolutionCards";
 import WhyPartner from "@/components/WhyPartner";
@@ -23,6 +24,14 @@ export default function TeamsCorporate() {
           "AI training for teams Kenya",
           "AI workshop Nairobi",
         ]}
+        jsonLd={standaloneCourse({
+          name: CORPORATE_PROGRAMME.name,
+          description: CORPORATE_PROGRAMME.format,
+          path: "/teams/corporate",
+          courseMode: "Blended",
+          audience: "Workplace and leadership teams",
+          onsite: false,
+        })}
       />
 
       {/* HERO */}
