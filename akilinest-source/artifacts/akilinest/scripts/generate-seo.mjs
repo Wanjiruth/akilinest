@@ -84,7 +84,7 @@ const staticPages = [
     title: "Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest",
     description:
       "Corporate AI training in Kenya for enterprise teams. Workflow readiness audits, custom AI playbooks, applied team cohorts and executive transformation labs from AkiliNest.",
-    body: "AkiliNest Enterprise Solutions: the Operational Workflow and Readiness Audit, the AkiliNest Custom Playbook, Applied Team Cohorts and Training Academies, and Executive Alignment and Transformation Labs, for organisations in Nairobi and across Kenya.",
+    body: "AkiliNest delivers practical, hands-on corporate AI training for teams across Kenya and East Africa. The AkiliNest 6-Session Corporate AI Program runs as six live sessions plus asynchronous support between them: Session 1 Foundations, Policy and Baseline; Session 2 Prompt Engineering and Core Workflows; Session 3 Department-Specific Use-Case Labs; Session 4 Tools, Integration and Safe Usage; Session 5 Reinforcement and Problem-Solving Clinic; Session 6 Metrics, Governance and Scale Plan, closing with a 90-day scale roadmap. We also offer the Operational Workflow and Readiness Audit, the AkiliNest Custom Playbook, Applied Team Cohorts and Training Academies, and Executive Alignment and Transformation Labs, for organisations in Nairobi and across Kenya.",
   },
   {
     path: "/teams/educators",
