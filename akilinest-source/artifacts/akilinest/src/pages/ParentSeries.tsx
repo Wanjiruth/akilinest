@@ -63,8 +63,8 @@ export default function ParentSeries() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0D0C18] to-[#1A2030]" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/70 via-transparent to-transparent" />
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
-          <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-white/35 mb-3 block">For Parents</span>
-          <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-black text-white tracking-tight leading-tight mb-3">Parent Intelligence<br />Series</h1>
+          <span className="text-[11px] font-bold tracking-[2.5px] uppercase text-white/35 mb-3 block">Parent Intelligence Series</span>
+          <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-black text-white tracking-tight leading-tight mb-3">AI workshops for<br />parents in Nairobi.</h1>
           <p className="text-base text-white/60 max-w-lg font-light leading-relaxed">Not a fear-based talk. A thoughtful, future-focused experience for modern Kenyan families.</p>
         </div>
       </div>

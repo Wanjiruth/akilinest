@@ -50,7 +50,7 @@ export default function Events() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0D0C18]/60 to-transparent" />
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-3 block">Events</span>
-          <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Where the<br />learning begins</h1>
+          <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Holiday AI camps<br />for kids in Nairobi.</h1>
           <p className="text-base text-white/60 max-w-lg leading-relaxed">Creative AI bootcamps and holiday programmes for children across Kenya, held at heARTspace, Nairobi.</p>
         </div>
       </div>

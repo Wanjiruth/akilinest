@@ -166,8 +166,8 @@ export default function Programme() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/70 via-transparent to-transparent" />
         <div className="relative z-10 px-6 md:px-14 pb-12 pt-28">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-white/35 mb-3 block">Our Programmes</span>
-          <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Four stages of<br />creative intelligence</h1>
-          <p className="text-base text-white/60 max-w-lg leading-relaxed">Age-appropriate programmes that grow with your child from ages 8 to 17.</p>
+          <h1 className="font-serif text-[clamp(2.4rem,5vw,5rem)] font-bold text-white tracking-tight leading-tight mb-3">Kids AI programme stages,<br />ages 8 to 17.</h1>
+          <p className="text-base text-white/60 max-w-lg leading-relaxed">Age-appropriate programmes that grow with your child, from Sprouts to Innovators.</p>
         </div>
       </div>
 

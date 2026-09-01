@@ -193,6 +193,7 @@ const staticPages = [
   },
   {
     path: "/programme",
+    h1: "Kids AI programme stages, ages 8 to 17.",
     title: "Kids AI Programme Stages, Ages 8 to 17 | AkiliNest",
     description:
       "Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Creative intelligence training for the AI era.",
@@ -200,6 +201,7 @@ const staticPages = [
   },
   {
     path: "/events",
+    h1: "Holiday AI camps for kids in Nairobi.",
     jsonLd: () => (featuredCamp ? campEventSchema(featuredCamp) : undefined),
     title: "Holiday AI Camps for Kids in Nairobi 2026 | AkiliNest",
     description:
@@ -208,6 +210,7 @@ const staticPages = [
   },
   {
     path: "/faq",
+    h1: "AI training questions parents actually ask.",
     title: "AI Training FAQ for Parents & Teams in Kenya | AkiliNest",
     description:
       "Frequently asked questions about AkiliNest programmes, AI safety, thinking-first learning, and enrolment for children aged 8–17 across Kenya.",
@@ -250,6 +253,7 @@ const staticPages = [
   },
   {
     path: "/pis",
+    h1: "AI workshops for parents in Nairobi.",
     title: "AI Workshops for Parents in Nairobi | AkiliNest",
     description: "Five parent sessions on raising children in the AI era: screens, safety, creation, and future skills.",
     body: "Parent Intelligence Series for Kenyan families. Five thoughtful sessions on technology and parenting.",
