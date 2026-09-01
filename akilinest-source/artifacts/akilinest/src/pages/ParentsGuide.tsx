@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import EventCTA from "@/components/EventCTA";
 import { canonicalUrl } from "@/lib/seo";
 
@@ -59,15 +60,7 @@ export default function ParentsGuide() {
   return (
     <>
       <PageMeta
-        title="The Nairobi Parent's Guide to Raising Thinkers in the AI Era"
-        description="Is AkiliNest right for your family? A complete guide for Kenyan parents: who it's for, what to expect, how to start, and what children actually learn."
-        path="/parents-guide"
-        keywords={[
-          "Nairobi parent guide AI children",
-          "creative programmes kids Nairobi",
-          "extracurricular activities Nairobi",
-          "raising kids AI era Kenya",
-        ]}
+        {...pageSeo("/parents-guide")}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebPage",

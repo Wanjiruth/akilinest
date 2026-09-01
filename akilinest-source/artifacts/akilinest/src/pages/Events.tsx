@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { campEventSchema } from "@/lib/schema.mjs";
 import EventCTA from "@/components/EventCTA";
 import { events, EVENT_REGISTRATION_URL, holidayCampsFlyer, SIGNUP_LABEL, VENUE, WHATSAPP_URL } from "@/content/events";
@@ -13,10 +14,7 @@ export default function Events() {
   return (
     <>
       <PageMeta
-        title="Holiday AI Camps for Kids in Nairobi 2026 | AkiliNest"
-        description="AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. Join the waiting list to hear when the next intake opens."
-        path="/events"
-        keywords={["holiday camps kids Nairobi", "creative classes children Nairobi", "AkiliNest events", "after school activities Kenya"]}
+        {...pageSeo("/events")}
         jsonLd={
           featured?.startDate
             ? campEventSchema({

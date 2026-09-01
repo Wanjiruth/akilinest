@@ -45,6 +45,19 @@ const insightPosts = readInsights();
  * head a browser renders cannot disagree. Course and Event data is regex-read
  * from the content modules for the same reason the insights are above: one copy.
  */
+const { PAGE_SEO } = await import("../src/lib/pageSeo.mjs");
+
+/**
+ * Title, description and h1 come from the shared module; `body` stays here
+ * because it is shell-only prose that the app never renders.
+ */
+function seo(path) {
+  const entry = PAGE_SEO[path];
+  if (!entry) throw new Error(`No PAGE_SEO entry for "${path}"`);
+  const { keywords, ...rest } = entry;
+  return { path, ...rest };
+}
+
 const {
   organizationSchema,
   kidsCoursesSchema,
@@ -104,32 +117,20 @@ const SITE = "https://akilinest.co.ke";
 
 const staticPages = [
   {
-    path: "/",
+    ...seo("/"),
     jsonLd: () => organizationSchema(),
-    h1: "Practical AI training in Kenya, for teams and for kids.",
-    title: "AI Training in Kenya for Teams & Kids | AkiliNest",
-    description:
-      "Practical AI training in Kenya for workplace teams, educator teams and young people. AkiliNest helps people build useful AI skills and workflows for real work and learning.",
     body: "AkiliNest closes the gap on both sides: practical AI upskilling for workplace and educator teams in Kenya, and creative AI bootcamps for young people aged 8 to 17.",
   },
   {
-    path: "/ai-training-kenya",
-    h1: "AI training in Kenya.",
-    title: "AI Training in Kenya | Corporate, Teacher & Kids | AkiliNest",
-    description:
-      "AI training in Kenya from AkiliNest. Corporate AI training for workplace teams, AI training for teachers, and creative AI bootcamps for kids in Nairobi.",
+    ...seo("/ai-training-kenya"),
     body: "AkiliNest is an AI training company based in Nairobi, Kenya. We run practical AI training for workplace teams, AI training for teachers and school leadership, and creative AI bootcamps for young people aged 8 to 17. Kenya has the highest rate of ChatGPT use of any country in the world, at 42.1% of internet users aged 16 and over in the past month, according to the DataReportal and Meltwater Global Digital Report 2025. AI use is running ahead of formal AI training. Team sessions run on site at your offices in Nairobi or at our space, and we work with organisations across Kenya.",
   },
   {
-    path: "/teams",
-    h1: "AI training and upskilling for teams in Kenya.",
-    title: "AI Training for Teams in Kenya | Corporate & Educator | AkiliNest",
-    description:
-      "AI training for teams in Kenya, for two audiences: workplace teams and educator teams. Compare the corporate and educator programmes, readiness audits and applied cohorts.",
+    ...seo("/teams"),
     body: "Technology moves fast, but the human capability to use it effectively is often left behind. AkiliNest builds practical operating systems and hands-on training tracks for two environments: corporate teams and educator teams. AI use is running ahead of formal AI training. AkiliNest for Teams: AI Opportunity Session, AI Workflow Bootcamp, Team AI Playbook and AI Adoption Support for workplace and educator teams in Kenya.",
   },
   {
-    path: "/teams/corporate",
+    ...seo("/teams/corporate"),
     jsonLd: () => [
       faqPage(faqs.teamFaqs),
       standaloneCourse({
@@ -141,14 +142,10 @@ const staticPages = [
         onsite: false,
       }),
     ],
-    h1: "Corporate AI training in Kenya.",
-    title: "Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest",
-    description:
-      "Corporate AI training in Kenya for enterprise teams. Workflow readiness audits, custom AI playbooks, applied team cohorts and executive transformation labs from AkiliNest.",
     body: "AkiliNest delivers practical, hands-on corporate AI training for teams across Kenya and East Africa. The AkiliNest 6-Session Corporate AI Program runs as six live sessions plus asynchronous support between them: Session 1 Foundations, Policy and Baseline; Session 2 Prompt Engineering and Core Workflows; Session 3 Department-Specific Use-Case Labs; Session 4 Tools, Integration and Safe Usage; Session 5 Reinforcement and Problem-Solving Clinic; Session 6 Metrics, Governance and Scale Plan, closing with a 90-day scale roadmap. We also offer the Operational Workflow and Readiness Audit, the AkiliNest Custom Playbook, Applied Team Cohorts and Training Academies, and Executive Alignment and Transformation Labs, for organisations in Nairobi and across Kenya.",
   },
   {
-    path: "/teams/educators",
+    ...seo("/teams/educators"),
     jsonLd: () => [
       faqPage(faqs.educatorFaqs),
       standaloneCourse({
@@ -160,114 +157,64 @@ const staticPages = [
         onsite: false,
       }),
     ],
-    h1: "AI training for teachers in Kenya.",
-    title: "AI Training for Teachers in Kenya | Educator Solutions | AkiliNest",
-    description:
-      "Practical AI training for teachers and schools in Kenya. Educator readiness audits, integration playbooks, hands-on teacher cohorts and leadership labs from AkiliNest.",
     body: "AkiliNest delivers practical AI training for teachers and schools in Kenya. The AkiliNest 6-Session Educator AI Program runs for a whole teaching team, often across staff development days: Session 1 Foundations, Learner Data and Baseline; Session 2 Prompting on Real Teaching Work; Session 3 Department Use-Case Labs; Session 4 Tools, Classroom Practice and Safe Usage; Session 5 Reinforcement and Problem-Solving Clinic; Session 6 Standards, Governance and Rollout, closing with a 90-day rollout plan. We also offer the Educator AI Readiness Audit, the Educator AI Integration Playbook, Applied Educator Cohorts and Training Academies, and Educational Leadership and Transformation Labs, building on frameworks like the TSC AI Educator Pathways powered by Microsoft Elevate.",
   },
   {
-    path: "/kids-ai-bootcamps",
+    ...seo("/kids-ai-bootcamps"),
     jsonLd: () => kidsCoursesSchema(kidsStages),
-    h1: "The best AI training for kids in Kenya.",
-    title: "The Best AI Training for Kids in Kenya | AI Bootcamps Nairobi | AkiliNest",
-    description:
-      "AkiliNest is Kenya's leading AI training company for kids. Creative AI bootcamps for children aged 8-17 in Nairobi, across four age stages, during the school holidays.",
     body: "Creative AI bootcamps for children aged 8 to 17 in Nairobi and across Kenya. Four programme stages: Sprouts, Explorers, Builders and Innovators.",
   },
   {
-    path: "/hero-2026",
-    h1: "AkiliNest selected for H.E.R.O. 2026.",
-    title: "AkiliNest Selected for H.E.R.O. 2026 | Harmonic Innovation Group",
-    description:
-      "AkiliNest was selected for H.E.R.O. 2026, the Harmonic Euro-African Ramp-up Orbit acceleration and internationalisation programme. One of 20 startups selected from 324 applications across 23 countries.",
+    ...seo("/hero-2026"),
     body: "AkiliNest was selected for H.E.R.O., the Harmonic Euro-African Ramp-up Orbit, supported by Harmonic Innovation Group, BeEntrepreneurs and Startup Africa Roadtrip. One of 20 startups selected from 324 applications across 23 countries.",
   },
   {
-    path: "/insights",
-    h1: "Practical notes on using AI well.",
-    title: "Insights on Practical AI for Kenyan Teams | AkiliNest",
-    description:
-      "Founder-led articles on using AI well at work and in the classroom: safe everyday use, practical workflows, and responsible AI habits for Kenyan teams.",
+    ...seo("/insights"),
     body: "Practical notes on using AI well at work and in the classroom, written from real workshops with Kenyan teams.",
   },
   {
-    path: "/programme",
-    h1: "Kids AI programme stages, ages 8 to 17.",
-    title: "Kids AI Programme Stages, Ages 8 to 17 | AkiliNest",
-    description:
-      "Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Creative intelligence training for the AI era.",
+    ...seo("/programme"),
     body: "Four stages of creative intelligence: Sprouts ages 8-10, Explorers 11-12, Builders 13-14, Innovators 15-17.",
   },
   {
-    path: "/events",
-    h1: "Holiday AI camps for kids in Nairobi.",
+    ...seo("/events"),
     jsonLd: () => (featuredCamp ? campEventSchema(featuredCamp) : undefined),
-    title: "Holiday AI Camps for Kids in Nairobi 2026 | AkiliNest",
-    description:
-      "AkiliNest creative AI bootcamps and holiday camps for children aged 8-17 at heARTspace, Nairobi. The November to December 2026 intake is open for registration.",
     body: "AkiliNest creative AI bootcamps and holiday camps for children aged 8 to 17 at heARTspace, Kabarnet Road, off Ngong Road, Nairobi. The next intake runs November to December 2026, across all four programme stages, with session times confirmed on registration.",
   },
   {
-    path: "/faq",
-    h1: "AI training questions parents actually ask.",
-    title: "AI Training FAQ for Parents & Teams in Kenya | AkiliNest",
-    description:
-      "Frequently asked questions about AkiliNest programmes, AI safety, thinking-first learning, and enrolment for children aged 8–17 across Kenya.",
+    ...seo("/faq"),
     body: "FAQ: Will AI make my child lazy? How is AkiliNest different from school? What age ranges do you accept?",
   },
   {
-    path: "/blog",
-    title: "Parent Guides & Insights for Raising Kids in the AI Era | AkiliNest",
-    description:
-      "Research-backed guides for Kenyan parents: AI safety, CBC gaps, extracurriculars, future skills, and creative programmes.",
+    ...seo("/blog"),
     body: "Parent guides covering ChatGPT safety, AI cheating, CBC gaps, extracurricular activities Nairobi, future skills 2030.",
   },
   {
-    path: "/parents-guide",
-    title: "The Nairobi Parent's Guide to Raising Thinkers in the AI Era | AkiliNest",
-    description:
-      "Is AkiliNest right for your family? Complete guide for Kenyan parents: who it's for, what children learn, how to start.",
+    ...seo("/parents-guide"),
     body: "Nairobi parent guide: who AkiliNest is perfect for, five steps to enrol, requirements to get started.",
   },
   {
-    path: "/future-skills-report",
-    title: "The Future Skills Report 2026: What Kenyan Kids Need | AkiliNest",
-    description:
-      "Research-backed report: six skills children need before 2030, parent data on AI concerns, and what schools are missing.",
+    ...seo("/future-skills-report"),
     body: "Future Skills Report 2026: independent reasoning, creative articulation, AI literacy, digital safety, problem framing, ethical technology.",
   },
   {
-    path: "/about",
-    h1: "We help people in Kenya work and learn well with AI.",
-    title: "About AkiliNest | Practical AI Upskilling in Kenya",
-    description: "AkiliNest helps workplace and educator teams in Kenya use AI well, and runs creative AI bootcamps for young people aged 8 to 17.",
+    ...seo("/about"),
     body: "AkiliNest is a Nairobi-based company providing practical AI upskilling for teams and creative AI bootcamps for young people.",
   },
   {
-    path: "/contact",
-    h1: "Tell us what you are trying to do.",
-    title: "Contact AkiliNest | Book a Team Discovery Call",
-    description: "Book a team discovery call or ask about kids bootcamps. Email akilinest@gmail.com or WhatsApp 0702 820 845.",
+    ...seo("/contact"),
     body: "Contact AkiliNest Nairobi. Book a team discovery call, or join the kids bootcamp waiting list. WhatsApp 0702820845. Email akilinest@gmail.com.",
   },
   {
-    path: "/pis",
-    h1: "AI workshops for parents in Nairobi.",
-    title: "AI Workshops for Parents in Nairobi | AkiliNest",
-    description: "Five parent sessions on raising children in the AI era: screens, safety, creation, and future skills.",
+    ...seo("/pis"),
     body: "Parent Intelligence Series for Kenyan families. Five thoughtful sessions on technology and parenting.",
   },
   {
-    path: "/privacy",
-    title: "Privacy Policy | AkiliNest",
-    description: "How AkiliNest collects, uses, and protects your personal information.",
+    ...seo("/privacy"),
     body: "AkiliNest privacy policy: your data rights and how we protect your information.",
   },
   {
-    path: "/terms",
-    title: "Terms of Service | AkiliNest",
-    description: "Terms and conditions for AkiliNest programmes, enrolment, and website use.",
+    ...seo("/terms"),
     body: "AkiliNest terms of service: enrolment terms, cancellation policy, and website use.",
   },
 ];

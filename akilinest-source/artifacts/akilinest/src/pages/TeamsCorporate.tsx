@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { standaloneCourse } from "@/lib/schema.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import SolutionCards from "@/components/SolutionCards";
@@ -15,15 +16,7 @@ export default function TeamsCorporate() {
   return (
     <>
       <PageMeta
-        title="Corporate AI Training in Kenya | Enterprise Solutions | AkiliNest"
-        description="Corporate AI training in Kenya for enterprise teams. Workflow readiness audits, custom AI playbooks, applied team cohorts and executive transformation labs from AkiliNest."
-        path="/teams/corporate"
-        keywords={[
-          "corporate AI training Kenya",
-          "AI upskilling Kenya",
-          "AI training for teams Kenya",
-          "AI workshop Nairobi",
-        ]}
+        {...pageSeo("/teams/corporate")}
         jsonLd={standaloneCourse({
           name: CORPORATE_PROGRAMME.name,
           description: CORPORATE_PROGRAMME.format,

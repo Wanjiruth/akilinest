@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import EventCTA from "@/components/EventCTA";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { blogPosts, CATEGORY_LABELS } from "@/content/blog";
 export default function Blog() {
   const sorted = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
@@ -9,16 +10,7 @@ export default function Blog() {
   return (
     <>
       <PageMeta
-        title="Parent Guides & Insights for Raising Kids in the AI Era"
-        description="Research-backed guides for Kenyan parents: AI safety, CBC gaps, extracurriculars, future skills, and creative programmes for children aged 8-17."
-        path="/blog"
-        keywords={[
-          "parenting AI era Nairobi",
-          "extracurricular activities kids Nairobi",
-          "creative classes children Kenya",
-          "CBC curriculum gaps",
-          "ChatGPT safe for kids",
-        ]}
+        {...pageSeo("/blog")}
       />
 
       <div className="relative h-[40vh] min-h-[280px] flex flex-col justify-end overflow-hidden bg-gradient-to-br from-[#0B4D5F] to-[#0D0C18]">

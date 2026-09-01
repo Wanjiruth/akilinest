@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { kidsCoursesSchema } from "@/lib/schema.mjs";
 import EventCTA from "@/components/EventCTA";
 import VideoEmbed from "@/components/VideoEmbed";
@@ -55,10 +56,7 @@ export default function KidsBootcamps() {
   return (
     <>
       <PageMeta
-        title="The Best AI Training for Kids in Kenya | AI Bootcamps Nairobi | AkiliNest"
-        description="AkiliNest is Kenya's leading AI training company for kids. Creative AI bootcamps for children aged 8-17 in Nairobi, across four age stages, during the school holidays."
-        path="/kids-ai-bootcamps"
-        keywords={["AI bootcamp for kids Nairobi", "AI bootcamp Kenya", "creative classes children Nairobi"]}
+        {...pageSeo("/kids-ai-bootcamps")}
         jsonLd={kidsCoursesSchema(kidsStages)}
       />
 

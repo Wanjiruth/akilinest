@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { organizationSchema } from "@/lib/schema.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import TeamCTA from "@/components/TeamCTA";
@@ -35,10 +36,7 @@ export default function Home() {
   return (
     <>
       <PageMeta
-        title="AI Training in Kenya for Teams & Kids | AkiliNest"
-        description="Practical AI training in Kenya for workplace teams, educator teams and young people. AkiliNest helps people build useful AI skills and workflows for real work and learning."
-        path="/"
-        keywords={["AI training Kenya", "AI upskilling Kenya", "AI training Nairobi", "AI bootcamp Kenya"]}
+        {...pageSeo("/")}
         jsonLd={organizationSchema()}
       />
 

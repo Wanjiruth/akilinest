@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import EventCTA from "@/components/EventCTA";
 
 const faqs = [
@@ -42,10 +43,7 @@ export default function Faq() {
   return (
     <>
       <PageMeta
-        title="AI Training FAQ for Parents & Teams in Kenya | AkiliNest"
-        description="Answers to what Kenyan parents actually ask: Is AI safe? Will my child stop thinking? How is AkiliNest different from school? Ages 8 to 17."
-        path="/faq"
-        keywords={["AkiliNest FAQ", "AI safe for kids", "creative programmes Nairobi", "children AI education Kenya"]}
+        {...pageSeo("/faq")}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "FAQPage",

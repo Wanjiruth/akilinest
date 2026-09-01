@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import TeamCTA from "@/components/TeamCTA";
 import { AUDIENCE_LABELS, insights, type InsightAudience } from "@/content/insights";
 
@@ -14,10 +15,7 @@ export default function Insights() {
   return (
     <>
       <PageMeta
-        title="Insights on Practical AI for Kenyan Teams | AkiliNest"
-        description="Founder-led articles on using AI well at work and in the classroom: safe everyday use, practical workflows, and responsible AI habits for Kenyan teams."
-        path="/insights"
-        keywords={["AI upskilling Kenya", "AI training Kenya", "responsible AI use Kenya"]}
+        {...pageSeo("/insights")}
       />
 
       {/* HERO */}

@@ -1,15 +1,14 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { WHATSAPP_URL, VENUE } from "@/content/events";
 
 export default function Privacy() {
   return (
     <>
       <PageMeta
-        title="Privacy Policy | AkiliNest"
-        description="How AkiliNest collects, uses, and protects your personal information. Your privacy matters to us."
-        path="/privacy"
+        {...pageSeo("/privacy")}
       />
       <div className="relative h-[30vh] min-h-[220px] flex flex-col justify-end overflow-hidden bg-gradient-to-br from-[#0B4D5F] to-[#0D0C18]">
         <div className="relative z-10 px-6 md:px-14 pb-10 pt-24">

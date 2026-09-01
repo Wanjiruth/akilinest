@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import EventCTA from "@/components/EventCTA";
 import { canonicalUrl } from "@/lib/seo";
 
@@ -34,15 +35,7 @@ export default function FutureSkillsReport() {
   return (
     <>
       <PageMeta
-        title="The Future Skills Report 2026: What Kenyan Kids Need"
-        description="Research-backed report for Kenyan parents: the six skills children need before 2030, what schools are missing, and what the data says about AI and young minds."
-        path="/future-skills-report"
-        keywords={[
-          "future skills children 2030",
-          "Nairobi kids skills AI era",
-          "critical thinking children Kenya",
-          "AI education report parents",
-        ]}
+        {...pageSeo("/future-skills-report")}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Report",

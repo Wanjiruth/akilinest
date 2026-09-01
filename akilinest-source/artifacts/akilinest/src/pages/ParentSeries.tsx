@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import EventCTA from "@/components/EventCTA";
 import { asset, IMAGES } from "@/lib/images";
 
@@ -50,10 +51,7 @@ export default function ParentSeries() {
   return (
     <>
       <PageMeta
-        title="AI Workshops for Parents in Nairobi | AkiliNest"
-        description="Five thoughtful parent sessions for Kenyan families: AI safety, screens, creation, digital identity, and future skills. Not fear-based."
-        path="/pis"
-        keywords={["parenting AI era Nairobi", "parent workshops Kenya", "raising kids technology Africa"]}
+        {...pageSeo("/pis")}
       />
       {/* PAGE HERO */}
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">

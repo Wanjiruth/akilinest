@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import TeamEnquiryForm from "@/components/TeamEnquiryForm";
 import { asset, IMAGES } from "@/lib/images";
@@ -63,16 +64,7 @@ export default function AiTrainingKenya() {
   return (
     <>
       <PageMeta
-        title="AI Training in Kenya | Corporate, Teacher & Kids | AkiliNest"
-        description="AI training in Kenya from AkiliNest. Corporate AI training for workplace teams, AI training for teachers, and creative AI bootcamps for kids in Nairobi."
-        path="/ai-training-kenya"
-        keywords={[
-          "AI training Kenya",
-          "AI training Nairobi",
-          "corporate AI training Kenya",
-          "AI training for teachers Kenya",
-          "AI bootcamp Kenya",
-        ]}
+        {...pageSeo("/ai-training-kenya")}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "FAQPage",

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import TeamCTA from "@/components/TeamCTA";
 import { HERO_2026 } from "@/content/hero2026";
 import { asset, IMAGES } from "@/lib/images";
@@ -9,10 +10,7 @@ export default function Hero2026() {
   return (
     <>
       <PageMeta
-        title="AkiliNest Selected for H.E.R.O. 2026 | Harmonic Innovation Group"
-        description="AkiliNest was selected for H.E.R.O. 2026, the Harmonic Euro-African Ramp-up Orbit acceleration and internationalisation programme. One of 20 startups selected from 324 applications across 23 countries."
-        path="/hero-2026"
-        keywords={["H.E.R.O. 2026", "Harmonic Euro-African Ramp-up Orbit", "AkiliNest"]}
+        {...pageSeo("/hero-2026")}
       />
 
       {/* HERO */}

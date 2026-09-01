@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import TeamEnquiryForm from "@/components/TeamEnquiryForm";
 import { asset, IMAGES } from "@/lib/images";
@@ -11,15 +12,7 @@ export default function Teams() {
   return (
     <>
       <PageMeta
-        title="AI Training for Teams in Kenya | Corporate & Educator | AkiliNest"
-        description="AI training for teams in Kenya, for two audiences: workplace teams and educator teams. Compare the corporate and educator programmes, readiness audits and applied cohorts."
-        path="/teams"
-        keywords={[
-          "corporate AI training Kenya",
-          "AI training for teams Kenya",
-          "AI upskilling Kenya",
-          "AI workshop Nairobi",
-        ]}
+        {...pageSeo("/teams")}
       />
 
       {/* HERO */}

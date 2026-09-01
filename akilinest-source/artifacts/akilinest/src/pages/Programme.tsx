@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import EventCTA from "@/components/EventCTA";
 import { asset, IMAGES } from "@/lib/images";
 
@@ -145,10 +146,7 @@ export default function Programme() {
   return (
     <>
       <PageMeta
-        title="Kids AI Programme Stages, Ages 8 to 17 | AkiliNest"
-        description="Four age-appropriate programmes for children 8–17 across Kenya: Sprouts, Explorers, Builders, and Innovators. Thinking-first creative intelligence for the AI era."
-        path="/programme"
-        keywords={["creative programmes Nairobi", "children AI education Kenya", "extracurricular activities Nairobi", "Sprouts Explorers Builders Innovators"]}
+        {...pageSeo("/programme")}
       />
 
       <div className="relative h-[52vh] min-h-[340px] flex flex-col justify-end overflow-hidden">

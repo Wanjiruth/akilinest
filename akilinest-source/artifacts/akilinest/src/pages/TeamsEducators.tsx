@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import { standaloneCourse } from "@/lib/schema.mjs";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import SolutionCards from "@/components/SolutionCards";
@@ -15,15 +16,7 @@ export default function TeamsEducators() {
   return (
     <>
       <PageMeta
-        title="AI Training for Teachers in Kenya | Educator Solutions | AkiliNest"
-        description="Practical AI training for teachers and schools in Kenya. Educator readiness audits, integration playbooks, hands-on teacher cohorts and leadership labs from AkiliNest."
-        path="/teams/educators"
-        keywords={[
-          "AI training for teachers Kenya",
-          "AI upskilling Kenya",
-          "AI workshop Nairobi",
-          "AI training Kenya",
-        ]}
+        {...pageSeo("/teams/educators")}
         jsonLd={standaloneCourse({
           name: EDUCATOR_PROGRAMME.name,
           description: EDUCATOR_PROGRAMME.format,

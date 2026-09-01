@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import TeamCTA from "@/components/TeamCTA";
 import { asset, IMAGES } from "@/lib/images";
 import { HERO_2026 } from "@/content/hero2026";
@@ -25,10 +26,7 @@ export default function About() {
   return (
     <>
       <PageMeta
-        title="About AkiliNest | Practical AI Upskilling in Kenya"
-        description="AkiliNest helps workplace and educator teams in Kenya use AI well, and runs creative AI bootcamps for young people aged 8 to 17. Based in Nairobi."
-        path="/about"
-        keywords={["AkiliNest", "AI upskilling Kenya", "AI training Kenya", "about AkiliNest"]}
+        {...pageSeo("/about")}
       />
 
       {/* HERO */}

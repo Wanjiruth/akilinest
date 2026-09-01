@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Reveal } from "@/components/Reveal";
 import PageMeta from "@/components/PageMeta";
+import { pageSeo } from "@/lib/pageSeo.mjs";
 import TeamEnquiryForm from "@/components/TeamEnquiryForm";
 import { VENUE } from "@/content/events";
 import { asset, IMAGES } from "@/lib/images";
@@ -169,10 +170,7 @@ export default function Contact() {
   return (
     <>
       <PageMeta
-        title="Contact AkiliNest | Book a Team Discovery Call"
-        description="Book a team discovery call or ask about kids bootcamps. Email akilinest@gmail.com or WhatsApp 0702 820 845."
-        path="/contact"
-        keywords={["contact AkiliNest", "AI training Kenya", "AI bootcamp Nairobi"]}
+        {...pageSeo("/contact")}
       />
 
       {/* HERO */}
