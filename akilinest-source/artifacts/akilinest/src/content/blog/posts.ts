@@ -32,8 +32,8 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Where to learn the safer way in Nairobi",
         paragraphs: [
-          "If you want a structured environment, explore AkiliNest programmes for ages 8–17 on /programme.",
-          "For registration and quick answers, book via WhatsApp using the contact options on /contact (and our WhatsApp button).",
+          "If you want a structured environment, explore the [AkiliNest programme stages for ages 8 to 17](/programme), or the [creative AI bootcamps themselves](/kids-ai-bootcamps).",
+          "For registration and quick answers, [get in touch](/contact) or use the WhatsApp button on any page.",
         ],
       },
     ],
@@ -71,8 +71,8 @@ export const blogPosts: BlogPost[] = [
         heading: "AkiliNest’s holiday camps (June–August 2026)",
         paragraphs: [
           "AkiliNest holiday camps run across four stages for children aged 8–17. Sessions are 2 hours daily, with limited spots by design.",
-          "For exact dates and pricing, visit /events. To compare programmes by age, go to /programme.",
-          "To reserve a place quickly, use WhatsApp via our contact flow on /contact.",
+          "For the next intake and where it runs, see [the holiday AI camps](/events). To compare [programme stages by age](/programme), start with Sprouts and work up.",
+          "To reserve a place quickly, [contact us](/contact) or message the team on WhatsApp.",
         ],
       },
     ],
@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
         heading: "What parents notice by the end",
         paragraphs: [
           "Children leave with a tangible output and stronger confidence: clearer thinking, better articulation, and healthier relationships with technology.",
-          "See programme options by age on /programme, and register or book on WhatsApp via /contact.",
+          "See [programme options by age](/programme), then [register or ask a question](/contact).",
         ],
       },
     ],

@@ -1,5 +1,6 @@
 import type { BlogPost } from "@/content/blog";
 import { Link } from "wouter";
+import RichText from "@/components/RichText";
 import { SIGNUP_LABEL, WHATSAPP_URL } from "@/content/events";
 
 export default function BlogPostBody({ post }: { post: BlogPost }) {
@@ -11,9 +12,7 @@ export default function BlogPostBody({ post }: { post: BlogPost }) {
             <h2 className="font-serif text-2xl font-bold text-[#0D0C18] mb-4">{section.heading}</h2>
           ) : null}
           {section.paragraphs.map((p, j) => (
-            <p key={j} className="text-base text-[#4A4860] leading-relaxed mb-4 font-sans">
-              {p}
-            </p>
+            <RichText key={j} text={p} className="text-base text-[#4A4860] leading-relaxed mb-4 font-sans" />
           ))}
         </div>
       ))}

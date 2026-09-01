@@ -219,37 +219,33 @@ const staticPages = [
   },
 ];
 
-// Blog slugs: keep in sync with src/content/blog/posts.ts
-const blogSlugs = [
-  { slug: "is-ai-safe-for-my-child-nairobi", title: "Is AI Safe for My Child? A Parent's Guide to AI Education in Nairobi", description: "Is AI safe for kids in Nairobi? A parent's guide to AI education, safety rules, and how AkiliNest teaches children to think first before using AI." },
-  { slug: "top-5-holiday-camps-nairobi-2026-future-skills", title: "Top 5 Holiday Camps in Nairobi 2026 for Future Skills", description: "Looking for holiday camps in Nairobi 2026? Here are 5 camp types that build future skills, plus why AkiliNest adds thinking-first AI education." },
-  { slug: "what-age-should-kids-start-learning-ai-akilnest", title: "What Age Should Kids Start Learning AI? Expert Advice from AkiliNest", description: "What age should kids start learning AI in Nairobi? AkiliNest expert advice on developmental stages and the thinking-first rules that keep AI safe." },
-  { slug: "a-day-at-akilnest-what-children-learn", title: "A Day at AkiliNest: What Children Actually Learn in Our Workshops", description: "What happens in an AkiliNest workshop day? A Nairobi walkthrough of the thinking-first cycle: think, use AI wisely, and present confidently." },
-  { slug: "how-to-help-child-think-creatively-with-ai", title: "How to Help Your Child Think Creatively with AI Without Letting AI Do the Thinking", description: "Three practical tips for Nairobi parents: think first, create boldly, use AI wisely. Plus what AkiliNest does differently." },
-  { slug: "is-chatgpt-safe-for-my-child", title: "Is ChatGPT Safe for Your Child? What Nairobi Parents Need to Know", description: "60% of parents worry about inappropriate AI content. Research-backed guide for Nairobi families." },
-  { slug: "is-my-kid-cheating-with-ai", title: "Is My Kid Cheating with AI? A Nairobi Parent's Guide", description: "How to tell cheating from learning when your child uses AI for homework." },
-  { slug: "what-is-my-child-doing-on-ai", title: "What Is Your Child Actually Doing on AI? The 37% Awareness Gap", description: "Only 37% of parents knew their teen used AI. How to find out and start the conversation." },
-  { slug: "ai-chatbots-inappropriate-kids", title: "Can AI Chatbots Be Inappropriate with Kids?", description: "What parents need to know about companion chatbots and child safety." },
-  { slug: "will-ai-harm-critical-thinking", title: "Will AI Make My Child Lose Critical Thinking Skills?", description: "What 56% of parents fear and what actually protects young minds." },
-  { slug: "best-ai-tools-kids-learning", title: "Best AI Tools for My Child's Learning: A Parent's Shortlist", description: "77% of parents want AI education tools. Age-appropriate list for Nairobi families." },
-  { slug: "extracurriculars-nairobi-confidence", title: "Nairobi Parent's Guide to Extracurriculars That Build Confidence", description: "How to choose extracurricular activities for kids in Nairobi." },
-  { slug: "after-school-nairobi-child-mind", title: "After School in Nairobi: What Develops Your Child's Mind", description: "After school activities for kids in Kenya beyond homework and screens." },
-  { slug: "creative-classes-nairobi-think", title: "Where Nairobi Kids Learn to Think, Not Just Click", description: "Creative classes for children in Nairobi that prioritise original thinking." },
-  { slug: "weekend-activities-nairobi-smarter", title: "Weekend Activities in Nairobi That Make Kids Smarter", description: "Things to do with kids in Nairobi this weekend." },
-  { slug: "raise-confident-kids-kenya", title: "The Confidence Gap: Raising Bold Kids in Kenya", description: "How to raise confident kids in Kenya." },
-  { slug: "shy-child-find-voice-nairobi", title: "From Quiet to Confident: Helping Shy Kids Find Their Voice", description: "My child is shy what to do, Nairobi creative studio approach." },
-  { slug: "kids-not-interested-school-nairobi", title: "When School Feels Boring: Reigniting Curiosity in Nairobi", description: "Kids not interested in school, how to reconnect curious children." },
-  { slug: "parenting-digital-age-africa", title: "Raising Thinkers in the AI Era: A Nairobi Parent's Playbook", description: "Parenting in the digital age Africa, practical playbook." },
-  { slug: "cbc-promises-vs-reality", title: "What CBC Promises vs. What Your Child Actually Needs", description: "CBC curriculum gaps in Kenya." },
-  { slug: "cbc-digital-literacy-question-algorithm", title: "CBC Added Digital Literacy. Who Teaches Kids to Question the Algorithm?", description: "Critical AI literacy missing from most Kenyan classrooms." },
-  { slug: "school-principals-ai-question", title: "10 Nairobi School Principals Couldn't Answer This AI Question", description: "83% of parents say schools have not communicated AI policy." },
-  { slug: "future-skills-2030-one-skill", title: "The One Skill Your Child Needs Before 2030", description: "Future skills for children 2030, independent reasoning beats coding certificates." },
-  { slug: "coding-certificate-wont-matter-2030", title: "Why Your Child's Coding Certificate Won't Matter in 2030", description: "Creative intelligence and reasoning matter more than certificates." },
-  { slug: "african-stack-for-kids", title: "The African Stack for Kids: M-Pesa, Climate, Community", description: "African context for children's technology education in Nairobi." },
-  { slug: "50-nairobi-parents-ai-era", title: "What I Learned From 50 Nairobi Parents About Raising Kids in the AI Era", description: "Five shared fears and three surprising hopes." },
-  { slug: "mom-google-says-to-mom-i-disagree", title: "From Mom Google Says to Mom I Disagree", description: "How children move from accepting AI answers to independent positions." },
-  { slug: "kes-investment-future-proof-mind", title: "What Should a Holiday Programme in Nairobi Actually Give Your Child?", description: "How to judge whether a Nairobi holiday programme is worth paying for: what to look for, what to avoid, and the questions to ask before you book." },
-];
+/**
+ * Blog posts are read straight out of posts.ts, the same way insights are.
+ * There used to be a hand-maintained copy of every slug, title and description
+ * down here under a "keep in sync" comment, which is a promise no one keeps.
+ */
+function readBlogPosts() {
+  const src = fs.readFileSync(path.resolve(__dirname, "../src/content/blog/posts.ts"), "utf8");
+  const unescape = (v) => v.replace(/\\"/g, '"').replace(/\\n/g, "\n");
+  const out = [];
+  for (const chunk of src.split(/\n  \{\n    slug: "/).slice(1)) {
+    const slug = chunk.slice(0, chunk.indexOf('"'));
+    const title = /title:\s*\n?\s*"((?:[^"\\]|\\.)*)"/.exec(chunk);
+    const description = /description:\s*\n?\s*"((?:[^"\\]|\\.)*)"/.exec(chunk);
+    // Every paragraph, so the shell carries the article rather than a repeat
+    // of its own meta description.
+    const paragraphs = [];
+    for (const block of chunk.match(/paragraphs:\s*\[([\s\S]*?)\n\s*\],/g) || []) {
+      for (const m of block.matchAll(/"((?:[^"\\]|\\.)*)"/g)) paragraphs.push(unescape(m[1]));
+    }
+    if (title && description) {
+      out.push({ slug, title: unescape(title[1]), description: unescape(description[1]), paragraphs });
+    }
+  }
+  return out;
+}
+
+const blogSlugs = readBlogPosts();
 
 /**
  * The prerendered copy exists for crawlers that do not run JavaScript. In a real
@@ -283,7 +279,19 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
-function buildHtml({ title, description, path: pagePath, body, h1, jsonLd }) {
+/**
+ * Escapes prose, then turns the markdown-style links the articles are written
+ * with into real anchors, so the crawlable shell carries the same internal
+ * links a reader clicks.
+ */
+function richTextToHtml(text) {
+  return esc(text).replace(
+    /\[([^\]]+)\]\(([^)\s]+)\)/g,
+    (_, label, href) => `<a href="${href.startsWith("/") ? SITE + href : href}">${label}</a>`,
+  );
+}
+
+function buildHtml({ title, description, path: pagePath, body, bodyHtml, h1, jsonLd }) {
   const url = `${SITE}${pagePath === "/" ? "" : pagePath}`;
   const fullTitle = title.includes("AkiliNest") ? title : `${title} | AkiliNest`;
 
@@ -315,7 +323,7 @@ ${(() => { const d = jsonLd?.(); return d ? `  <script type="application/ld+json
     <main data-prerender>
       <h1>${esc(h1 ?? title.split(" | ")[0])}</h1>
       <p>${esc(description)}</p>
-      <p>${esc(body)}</p>
+      <p>${bodyHtml ?? esc(body)}</p>
       <nav>
         <a href="${SITE}/">Home</a> |
         <a href="${SITE}/ai-training-kenya">AI Training Kenya</a> |
@@ -485,7 +493,9 @@ function main() {
       path: `/blog/${post.slug}`,
       title: post.title,
       description: post.description,
-      body: post.description,
+      bodyHtml: post.paragraphs.length
+        ? post.paragraphs.map(richTextToHtml).join("</p>\n      <p>")
+        : esc(post.description),
     });
     writeRoute(`/blog/${post.slug}`, html, indexHtml);
     console.log(`SEO blog: /blog/${post.slug}`);
